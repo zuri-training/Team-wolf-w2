@@ -1,17 +1,14 @@
-const express = require('express')
-const connect = require ('./config/database')
+const express = require("express");
+const connect = require("./config/database");
 
-connect()
+connect();
 
+const app = express();
 
-const app = express()
+const PORT = process.env.PORT || 3000;
 
-
-
-const PORT = process.env.PORT|| 3000;
-
-app.get('/', 
-(req ,res)=> {res.send('my cms');
+app.get("/", (req, res) => {
+  res.send("Welcome to Our Website");
 });
 
-app.listen(PORT, () => console.log(`serving on port ${PORT}`));
+app.listen(PORT, () => console.log(`server on port ${PORT}`));
