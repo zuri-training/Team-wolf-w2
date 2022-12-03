@@ -16,7 +16,7 @@ Register to setup a new website
 Setup website by filling out some information
 Browse through available templates 
 	
-  User: Authenticated
+  	User: Authenticated
 Full access to the platform
 Access to backend of created website
 Ability to create more pages
@@ -24,7 +24,8 @@ Ability to change template
 Unique address
 Ability to add social media links
 
-Running the Server
+Running the Server				
+
 After cloning or pulling, run npm install
 
 create .env file in my-cms directory and paste the following: 
