@@ -1,0 +1,30 @@
+{
+  "name": "TeamWolfw2-Project",
+  "version": "1.0.0",
+  "description": "Zuri Cohort II Training 2022\r Zuri Team Inc | I4G x Zuri Project Phase | 23-11-22",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./my-cms/index.js",
+    "dev": "nodemon ./my-cms/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lahday/TeamWolfw2-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lahday/TeamWolfw2-Project/issues"
+  },
+  "homepage": "https://github.com/lahday/TeamWolfw2-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.7.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
