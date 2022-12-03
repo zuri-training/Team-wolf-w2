@@ -1,7 +1,9 @@
 # Team-wolf-w2
 My-CMS Project
 
-After cloning or pulling, create .env file in my-cms directory and paste the following: 
+After cloning or pulling, run npm install
+
+create .env file in my-cms directory and paste the following: 
 
 PORT = 3000
 
