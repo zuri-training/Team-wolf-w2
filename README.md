@@ -1,5 +1,5 @@
 # Team-wolf-w2
-weCode
+Website Name: weCode
 
 ## Introduction
 A platform that allows users spin up a basic website - allow as much customizations as possible.
