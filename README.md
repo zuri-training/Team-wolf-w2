@@ -33,4 +33,4 @@ PORT = 3000
 
 MONGODB_URI="mongodb+srv://username:password@cluster0.h6u4kbt.mongodb.net/test"
 
-run npm run dev
+Start the server by running npm start
