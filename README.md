@@ -2,10 +2,10 @@
 weCode
 
 Introduction
+
 A platform that allows users spin up a basic website - allow as much customizations as possible.
 
-Project Name
-my_cms
+Project Name: my_cms
 
 Feature Requests
 
