@@ -1,8 +1,7 @@
 # Team-wolf-w2
 weCode
 
-Introduction
-
+	Introduction
 A platform that allows users spin up a basic website - allow as much customizations as possible.
 
 Project Name: my_cms
@@ -24,7 +23,7 @@ Ability to change template
 Unique address
 Ability to add social media links
 
-Running the Server				
+	Running the Server				
 
 After cloning or pulling, run npm install
 
