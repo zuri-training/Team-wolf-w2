@@ -22,7 +22,7 @@ const connect = async () => {
       if (err) {
         console.log(err.message);
       } else {
-        console.log("Connected");
+        console.log("Database Connected");
       }
     }
   );
