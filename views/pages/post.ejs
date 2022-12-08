@@ -1,16 +1,11 @@
 <%- include('partials/header'); -%>
-
+<head>
+  <title>weCode | post</title>
+</head>
 <h1>This is Post Page</h1>
 <% for (var i = 0; i<posts.length; i++){ %>
-    <li>
-        <%= posts[i].title %> - <strong><%= posts[i].author %></strong>
-    </li>
-<% } %>; 
-
-<% posts.forEach(function(post){ %>
-    <li>
-        <%= post.title %> - <strong><%= post.author %></strong>
-    </li>
-    <% }) %>;
-
-    <%- include('partials/footer'); -%>
+  <li><%= posts[i].title %> - <strong><%= posts[i].author %></strong></li>
+  <% } %>; <% posts.forEach(function(post){ %>
+  <li><%= post.title %> - <strong><%= post.author %></strong></li>
+  <% }) %>; <%- include('partials/footer'); -%></posts.length;
+>
