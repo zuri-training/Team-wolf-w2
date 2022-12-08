@@ -1,0 +1,41 @@
+<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
+<head>
+  <title>weCode | contacts</title>
+</head>
+<link rel="stylesheet" href="/styles/contacts.css" />
+<body>
+  <img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
+</body>
+<form method="POST" action="/contacts" class="">
+  
+</form>
+</div>
+<script>
+$(() => {
+  $("#send").click(() => {
+    sendMessage({
+      name: $("#name").val(),
+      message: $("#message").val(),
+    });
+  });
+  getMessages();
+});
+
+function addMessages(message) {
+  $(`#messages`).append(`
+      <h4> ${message.name} </h4>
+      <p>  ${message.message} </p>`);
+}
+
+function getMessages() {
+  $.get(`http://localhost:9000/messages`, (data) => {
+    data.forEach(addMessages);
+  });
+}
+
+function sendMessage(message) {
+  $.post(`http://localhost:9000/messages`, message);
+}
+</script>
+
+<%- include('../partials/footer'); -%>
