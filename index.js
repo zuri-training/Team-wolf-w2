@@ -161,9 +161,15 @@ app.post("/contacts", (req, res) => {
     res.redirect("/dashboard");
   });
 });
+
+app.get("/aboutus", (req, res) => {
+  res.render("pages/aboutus");
+});
+
 app.get("/aboutus",  (req, res) => {
   res.render("pages/aboutus");
 });
+
 app.get("*", function (req, res) {
   res.render("pages/404");
 });
