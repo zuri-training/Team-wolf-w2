@@ -2,13 +2,13 @@ var express = require("express"),
   mongoose = require("mongoose"),
   passport = require("passport"),
   flash = require("connect-flash"),
-  User = require("./models/user"),
+  User = require("./models/User"),
   Message = require("./models/contact"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
   passportLocalMongoose = require("passport-local-mongoose");
 require("dotenv").config();
-const user = require("./models/user");
+// const user = require("./models/user");
 const connect = require("./config/database");
 connect();
 
@@ -161,9 +161,15 @@ app.post("/contacts", (req, res) => {
     res.redirect("/dashboard");
   });
 });
+
+app.get("/aboutus", (req, res) => {
+  res.render("pages/aboutus");
+});
+
 app.get("/aboutus",  (req, res) => {
   res.render("pages/aboutus");
 });
+
 app.get("*", function (req, res) {
   res.render("pages/404");
 });
