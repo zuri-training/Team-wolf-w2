@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+:root {
+    --primary-blue: #2D0DB1;
+    --dark-gray: #4F4F4F;
+    --light-gray: #9F9F9F;
+    --very-dark-gray: #303030;
+    --gray: #F7F7F7;
+    --white: #fff;
+    --purple: #795FE2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    color: var(--very-dark-gray);
+}
+
+a, p, h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0;}
+a {text-decoration: none; color: inherit;}
+
+header {
+    background-color: var(--light-gray);
+    padding: 2em 0;
+}
+
+.settings-container_side-panel {
+    background-color: var(--white);
+    width: 15%;
+    inset: 0;
+    top: 4em;
+    overflow: auto;
+    padding-top: 2.5em;
+    position: fixed;
+}
+
+.left-pane_top-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.back-flex {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2.5em;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+
+.back-text {
+    font-size: .875rem;
+}
+
+.user-pfp {
+    width: 80px;
+    margin: 0 auto;
+}
+.settings-container_main-panel {
+    background-color: var(--gray);
+    width: 85%;
+    position: relative;
+    left: 15%;
+    min-height: 100vh;
+    padding: 3em 2em;
+}
+
+.user-name {
+    margin-top: 1.5em;
+    margin-bottom: .25em;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.user-email {
+    margin-bottom: 2.5em;
+    color: var(--light-gray);
+    font-size: .75rem;
+}
+
+.settings-btn {
+    font-size: .875rem;
+    padding: 1em;
+    padding-left: 1.5em;
+    width: 100%;
+    position: relative;
+    color: var(--dark-gray);
+}
+
+.settings-btn:hover,
+.settings-btn:active,
+.settings-btn:focus {
+    background-color: var(--purple);
+    color: var(--white);
+}
+.payment-container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.btn{
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    padding: .8em 1em ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card-container{
+    background-color: var(--white);
+    display: grid;
+    place-items: center;
+    margin-top: 2em;
+    padding: 4em 0;
+}
+.bank-card{
+    width: 40%;
+}
+.card-text{
+    margin: 2em 0;
+    text-align: center;
+}
+.card-text2{
+    margin-top: 0;
+    width: 50%;
+}
+.add-payment{
+    color: var(--purple);
+}
