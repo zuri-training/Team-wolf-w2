@@ -1,8 +1,16 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
 <head>
   <title>weCode | 404</title>
+  <link rel="stylesheet" href="/styles/404.css"/>
+  <link rel="stylesheet" href="/styles/SignUp.css"/>
 </head>
-<link rel="stylesheet" href="/styles/Login.css" />
+
 <body>
-  <img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
+    <section class="error-container container">
+        <img class="error-img" src="./images/error-illustration.png" alt="error-illustration">
+        <h4 class="error-heading">Page Not Found</h4>
+        <p class="error-message">
+            Oops! The page you are looking for does not exist. It might have been moved or deleted.
+        </p>
+        <button class="btn error-back-home">GO BACK HOME</button>
+    </section>
 </body>

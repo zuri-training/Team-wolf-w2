@@ -1,10 +1,64 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
 <head>
   <title>weCode | SignUp</title>
-  <head>
-    <title>weCode | signup</title>
-  </head>
-  <link rel="stylesheet" href="/styles/SignUp.css" />
-  <img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
-  <form action="/register" method="post" class=""></form>
+  <link rel="stylesheet" href="/styles/SignUp.css"/>
+  <!-- add fontawesome -->
+    <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
+
+
+<body>
+    <div class="sign-up_container container">
+
+        <!-- left/image section of the sign-up container -->
+        <div class="sign-up_img"></div>
+
+        <!-- right/form section of the sign-up container -->
+        <div class="sign-up_form">
+            <h1 class="sign-up_header">Sign Up</h1>
+            <h4 class="sign-up_subtext"> <a href="/login">Already have an account? <span class="log-in_span">Log in</span></a></h4>
+
+            <!-- form -->
+            <form action="/register" method="post">
+                <!-- full name -->
+                <label for="fname">Full name</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your name" required>
+                <!-- email address -->
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <!-- username -->
+                <label for="uname">Username</label>
+                <input type="text" name="uname" id="uname" placeholder="Enter your username" required>
+                <!-- password -->
+                <label for="password">Password</label>
+                <input
+                type="password" name="password" id="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                placeholder="Enter your password"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required>
+                <!-- password validation message -->
+                <div id="message">
+                    <h4 class="password-contain">Password must contain the following:</h4>
+                    <p id="lowercase" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="uppercase" class="invalid">An <b>uppercase</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <!-- repeat password -->
+                <label for="password">Repeat Password</label>
+                <input type="password" name="repeat_password" id="repeat_password" placeholder="Enter your password again" required>
+                <!-- terms -->
+                <div class="agree-terms_flex flex">
+                    <input type="checkbox" name="" id="agree-terms">
+                    <label for="checkbox" class="agree-terms">I agree to the Terms of User</label>
+                </div>
+                <!-- sign up button -->
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+  <!-- link javascript -->
+  <script src="/public/js/signuplogin.js"></script>
+
+</body>
