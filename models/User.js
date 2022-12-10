@@ -1,12 +1,10 @@
 const { Schema, model } = require("mongoose");
+const bcrpt = require ("bcryptjs");
+const bcryptSalt =process.env.BCRYPRT_SALT
 
 const userSchema = new Schema(
   {
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
+    Name: {
       type: String,
       required: true,
     },
@@ -41,6 +39,10 @@ const userSchema = new Schema(
       required: true,
       select: false,
     },
+    // resetLink: {
+    //   data: String,
+    //   default: ''
+    // },
     refreshToken: String,
   },
   {
@@ -48,6 +50,15 @@ const userSchema = new Schema(
     versionKey: false,
   }
 );
+
+userSchema.pre("save", async function (next) {
+  if (!this.isModified("password")){
+    return next();
+  }
+  const hash = await bcryptSalt.hash(this.password, Number(bcryptSalt));
+  this.password = hash;
+  next()
+});
 
 const userModel = model("User", userSchema);
 
