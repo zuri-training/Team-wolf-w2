@@ -1,5 +1,72 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
 
-<body>
-  <img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
-</body>
+<nav class="navbar">
+  <div class="nav-flex1">
+    <a class="navbar-brand" href="/">
+      <img src="images/weCode.png" alt="" />
+    </a>
+    <div class="collapsey">
+      <ul class="nav">
+        <li class="nav-item">
+          <a href="" class="nav-lin">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/aboutus" class="nav-lin">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/payment" class="nav-lin">Product</a>
+        </li>
+        <li class="nav-item">
+          <a href="/templates" class="nav-lin">Template</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-lin">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nav-flex2">
+    <form action="">
+      <button>
+        <img src="images/search-interface-symbol.png" alt="" />
+      </button>
+      <input
+        type="search"
+        name="search-bar"
+        id=""
+        placeholder="search template"
+      />
+    </form>
+    <div class="d-flex">
+      <% if (!currentUser){ %>
+      <a href="/login" class="nav-link">
+        <button type="button" class="nav-btn1">Log in</button>
+      </a>
+      <a href="/register" class="nav-link">
+        <button type="button" class="nav-btn2">Get Started</button>
+      </a>
+      <% } else{ %>
+      <a href="/profile" class="nav-link">
+        <button type="button" class="nav-btn1">
+          <%= currentUser.username %>
+        </button>
+      </a>
+      <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
+      <a href="/logout" class="nav-link">
+        <button type="button" class="nav-btn1">Logout</button>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+<% if(error && error.length>0){ %>
+<div class="alert alert-primary" role="alert"><%= error %></div>
+<% } else if(success &&success.length>0){ %>
+<div class="alert alert-success" role="alert"><%= success %></div>
+<% } else if(welcome && welcome.length>0){ %>
+<div class="alert alert-info" role="alert"><%= welcome %></div>
+<% }%>

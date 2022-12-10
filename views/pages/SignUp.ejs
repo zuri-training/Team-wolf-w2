@@ -1,10 +1,65 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
 <head>
   <title>weCode | SignUp</title>
-  <head>
-    <title>weCode | signup</title>
-  </head>
-  <link rel="stylesheet" href="/styles/SignUp.css" />
-  <img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
-  <form action="/register" method="post" class=""></form>
+  <link rel="stylesheet" href="/styles/signup.css" />
+  <!-- add fontawesome -->
+  <script
+    src="https://kit.fontawesome.com/51e04b70b4.js"
+    crossorigin="anonymous"
+  ></script>
 </head>
+
+<body>
+  <a class="navbar-brand" href="/">
+    <img src="images/weCode.png" alt="" />
+  </a>
+  <div class="sign-up_container container">
+    <!-- left/image section of the sign-up container -->
+    <div class="sign-up_img"></div>
+
+    <!-- right/form section of the sign-up container -->
+    <div class="sign-up_form">
+      <h1 class="sign-up_header">Sign Up</h1>
+      <h4 class="sign-up_subtext">
+        <a href="/login"
+          >Already have an account? <span class="log-in_span">Log in</span></a
+        >
+      </h4>
+
+      <!-- form -->
+      <form action="/register" method="post">
+        <label for="fullname">Fullname</label>
+        <input type="text" name="fullName" placeholder="John Example" />
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username" />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="example@gmail.com" />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+        <!-- terms -->
+        <div class="agree-terms_flex flex">
+          <input type="checkbox" name="" id="agree-terms" />
+          <label for="checkbox" class="agree-terms"
+            >I agree to the Terms of User</label
+          >
+        </div>
+        <!-- sign up button -->
+        <input type="submit" value="Sign Up" />
+      </form>
+      <div class="login-options_icons">
+        <i class="fa-brands fa-facebook login-icon"></i>
+        <a href="/google"><i class="fa-brands fa-google login-icon"></i></a>
+        <i class="fa-brands fa-apple login-icon"></i>
+        <i class="fa-brands fa-twitter login-icon"></i>
+      </div>
+      <p class="login-options">or login with</p>
+      <!-- <a href="/google">Login with Google</a> -->
+    </div>
+  </div>
+
+  <!-- link javascript -->
+  <!-- <script src="/public/js/signuplogin.js"></script> -->
+</body>
