@@ -233,6 +233,9 @@ app.get("/templates", isLoggedIn, function (req, res) {
   res.render("pages/templates");
 });
 
+app.get("/payment", isLoggedIn, function (req, res) {
+  res.render("pages/payment");
+});
 // 404 Route
 app.get("*", function (req, res) {
   res.render("pages/404");
