@@ -1,9 +1,82 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
+<%- include('../partials/header'); -%> <%- include('../partials/navbar2'); -%>
 <head>
   <title>weCode | dashboard</title>
+  <link rel="stylesheet" href="/styles/dashboard.css" />
 </head>
-<link rel="stylesheet" href="/styles/Login.css" />
 
-<img class="center-image" src="<%= 'images/image9.png' %>" alt="" />
+<body>
+<div class="side-nav">
+        <a href="" class="home">
+            <img src="./home.png" alt="icon"> Home</a>
+        <a href="">
+            <img src="./add_home.png" alt="icon"> Add Templates</a>
+        <a href="">
+            <img src="./dashboard.png" alt="icon"> Templates</a>
+        <a href="">
+            <img src="./insights.png" alt="icon"> Insights</a>
+        <a href="">
+            <img src="./dark_mode.png" alt="icon"> Theme</a>
+    </div>
+    <main>
+        <h6 style="margin-bottom: -2.5%; font-size: 16px;">
+            <span style="color: #605E5C; font-family: 'Inter', sans-serif; opacity: 0.3; font-weight: lighter;">Dashboard > Home > </span><span style="color: #323130; opacity: 0.7;">Home</span>
+        </h6>
+        <div class="welcome">
+            <p style="margin-right: 45%; font-size: 39px; white-space: nowrap;">Welcome, Matthew</p>
+            <div class="select" style="margin-top: 3%;">Site Actions <i class="fa fa-sort-desc" aria-hidden="true" style="margin-left: 6%;"></i> </div>
+            <div class="customize" style="margin-top: 3%;">Customize Site <i class="fa fa-pencil" aria-hidden="true" style="margin-left: 6%;"></i></div>
+        </div>
+        <p style="margin-top: -3%; font-size: 20px; margin-bottom: 3%;">It's personalized for your site type: <u>Consultant</u></p>
+        <div class="column">
+            <p>Want a Free Plan? Compare Plans</p>
+            <p style="padding-top: 4%;">Not connected? Connect Your Own Domain</p>
+            <p style="padding-top: 4%;">No Business Email? Get a Business Email</p>
+            <p style="padding-top: 4%;"> <i class="fa fa-info-circle" aria-hidden="true" style="margin-right: 3%;"></i> Business info</p>
+        </div>
 
-<%- include('../partials/footer'); -%>
+        <section>
+            <div>
+                <div style="padding: 1% 0; display: flex; white-space: nowrap; margin-bottom: 1%;">
+                    <span style="margin-right: 43%; font-size: 25px;">Let's set up your business</span>
+                    <span style="margin-right: 1%; font-size: 16px;">1/6 completed</span>
+                    <div class="progress-bar" style="background-color: #EEEEEE; width: 20%; height: 10px; margin-top: 0.5%;">
+                        <div class="inner" style="height: 100%; width: 32%; background-color: #360FD4"></div>
+                    </div>
+                    <!-- <label for="progress" style="margin-right: 1%;">1/6 completed</label>
+                    <progress id="progress" value="30" max="100">30%</progress> -->
+                </div>
+
+                <div class="one">
+                    <span class="main-words" style="margin-right: 71.5%;">
+                        <i class="fa fa-check" aria-hidden="true" style="color:  #18A91E;"></i><s>Update your business type</s></span>
+                    <span class="purple-words">Update site type</span>
+                </div>
+                <div class="two">
+                    <span class="main-words" style="margin-right: 83.5%;">
+                        <i class="fa fa-square" aria-hidden="true" style="color: #360FD4; font-size: 12px;"></i> Add Service</span>
+                    <span class="purple-words">Add Service</span>
+                </div>
+                <div class="three">
+                    <span class="main-words" style="margin-right: 69%;">
+                        <i class="fa fa-square" aria-hidden="true" style="color: #360FD4; font-size: 12px;"></i> Set up your payment methods</span>
+                    <span class="purple-words">Set up payments</span>
+                </div>
+                <div class="four">
+                    <span class="main-words" style="margin-right: 71.5%;">
+                        <i class="fa fa-square" aria-hidden="true" style="color: #360FD4; font-size: 12px;"></i> Connect a custom domain</span>
+                    <span class="purple-words"> Connect Domain</span>
+                </div>
+                <div class="five">
+                    <span class="main-words" style="margin-right: 76.5%;">
+                        <i class="fa fa-square" aria-hidden="true" style="color: #360FD4; font-size: 12px;"></i> Design your website</span>
+                    <span class="purple-words">Customize Site</span>
+                </div>
+                <div class="six">
+                    <span class="main-words" style="margin-right: 78.5%;">
+                        <i class="fa fa-square" aria-hidden="true" style="color: #360FD4; font-size: 12px;"></i> Get found on Google</span>
+                    <span class="purple-words">Get started</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
