@@ -7,6 +7,11 @@ var express = require("express"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
   passportLocalMongoose = require("passport-local-mongoose");
+
+var authRoutes = require("./routes/authRoutes"),
+  contactRoutes = require("./routes/contactRoutes"),
+  indexRoutes = require("./routes/indexRoutes");
+
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
 const cookieSession = require("cookie-session");
@@ -42,29 +47,6 @@ app.use(passport.session());
 passport.use(User.createStrategy());
 passport.use(new localStrategy(User.authenticate()));
 
-// passport.use(
-//   new LocalStrategy(
-//     {
-//       usernameField: "email",
-//       passwordField: "password",
-//     },
-//     function (email, password, done) {
-//       // verify the username and password
-//       User.findOne({ email: email }, function (err, user) {
-//         if (err) {
-//           return done(err);
-//         }
-//         if (!user) {
-//           return done(null, false);
-//         }
-//         if (!user.verifyPassword(password)) {
-//           return done(null, false);
-//         }
-//         return done(null, user);
-//       });
-//     }
-//   )
-// );
 // passport.serializeUser(User.serializeUser());
 // passport.deserializeUser(User.deserializeUser());
 passport.serializeUser(function (user, done) {
@@ -84,162 +66,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(authRoutes);
+app.use(contactRoutes);
+app.use(indexRoutes);
 // ===============
 // ROUTES
 // ===============
-
-// Home Route
-app.get("/", function (req, res) {
-  res.render("pages/home", { currentUser: req.user });
-});
-// About Us Route
-app.get("/aboutus", function (req, res) {
-  res.render("pages/aboutus");
-});
-
-// Google Login Route
-app.get(
-  "/google",
-  passport.authenticate("google", {
-    scope: ["email", "profile"],
-  })
-);
-app.get(
-  "/google/callback",
-  passport.authenticate("google", {
-    failureRedirect: "/failed",
-  }),
-  function (req, res) {
-    res.redirect("/success");
-  }
-);
-app.get("/failed", (req, res) => {
-  // res.send("Failed")
-  res.render("pages/failed");
-});
-app.get("/success", isLoggedIn, (req, res) => {
-  res.redirect("/");
-  // res.render("pages/success");
-});
-
-// Sign Up Route
-app.get("/register", function (req, res) {
-  res.render("pages/signup");
-});
-app.post("/register", (req, res) => {
-  User.register(
-    new User(
-      { username: req.body.username },
-      { fullname: req.body.fullname },
-      { email: req.body.email }
-    ),
-    req.body.password,
-    (err, user) => {
-      if (err) {
-        req.flash("error", "Username already exists");
-        return res.render("pages/signup");
-      }
-      // if (req.body.password == req.body.repeat_password) {
-      passport.authenticate("local")(req, res, () => {
-        req.flash("welcome", "Welcome " + req.body.username);
-        res.redirect("/");
-      });
-    }
-    // }
-  );
-  // res.status(200).json({ message: "Registered successfully", User: User });
-});
-// Change Password Route
-app.get("/changepassword", (req, res) => res.render("pages/changepassword"));
-app.post("/changepassword", function (req, res) {
-  User.findByUsername(req.body.username, (err, user) => {
-    if (err) {
-      res.send(err);
-    } else {
-      user.changePassword(
-        req.body.oldpassword,
-        req.body.newpassword,
-        function (err) {
-          if (err) {
-            res.send(err);
-          } else {
-            res.redirect("/dashboard");
-          }
-        }
-      );
-    }
-  });
-});
-// Reset Password Route
-app.get("/resetpassword", (req, res) => res.render("pages/resetpassword"));
-// Login Route
-app.get("/login", function (req, res) {
-  res.render("pages/login");
-});
-app.post(
-  "/login",
-  passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/login",
-  }),
-  (req, res) => {
-    // res.status(200).json({ message: "Login successfully" });
-    req.flash("success", "You login successfully");
-  }
-);
-// Dashboard Route
-app.get("/dashboard", isLoggedIn, function (req, res) {
-  res.render("pages/dashboard", { currentUser: req.user });
-});
-// Logout Route
-app.get("/logout", function (req, res) {
-  req.logout(function (err) {
-    if (err) {
-      console.log(err);
-    }
-    req.flash("success", "You logged out, please login in again");
-    res.redirect("/");
-  });
-});
-// isLoggedin Function
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  req.flash("error", "Please Login First");
-  res.redirect("/login");
-}
-// Contacts Route
-app.get("/contacts", isLoggedIn, function (req, res) {
-  res.render("pages/contacts");
-});
-app.post("/contacts", (req, res) => {
-  var message = new Message(req.body);
-  message.save((err) => {
-    if (err) {
-      sendStatus(500);
-      console.log(err);
-    } else
-      req.flash(
-        "success",
-        "Hi " + req.body.names + ", Thanks for contacting us"
-      );
-    req.flash("Thanks for contacting us");
-    // res.status(200).json({ message: "Thanks" });
-    res.redirect("/dashboard");
-  });
-});
-app.get("/templates", isLoggedIn, function (req, res) {
-  res.render("pages/templates");
-});
-
-app.get("/payment", isLoggedIn, function (req, res) {
-  res.render("pages/payment");
-});
-// 404 Route
-app.get("*", function (req, res) {
-  res.render("pages/404");
-});
 
 // Listen Port
 const PORT = process.env.PORT || 3000;
