@@ -11,19 +11,19 @@
           <a href="" class="nav-lin">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/aboutus" class="nav-lin">About</a>
+          <a href="/templates" class="nav-lin">Products</a>
         </li>
         <li class="nav-item">
-          <a href="/payment" class="nav-lin">Product</a>
+          <a href="/payment" class="nav-lin">Features</a>
         </li>
         <li class="nav-item">
-          <a href="/templates" class="nav-lin">Template</a>
+          <a href="/templates" class="nav-lin">Resources</a>
         </li>
         <li class="nav-item">
-          <a href="/subscription" class="nav-lin">Resources</a>
+          <a href="/subscription" class="nav-lin">Subscriptions</a>
         </li>
         <li class="nav-item">
-          <a href="/sidebar" class="nav-link">More</a>
+          <a href="/aboutus" class="nav-link">About</a>
         </li>
       </ul>
     </div>
@@ -42,11 +42,11 @@
     </form>
     <div class="d-flex">
       <% if (!currentUser){ %>
-      <a href="/login" class="nav-link">
-        <button type="button" class="nav-btn1">Log in</button>
-      </a>
       <a href="/register" class="nav-link">
-        <button type="button" class="nav-btn2">Get Started</button>
+        <button type="button" class="nav-btn1">Register</button>
+      </a>
+      <a href="/login" class="nav-link">
+        <button type="button" class="nav-btn2">Login</button>
       </a>
       <% } else{ %>
       <a href="/profile" class="nav-link">

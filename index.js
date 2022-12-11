@@ -2,7 +2,7 @@ var express = require("express"),
   mongoose = require("mongoose"),
   passport = require("passport"),
   flash = require("connect-flash"),
-  User = require("./models/user"),
+  User = require("./models/User"),
   Message = require("./models/contact"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
@@ -17,7 +17,7 @@ const session = require("express-session");
 const cookieSession = require("cookie-session");
 require("./pass");
 require("dotenv").config();
-const user = require("./models/user");
+// const user = require("./models/user");
 const connect = require("./config/database");
 connect();
 

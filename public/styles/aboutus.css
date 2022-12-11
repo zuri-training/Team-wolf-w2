@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-.html, body{
+/* .html, body{
     background-color:  #F5F5F5;
 }
 .logo{
@@ -22,12 +22,12 @@
     font-weight: 400;
     font-size: 20px;
     color: #FFFFFF;   
-}
+} */
 .social{
     color: #FFFFFF !important;
 }
-.nav-about{
-    display: flex;
+/* .nav-about{
+    display: block;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
@@ -35,17 +35,27 @@
     font-size: 30px;
     padding: 20px 0;
     color: #4F4F4F;
+} */
+.about{
+    padding: 50px 30px;
 }
-.nav-about1{
-    display: flex;
-align-items: center;
-justify-content: center;
+.about1{    
     font-family: 'Roboto', sans-serif;
     font-size: 15px; 
-    color: #5837DB;
+    color: #5837DB;    
+}
+.about1 h2{
+    font-weight: bold;
+    text-align: left;
+}
+.about1 p{
+    color: #240A8D;
+    font-size: 16px;
+    
+    margin: 0;
 }
 .nav-about2{
-    display: flex;
+    display: fle;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto', sans-serif;

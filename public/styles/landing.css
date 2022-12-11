@@ -17,6 +17,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 180px 0;    
+    z-index: -1;
   }
   
   .banner_text {
@@ -86,6 +87,7 @@
   }
   .landing1{
     background-color: white;
+    z-index: -1;
   }
   .industry-features {    
     font-size: 2.5em;
@@ -96,6 +98,7 @@
     align-items: center;
     justify-content: center;
     padding: 30px 0;
+    z-index: -1;
   }
   
   .industry-container {

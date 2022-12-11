@@ -1,12 +1,12 @@
 const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
-var User = require("../models/user"),
+var User = require("../models/User"),
   passport = require("passport");
 
 // Sign Up Route
 router.get("/register", function (req, res) {
-  res.render("pages/signup");
+  res.render("pages/SignUp");
 });
 router.post("/register", (req, res) => {
   User.register(
@@ -19,7 +19,7 @@ router.post("/register", (req, res) => {
     (err, user) => {
       if (err) {
         req.flash("error", "Username already exists");
-        return res.render("pages/signup");
+        return res.render("pages/SigUp");
       }
       // if (req.body.password == req.body.repeat_password) {
       passport.authenticate("local")(req, res, () => {
@@ -57,13 +57,13 @@ router.get("/success", isLoggedIn, (req, res) => {
 });
 // Login Route
 router.get("/login", function (req, res) {
-  res.render("pages/login");
+  res.render("pages/Login");
 });
 router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/",
-    failureRedirect: "/login",
+    failureRedirect: "/Login",
   }),
   (req, res) => {
     // res.status(200).json({ message: "Login successfully" });
@@ -110,7 +110,7 @@ function isLoggedIn(req, res, next) {
     return next();
   }
   req.flash("error", "Please Login First");
-  res.redirect("/login");
+  res.redirect("/Login");
 }
 
 module.exports = router;
