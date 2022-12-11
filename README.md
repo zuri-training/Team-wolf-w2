@@ -40,7 +40,7 @@ Project Name: my_cms
 - To install packages: npm install
 - Open a .env file in the root/cloned directory and put the following inside it
   - PORT = 3000
-  - MONGODB_URI="mongodb+srv://quadri_usman:usman123@cluster0.h6u4kbt.mongodb.net/test"
+  - MONGODB_URI="mongodb://localhost:27017/cms_app"
 - To run the server: npm run dev
 
 ### Endpoints
