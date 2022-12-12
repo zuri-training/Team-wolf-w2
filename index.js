@@ -173,6 +173,9 @@ app.get("/aboutus",  (req, res) => {
 app.get("*", function (req, res) {
   res.render("pages/404");
 });
+app.get("*", function (req, res) {
+  res.render("pages/subscription");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>
