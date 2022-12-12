@@ -1,41 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-/* .html, body{
-    background-color:  #F5F5F5;
-}
-.logo{
-    font-family:  'Germania One', cursive;
-    font-weight: 400;
-    font-size: 31px;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #777777;
-    color: #FFFFFF;;
 
-}
-.nav-link{
-    text-decoration: none;
-    margin-left: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #FFFFFF;   
-} */
 .social{
     color: #FFFFFF !important;
 }
-/* .nav-about{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    padding: 20px 0;
-    color: #4F4F4F;
-} */
+
 .about{
     padding: 50px 30px;
 }
