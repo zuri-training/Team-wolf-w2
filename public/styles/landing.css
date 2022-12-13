@@ -20,11 +20,11 @@ main {
 .banner {
   height: 90vh;
   width: 100vw;
-  background: url(/images/banner.png), linear-gradient(
+  background:linear-gradient(115deg,
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)
-    );
+    ), url(/images/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@ main {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   text-align: center;
   margin: auto;
   gap: 1em;
@@ -54,7 +54,7 @@ main {
   font-family: "Roboto";
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .btnA {
@@ -90,12 +90,13 @@ svg {
   stroke-dashoffset: -480;
 }
 
-.btnA span {
+.btnA a {
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
   font-size: 18px;
   color: white;
+  text-decoration: none;
 }
 
 .industry-features {

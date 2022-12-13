@@ -9,19 +9,13 @@ body {
   max-width: 100vw;
 }
 
-header {
-  background: #21144e;
-  height: 10vh;
-  padding: 0 4%;
-  width: 100vw;
-}
-
 .navbar {
-  height: 10vh;
+  background: #21144e;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+ flex-direction: column;
+  gap: 0.5em;
   color: white;
+  padding: 10px 0;
 }
 
 .navbar-brand {
@@ -31,22 +25,49 @@ header {
   font-size: 2em;
 }
 
+.div1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+  padding-right: 2%;
+}
+.div1 a {
+   color: white;
+   text-decoration: none;
+   font-family: "Inter";
+   font-weight: bold;
+   font-size: 14px;
+}
+
+.div1 a:hover {
+  text-decoration: underline;
+}
+
+.div2 {
+  display: flex;
+  padding: 0px 4%;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
 .nav-flex1 {
   display: flex;
   align-items: center;
-  gap: 3vw;
+   gap: 1em;
+  width: 43%;
 }
 
 .nav-flex2 {
   display: flex;
-  gap: 3vw;
-  align-items: center;
+  gap: 1em;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1em;
+  gap: 2em;
 }
 
 .nav-link {
@@ -62,7 +83,6 @@ nav ul {
 .d-flex {
   display: flex;
   align-items: center;
-  gap: 1em;
 }
 
 form {
@@ -71,10 +91,9 @@ form {
   align-items: center;
   gap: 0.5em;
   border: 1px solid #fff;
-  color: white;
+  /* color: white; */
   padding: 7px 10px;
   border-radius: 10px;
-  width: 150%;
 }
 
 form > button {
@@ -95,7 +114,7 @@ input {
   outline: 0;
   padding: 0 5px;
   height: 25px;
-  width: 100%;
+  width: 250px;
 }
 
 ::placeholder {
@@ -114,10 +133,7 @@ input {
   border: 1px solid #623cea;
   background: transparent;
   color: white;
-  /* padding: 5px 10px; */
-  width: 70px;
-  height: 30px;
-  min-width: 90%;
+  padding: 5px 10px;
   border-radius: 5px;
   font-family: "Inter";
   font-size: 1em;
@@ -128,9 +144,7 @@ input {
   border: 1px solid #623cea;
   background: #623cea;
   color: white;
-  width: 110px;
-  height: 30px;
-  min-width: 90%;
+  padding: 5px 10px;
   border-radius: 5px;
   font-family: "Inter";
   font-size: 1em;

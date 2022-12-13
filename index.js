@@ -61,7 +61,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/register", function (req, res) {
-  res.render("pages/signup");
+  res.render("pages/SignUp");
 });
 app.post("/register", (req, res) => {
   User.register(
@@ -74,11 +74,11 @@ app.post("/register", (req, res) => {
     (err, user) => {
       if (err) {
         req.flash("error", "Username already exists");
-        return res.render("pages/signup");
+        return res.render("pages/SignUp");
       }
       passport.authenticate("local")(req, res, () => {
         req.flash("welcome", "Welcome " + req.body.username);
-        res.redirect("/dashboard");
+        res.redirect("/");
       });
     }
   );
@@ -97,7 +97,7 @@ app.post("/changepassword", function (req, res) {
           if (err) {
             res.send(err);
           } else {
-            res.redirect("/dashboard");
+            res.redirect("/");
           }
         }
       );
@@ -112,7 +112,7 @@ app.get("/login", function (req, res) {
 app.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/dashboard",
+    successRedirect: "/",
     failureRedirect: "/login",
   }),
   (req, res) => {
@@ -166,15 +166,21 @@ app.get("/aboutus", (req, res) => {
   res.render("pages/aboutus");
 });
 
-app.get("/aboutus",  (req, res) => {
-  res.render("pages/aboutus");
+app.get("/settings", (req, res) => {
+  res.render("pages/settings");
 });
+
+app.get("/subscription", function (req, res) {
+  res.render("pages/subscription");
+});
+
+app.get("/template", function (req, res) {
+  res.render("pages/template");
+});
+
 
 app.get("*", function (req, res) {
   res.render("pages/404");
-});
-app.get("*", function (req, res) {
-  res.render("pages/subscription");
 });
 
 const PORT = process.env.PORT || 3000;
