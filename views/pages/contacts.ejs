@@ -1,13 +1,26 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar'); -%>
+
 <head>
   <title>weCode | contacts</title>
 </head>
-<link rel="stylesheet" href="/styles/contacts.css" />
-<a class="navbar-brand" href="/">
+<!-- <link rel="stylesheet" href="/styles/contacts.css" />
+<link rel="stylesheet" href="/styles/SignUp.css" /> -->
+<!-- <a class="navbar-brand" href="/">
   <img src="images/weCode.png" alt="" />
-</a>
+</a> -->
 <form method="POST" action="/contacts" class="">
-  
+  <header id="contact-head">
+    <h1>Contact Us</h1>
+    <br />
+  </header>
+  <input type="text" id="name" placeholder="Full Names" name="names" /><br>
+  <textarea
+    name="message"
+    placeholder="Message"
+    id=""
+    cols="30"
+    rows="10"
+  ></textarea><br>
+  <button type="submit" id="submit">Send</button>  
 </form>
 </div>
 <script>
@@ -38,4 +51,4 @@ function sendMessage(message) {
 }
 </script>
 
-<%- include('../partials/footer'); -%>
+<!-- <%- include('../partials/footer'); -%> -->

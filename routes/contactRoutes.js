@@ -1,4 +1,3 @@
-const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
 var Message = require("../models/contact");
@@ -20,7 +19,7 @@ router.post("/contacts", (req, res) => {
       );
     req.flash("Thanks for contacting us");
     // res.status(200).json({ message: "Thanks" });
-    res.redirect("/dashboard");
+    res.redirect("/");
   });
 });
 // isLoggedin Function

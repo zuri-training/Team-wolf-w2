@@ -85,7 +85,8 @@ router.post("/changepassword", function (req, res) {
           if (err) {
             res.send(err);
           } else {
-            res.redirect("/dashboard");
+            req.flash("success", "Please login again");
+            res.redirect("/login");
           }
         }
       );
