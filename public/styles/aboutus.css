@@ -6,37 +6,43 @@
 body{
    font-family: 'Roboto', sans-serif;
    background-color: #FFFFFF;
+   width: 100%;
 }
 .aboutus-head{
-   background-color:  #7C5DED;
+   background-color:  #5a3e92;
+   height: 400px;
+   padding: 130px 60px;
 }
+
 .head-h{
-   font-size: 48px;
-   font-weight: 700;
-   line-height: 56px;
-   padding: 1rem;
-   padding-top: 10rem;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 25px;
    color:  #FFFFFF;
 }
 .head-p{
-   padding: 1rem;
-  padding-bottom: ;
   color:  #FFFFFF;
-}
-.text{
- text-align: center;
+  padding-top: 25px;
 }
 .text-head{
-   font-size: 45px;
-   font-weight: 400;
+   font-size: 28px;
+   font-weight: 220;
    background-color: #221144;
    color:  #FFFFFF;
    padding: 1rem;
+   text-align: center;
+   width: 100%;
 }
 .text-p{
    margin: 5px 0px 0px;
-   line-height: 26px;
+   line-height: 25px;
    font-family: 'Roboto', sans-serif;
-   font-weight: 400;
-   font-size: 20px;
+   font-weight: 20;
+   font-size: 15px;
+   text-align: justify;
+   width: 95%;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   padding-left: 60px;
+
 }
