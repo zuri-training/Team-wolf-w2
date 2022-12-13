@@ -64,7 +64,7 @@ body {
   gap: 1em;
 }
 
-nav ul {
+.navbar ul {
   display: flex;
   list-style: none;
   gap: 2em;
@@ -85,7 +85,7 @@ nav ul {
   align-items: center;
 }
 
-form {
+.form {
   background-color: #21144e;
   display: flex;
   align-items: center;
@@ -96,18 +96,18 @@ form {
   border-radius: 10px;
 }
 
-form > button {
+.form > button {
   background: transparent;
   border: 0;
 }
 
-form img {
+.form img {
   filter: invert(100%) sepia(0%) saturate(7497%) hue-rotate(172deg)
     brightness(101%) contrast(104%);
   width: 18px;
 }
 
-input {
+.form input {
   background-color: #21144e;
   color: white;
   border: 0;
@@ -117,7 +117,7 @@ input {
   width: 250px;
 }
 
-::placeholder {
+.form ::placeholder {
   color: white;
   opacity: 0.8;
 }

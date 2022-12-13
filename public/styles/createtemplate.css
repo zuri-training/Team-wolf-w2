@@ -28,12 +28,6 @@ body {
     color: var(--very-dark-gray);
 }
 
-/* navbar */
-header {
-    background-color: var(--dark-blue);
-    padding: 2em 0;
-}
-
 a, p, h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0;}
 p {line-height: 1.5rem;}
 a {text-decoration: none; color: inherit;}
@@ -269,7 +263,7 @@ ul, li {list-style: none;}
 .template-frame_grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-areas: 
+    grid-template-areas:
     'a b c'
     'd e f';
     gap: 2em;
@@ -290,27 +284,27 @@ ul, li {list-style: none;}
 }
 
 .template-frame_image1 {
-    background-image: url('/public/images/ct-image-1.png');
+    background-image: url('images/ct-image-1.png');
 }
 
 .template-frame_image2 {
-    background-image: url('/public/images/ct-image-2.png');
+    background-image: url('images/ct-image-2.png');
 }
 
 .template-frame_image3 {
-    background-image: url('/public/images/ct-image-3.png');
+    background-image: url('images/ct-image-3.png');
 }
 
 .template-frame_image4 {
-    background-image: url('/public/images/ct-image-3.png');
+    background-image: url('images/ct-image-3.png');
 }
 
 .template-frame_image5 {
-    background-image: url('/public/images/ct-image-5.png');
+    background-image: url('images/ct-image-5.png');
 }
 
 .template-frame_image6 {
-    background-image: url('/public/images/ct-image-6.png');
+    background-image: url('images/ct-image-6.png');
 }
 
 .template-frame_image-header {
@@ -446,7 +440,7 @@ ul, li {list-style: none;}
 
     .template-frame_grid-container {
         grid-template-columns: 1fr;
-        grid-template-areas: 
+        grid-template-areas:
         'a'
         'b'
         'c'

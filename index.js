@@ -7,27 +7,12 @@ var express = require("express"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
   passportLocalMongoose = require("passport-local-mongoose");
-
-var authRoutes = require("./routes/authRoutes"),
-  contactRoutes = require("./routes/contactRoutes"),
-  indexRoutes = require("./routes/indexRoutes");
-
-const LocalStrategy = require("passport-local").Strategy;
-const session = require("express-session");
-const cookieSession = require("cookie-session");
-require("./pass");
 require("dotenv").config();
 const connect = require("./config/database");
 connect();
 
 var app = express();
 app.set("view engine", "ejs");
-// app.use(
-//   cookieSession({
-//     name: "google-auth-session",
-//     keys: ["key1", "key2"],
-//   })
-// );
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -37,7 +22,7 @@ app.use(
   require("express-session")({
     secret: "Welcome",
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
   })
 );
 
@@ -45,9 +30,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 passport.use(User.createStrategy());
 passport.use(new localStrategy(User.authenticate()));
-
-// passport.serializeUser(User.serializeUser());
-// passport.deserializeUser(User.deserializeUser());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
@@ -59,15 +43,13 @@ passport.deserializeUser(function (id, done) {
 
 app.use(function (req, res, next) {
   res.locals.currentUser = req.user;
+  res.locals.NINverified = req.number;
   res.locals.error = req.flash("error");
   res.locals.success = req.flash("success");
   res.locals.welcome = req.flash("welcome");
   next();
 });
 
-app.use(authRoutes);
-app.use(contactRoutes);
-app.use(indexRoutes);
 // ===============
 // ROUTES
 // ===============
@@ -78,7 +60,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/register", function (req, res) {
-  res.render("pages/SignUp");
+  res.render("pages/signup");
 });
 app.post("/register", (req, res) => {
   User.register(
@@ -91,11 +73,11 @@ app.post("/register", (req, res) => {
     (err, user) => {
       if (err) {
         req.flash("error", "Username already exists");
-        return res.render("pages/SignUp");
+        return res.render("pages/signup");
       }
       passport.authenticate("local")(req, res, () => {
         req.flash("welcome", "Welcome " + req.body.username);
-        res.redirect("/");
+        res.redirect("/dashboard");
       });
     }
   );
@@ -114,7 +96,7 @@ app.post("/changepassword", function (req, res) {
           if (err) {
             res.send(err);
           } else {
-            res.redirect("/");
+            res.redirect("/dashboard");
           }
         }
       );
@@ -129,7 +111,7 @@ app.get("/login", function (req, res) {
 app.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/dashboard",
     failureRedirect: "/login",
   }),
   (req, res) => {
@@ -195,6 +177,9 @@ app.get("/template", function (req, res) {
   res.render("pages/template");
 });
 
+app.get("/createtemplate", function (req, res) {
+  res.render("pages/createtemplate");
+});
 
 app.get("*", function (req, res) {
   res.render("pages/404");
