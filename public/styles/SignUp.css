@@ -52,7 +52,7 @@ a {text-decoration: none; color: inherit;}
 
 .sign-up_img {
     width: 50%;
-    background-image: url('/public/images/signup-illustration.png');
+    background-image: url('/images/signup-illustration.png');
     object-fit: cover;
     background-position: center;
     background-size: 90%;

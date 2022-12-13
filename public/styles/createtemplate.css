@@ -33,7 +33,7 @@ p {line-height: 1.5rem;}
 a {text-decoration: none; color: inherit;}
 ul, li {list-style: none;}
 
-.container {
+.ct-container {
     padding: 2em 0;
     margin: 0 auto;
     width: 85%;
@@ -224,18 +224,18 @@ ul, li {list-style: none;}
     display: none;
 }
 
-.nav-group {
+.ct-nav-group {
     display: flex;
     align-items: center;
     gap: 3em;
     font-size: 1rem;
 }
 
-.nav-item {
+.ct-nav-item {
     color: #623CEA;
 }
 
-.nav-item:hover {
+.ct-nav-item:hover {
     text-decoration: underline;
 }
 
@@ -284,27 +284,27 @@ ul, li {list-style: none;}
 }
 
 .template-frame_image1 {
-    background-image: url('images/ct-image-1.png');
+    background-image: url('/images/ct-image-1.png');
 }
 
 .template-frame_image2 {
-    background-image: url('images/ct-image-2.png');
+    background-image: url('/images/ct-image-2.png');
 }
 
 .template-frame_image3 {
-    background-image: url('images/ct-image-3.png');
+    background-image: url('/images/ct-image-3.png');
 }
 
 .template-frame_image4 {
-    background-image: url('images/ct-image-3.png');
+    background-image: url('/images/ct-image-3.png');
 }
 
 .template-frame_image5 {
-    background-image: url('images/ct-image-5.png');
+    background-image: url('/images/ct-image-5.png');
 }
 
 .template-frame_image6 {
-    background-image: url('images/ct-image-6.png');
+    background-image: url('/images/ct-image-6.png');
 }
 
 .template-frame_image-header {
@@ -336,7 +336,7 @@ ul, li {list-style: none;}
 
 @media (max-width: 700px) {
 
-    .container {
+    .ct-container {
         width: 90%;
     }
 
@@ -434,7 +434,7 @@ ul, li {list-style: none;}
         display: block;
     }
 
-    .nav-group {
+    .ct-nav-group {
         display: none;
     }
 
