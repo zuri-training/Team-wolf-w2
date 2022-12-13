@@ -1,7 +1,10 @@
 <head>
-  <title>weCode | SignUp</title>
-  <link rel="stylesheet" href="/styles/SignUp.css"/>
-  <!-- add fontawesome -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weCode | Sign Up</title>
+    <link rel="stylesheet" href="/styles/SignUp.css"/>
+    <!-- add fontawesome -->
     <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -14,6 +17,12 @@
 
         <!-- right/form section of the sign-up container -->
         <div class="sign-up_form">
+
+            <!-- logo -->
+            <aside class="signup-logo_container">
+                <img class="sign-up_logo" src="/public/images/weCodeLogo.png" alt="weCode Logo">
+            </aside>
+
             <h1 class="sign-up_header">Sign Up</h1>
             <h4 class="sign-up_subtext"> <a href="/login">Already have an account? <span class="log-in_span">Log in</span></a></h4>
 
@@ -25,9 +34,6 @@
                 <!-- email address -->
                 <label for="email">Email Address</label>
                 <input type="email" name="email" id="email" placeholder="Enter your email address" required>
-                <!-- username -->
-                <label for="uname">Username</label>
-                <input type="text" name="uname" id="uname" placeholder="Enter your username" required>
                 <!-- password -->
                 <label for="password">Password</label>
                 <input
@@ -45,7 +51,7 @@
                     <p id="length" class="invalid">Minimum <b>8 characters</b></p>
                 </div>
                 <!-- repeat password -->
-                <label for="password">Repeat Password</label>
+                <label for="password">Re-enter Password</label>
                 <input type="password" name="repeat_password" id="repeat_password" placeholder="Enter your password again" required>
                 <!-- terms -->
                 <div class="agree-terms_flex flex">
@@ -58,7 +64,6 @@
         </div>
     </div>
 
-  <!-- link javascript -->
-  <script src="/public/js/signuplogin.js"></script>
+    <script src="/public/js/signuplogin.js"></script>
 
 </body>
