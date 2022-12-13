@@ -46,3 +46,7 @@ Project Name: my_cms
 ### Endpoints
 
 - The api endpoints can be found in the api.rest file
+
+### Testing/Hosting
+
+- The website is currently being hosted on AWS with the URL: http://ec2-34-239-165-230.compute-1.amazonaws.com:3000/

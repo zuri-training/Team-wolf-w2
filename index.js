@@ -7,11 +7,11 @@ var express = require("express"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
   passportLocalMongoose = require("passport-local-mongoose");
-
+const userRoutes = require("./routes/userRoutes");
+const cors = require("cors");
 var authRoutes = require("./routes/authRoutes"),
   contactRoutes = require("./routes/contactRoutes"),
   indexRoutes = require("./routes/indexRoutes");
-
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
 const cookieSession = require("cookie-session");
@@ -28,6 +28,7 @@ app.set("view engine", "ejs");
 //     keys: ["key1", "key2"],
 //   })
 // );
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -64,7 +65,7 @@ app.use(function (req, res, next) {
   res.locals.welcome = req.flash("welcome");
   next();
 });
-
+app.use("/api/v1", userRoutes);
 app.use(authRoutes);
 app.use(contactRoutes);
 app.use(indexRoutes);

@@ -94,6 +94,9 @@ router.post("/changepassword", function (req, res) {
   });
 });
 // Reset Password Route
+router.get("/requestresetpassword", (req, res) =>
+  res.render("pages/requestresetpassword")
+);
 router.get("/resetpassword", (req, res) => res.render("pages/resetpassword"));
 // Logout Route
 router.get("/logout", function (req, res) {
