@@ -1,7 +1,10 @@
 <head>
-  <title>weCode | Login</title>
-  <link rel="stylesheet" href="/styles/SignUp.css"/>
-  <!-- add fontawesome -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weCode | Login</title>
+    <link rel="stylesheet" href="/styles/SignUp.css"/>
+    <!-- add fontawesome -->
     <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
 
@@ -10,6 +13,12 @@
 
         <!-- left/form section of the sign-up container -->
         <div class="sign-up_form login_form">
+
+            <!-- logo -->
+            <aside class="signup-logo_container">
+                <img class="sign-up_logo" src="/public/images/weCodeLogo.png" alt="weCode Logo">
+            </aside>
+
             <h1 class="sign-up_header">Log in</h1>
             <h4 class="sign-up_subtext"> <a href="/register">`Don't have an account yet? <span class="log-in_span">Sign up</span></a></h4>
 
@@ -21,25 +30,19 @@
                 <!-- password -->
                 <label for="password">Full name</label>
                 <input type="password" name="password" placeholder="Enter your password">
+                <!-- remember me -->
+                <div class="agree-terms_flex flex">
+                    <input type="checkbox" name="" id="agree-terms">
+                    <label for="checkbox" class="agree-terms">Remember Me</label>
+                </div>
                 <!-- login button -->
                 <input type="submit" class="login_btn" value="Log in">
                 <!-- forgot password -->
                 <label for="btn forgot-pass" class="agree-terms forgot-pass">Forgot password?</label>
             </form>
-
-            <!-- login options -->
-            
-            <div class="login-options_icons">
-                <i class="fa-brands fa-facebook login-icon"></i>
-                <i class="fa-brands fa-google login-icon"></i>
-                <i class="fa-brands fa-apple login-icon"></i>
-                <i class="fa-brands fa-twitter login-icon"></i>
-            </div>
-            <p class="login-options">or login with</p>
         </div>
 
         <!-- right/image section of the sign-up container -->
         <div class="sign-up_img"></div>
     </div>
 </body>
-
