@@ -24,22 +24,27 @@
 
             <!-- form -->
             <form action="/login" method="post">
-                <!-- username -->
-                <label for="uname">Username</label>
-                <input type="text" name="uname" placeholder="Enter your username">
-                <!-- password -->
-                <label for="password">Full name</label>
-                <input type="password" name="password" placeholder="Enter your password">
-                <!-- remember me -->
-                <div class="agree-terms_flex flex">
-                    <input type="checkbox" name="" id="agree-terms">
-                    <label for="checkbox" class="agree-terms">Remember Me</label>
-                </div>
-                <!-- login button -->
-                <input type="submit" class="login_btn" value="Log in">
-                <!-- forgot password -->
-                <label for="btn forgot-pass" class="agree-terms forgot-pass">Forgot password?</label>
-            </form>
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="username" />
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                />
+                <input type="submit" class="login_btn" value="Log in" />
+                <!-- Change password -->
+                <a href="/requestresetpassword"
+                  ><label for="btn forgot-pass" class="agree-terms forgot-pass"
+                    >Forgot password?</label
+                  ></a
+                >
+                <a href="/changepassword"
+                  ><label for="btn forgot-pass" class="agree-terms forgot-pass"
+                    >Change password?</label
+                  ></a
+                >
+              </form>
         </div>
 
         <!-- right/image section of the sign-up container -->
