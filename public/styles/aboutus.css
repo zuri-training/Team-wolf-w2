@@ -1,72 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-.html, body{
-    background-color:  #F5F5F5;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+*{
+   margin: 0;
+   padding: 0;
 }
-.logo{
-    font-family:  'Germania One', cursive;
-    font-weight: 400;
-    font-size: 31px;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: #777777;
-    color: #FFFFFF;;
+body{
+   font-family: 'Roboto', sans-serif;
+   background-color: #FFFFFF;
+}
+.aboutus-head{
+   background-color:  #7C5DED;
 
 }
-.nav-link{
-    text-decoration: none;
-    margin-left: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    color: #FFFFFF;   
+.head-h{
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 56px;
+   padding: 1rem;
+   padding-top: 10rem;
+   color:  #FFFFFF;
 }
-.social{
-    color: #FFFFFF !important;
+.head-p{
+   padding: 1rem;
+  padding-bottom: ;
+  color:  #FFFFFF;
 }
-.nav-about{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    padding: 20px 0;
-    color: #4F4F4F;
+.text{
+ text-align: center;
 }
-.nav-about1{
-    display: flex;
-align-items: center;
-justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px; 
-    color: #5837DB;
+.text-head{
+   font-size: 45px;
+   font-weight: 400;
+   background-color: #221144;
+   color:  #FFFFFF;
+   padding: 1rem;
 }
-.nav-about2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-}
-.button-nav{
-    background-color:#777777;
-    color: #FFFFFF;
-    border-color: #2D0DB1;
-    padding: 5px 15px;
-    border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px; 
-}
-.button-nav2{
-background-color:#240A8D;
-color: #FFFFFF;
-border-color: #2D0DB1;
-padding: 5px 15px;
-border-radius: 8px;
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 18px; 
+.text-p{
+   margin: 5px 0px 0px;
+   line-height: 26px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
 }
