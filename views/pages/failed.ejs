@@ -1,0 +1,33 @@
+<!-- views/pages/failed.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google SignIn</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron text-center text-primary">
+        <h1><span>😡?</span> sorry Bad request</h1>
+        <p>To continue, Login or Register here:</p>
+        <a href="/register">Sign Up</a><br />
+        <a href="/login">Login</a>
+        <a href="/google" class="btn btn-danger"
+          ><span class="fa fa-google"></span> SignIn with Google</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
