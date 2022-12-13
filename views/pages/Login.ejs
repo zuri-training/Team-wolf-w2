@@ -1,64 +1,48 @@
 <head>
-  <title>weCode | Login</title>
-  <link rel="stylesheet" href="/styles/SignUp.css" />
-  <!-- add fontawesome -->
-  <script
-    src="https://kit.fontawesome.com/51e04b70b4.js"
-    crossorigin="anonymous"
-  ></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weCode | Login</title>
+    <link rel="stylesheet" href="/styles/SignUp.css"/>
+    <!-- add fontawesome -->
+    <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <a class="navbar-brand" href="/">
-    <img src="images/weCode.png" alt="" />
-  </a>
-  <div class="sign-up_container container">
-    <!-- left/form section of the sign-up container -->
-    <div class="sign-up_form login_form">
-      <h1 class="sign-up_header">Log in</h1>
-      <h4 class="sign-up_subtext">
-        <a href="/register"
-          >`Don't have an account yet?
-          <span class="log-in_span">Sign Up</span></a
-        >
-      </h4>
+    <div class="sign-up_container container">
 
-      <!-- form -->
-      <form action="/login" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="username" />
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-        />
-        <input type="submit" class="login_btn" value="Log in" />
-        <!-- Change password -->
-        <a href="/requestresetpassword"
-          ><label for="btn forgot-pass" class="agree-terms forgot-pass"
-            >Forgot password?</label
-          ></a
-        >
-        <a href="/changepassword"
-          ><label for="btn forgot-pass" class="agree-terms forgot-pass"
-            >Change password?</label
-          ></a
-        >
-      </form>
+        <!-- left/form section of the sign-up container -->
+        <div class="sign-up_form login_form">
 
-      <!-- login options -->
+            <!-- logo -->
+            <aside class="signup-logo_container">
+                <img class="sign-up_logo" src="images/weCodeLogo.png" alt="weCode Logo">
+            </aside>
 
-      <div class="login-options_icons">
-        <i class="fa-brands fa-facebook login-icon"></i>
-        <a href="/google"><i class="fa-brands fa-google login-icon"></i></a>
-        <i class="fa-brands fa-apple login-icon"></i>
-        <i class="fa-brands fa-twitter login-icon"></i>
-      </div>
-      <p class="login-options">or login with</p>
+            <h1 class="sign-up_header">Log in</h1>
+            <h4 class="sign-up_subtext"> <a href="/register">`Don't have an account yet? <span class="log-in_span">Sign up</span></a></h4>
+
+            <!-- form -->
+            <form action="/login" method="post">
+                <!-- username -->
+                <label for="uname">Username</label>
+                <input type="text" name="uname" placeholder="Enter your username">
+                <!-- password -->
+                <label for="password">Full name</label>
+                <input type="password" name="password" placeholder="Enter your password">
+                <!-- remember me -->
+                <div class="agree-terms_flex flex">
+                    <input type="checkbox" name="" id="agree-terms">
+                    <label for="checkbox" class="agree-terms">Remember Me</label>
+                </div>
+                <!-- login button -->
+                <input type="submit" class="login_btn" value="Log in">
+                <!-- forgot password -->
+                <label for="btn forgot-pass" class="agree-terms forgot-pass">Forgot password?</label>
+            </form>
+        </div>
+
+        <!-- right/image section of the sign-up container -->
+        <div class="sign-up_img"></div>
     </div>
-
-    <!-- right/image section of the sign-up container -->
-    <div class="sign-up_img"></div>
-  </div>
 </body>

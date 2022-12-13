@@ -1,171 +1,190 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    max-width: 100vw;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    max-width: 100vw;
-    /* gap: 3em; */
-  }
-  
-  .banner {
-    padding: 200px 0;
-    width: 100%;
-    background-image: linear-gradient(115deg, rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)), url(/images/banner2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  
-  .banner_text {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;    
-    text-align: center;
-    margin: auto;
-    gap: 1em;    
-    width: 60%;
-    color: white;
-  }
-  
-  .banner_text h1 {
-    font-size: 48px;
-    font-weight: 600;
-    /* line-height: 60px; */
-    font-family: "Inter";
-  }
-  
-  .banner_text p {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.2em;
-  }
-  
-  .commercial-templates {
-    background-color: #21144e;
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    padding: 2% 2.5%;
-    font-size: 1.5em;
-    font-family: "Roboto";
-  }
-  
-  .templates {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5em;
-    border-bottom: 50px solid #21144e;
-    padding: 2.5% 5%;
-  }
-  
-  .template {
-    position: relative;
-  }
-  
-  .template img {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .image-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 2em;
-  }
-  
-  .more-download {
-    opacity: 0;
-  }
-  
-  .btn1 {
-    border: 1px solid #2f2e2e4d;
-    background: #2f2e2ebe;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    font-weight: bold;
-  }
-  
-  .btn2 {
-    border: 1px solid #623cea;
-    background: #623cea;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    bottom: 2%;
-    right: 0%;
-    font-weight: bold;
-  }
-  
-  .template:hover img {
-    filter: brightness(0.7);
-  }
-  
-  .template:hover .more-download {
-    opacity: 1;
-  }
-  
-  .load {
-    background-color: #623cea;
-    border: 1px solid #623cea;
-    border-radius: 5px;
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    padding: 10px;
-  }
-  
-  .load:hover {
-    background-color: #21144e;
-  }
-  
-  .theme-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2em;
-    padding: 4% 5%;
-  }
-  
-  .theme-container a {
-    text-decoration: none;
-  }
-  
-  .theme {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    padding: 30px;
-    height: 100%;
-    color: #303030;
-    font-family: "Inter";
-  }
-  
-  .theme h3 {
-    font-size: 1.3em;
-    font-weight: 900;
-  }
-  
-  .theme:hover {
-    background-color: #623cea10;
-    transform: scale(1.1);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  /* gap: 3em; */
+}
+
+.banner {
+  height: 90vh;
+  width: 100vw;
+  background:linear-gradient(115deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ), url(/images/banner2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner_text {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  margin: auto;
+  gap: 1em;
+  height: 90vh;
+  width: 60%;
+  color: white;
+}
+
+.banner_text h1 {
+  font-size: 55px;
+  font-weight: 900;
+  /* line-height: 60px; */
+  font-family: "Inter";
+}
+
+.banner_text p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.commercial-templates {
+  background-color: #21144e;
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  padding: 2% 2.5%;
+  font-size: 1.5em;
+  font-family: "Roboto";
+}
+
+.templates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  border-bottom: 50px solid #21144e;
+  padding: 2.5% 5%;
+}
+
+.template {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.template img {
+  width: 100%;
+  height: 350px;
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2em;
+}
+
+.more-download {
+  opacity: 0;
+}
+
+.btn1 {
+  border: 1px solid #2f2e2e4d;
+  background: #2f2e2ebe;
+  padding: 2%;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-weight: bold;
+}
+
+.btn2 {
+  border: 1px solid #623cea;
+  background: #623cea;
+  padding: 1.2% 5%;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -2.4%;
+  right: -11%;
+  font-weight: bold;
+}
+
+.template:hover img {
+  filter: brightness(0.7);
+}
+
+.template:hover .more-download {
+  opacity: 1;
+}
+
+.image-title {
+  width: 100%;
+  text-decoration: none;
+  color: #797979;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid #797979;
+  padding: 8px 8px;
+  /* margin-top: -5px; */
+  font-family: "Roboto";
+  font-size: 14px;
+}
+
+.load {
+  background-color: #623cea;
+  border: 1px solid #623cea;
+  border-radius: 5px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.load:hover {
+  background-color: #21144e;
+}
+
+.theme-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 4% 5%;
+}
+
+.theme-container a {
+  text-decoration: none;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 30px;
+  height: 100%;
+  color: #303030;
+  font-family: "Inter";
+}
+
+.theme h3 {
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.theme:hover {
+  background-color: #623cea10;
+  transform: scale(1.1);
+}

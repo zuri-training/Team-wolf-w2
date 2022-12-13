@@ -1,0 +1,151 @@
+/* navbar */
+header {
+    background-color: var(--dark-blue);
+    padding: 2em 0;
+}
+
+.preview-header {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.preview-container {
+    margin: 3em 5em;
+    padding: 4em 2em;
+    background-color: var(--gray);
+    border-radius: 10px;
+}
+
+.preview-box {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 2.5em 1.5em;
+    margin-bottom: 2.5em;
+}
+
+.preview-box_header {
+    font-size: 1.85rem;
+    margin-bottom: .5em;
+}
+
+.preview-box_subtext {
+    font-size: 1.25rem;
+    margin-bottom: 2em;
+    line-height: 1.5rem;
+}
+
+.preview-box_flex {
+    display: flex;
+    gap: 10em;
+    align-items: center;
+}
+
+.preview-box_flex-inner {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+}
+
+.preview-box_flex-header {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.preview-box_icon {
+    font-size: 2rem;
+}
+
+.colour-flex {
+    gap: 5em;
+}
+
+.colour-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.colour-circle:nth-child(1) {
+    background-color: #5837DB;
+}
+
+.colour-circle:nth-child(2) {
+    background-color: #D04343;
+}
+
+.colour-check {
+    background-color: var(--gray);
+}
+
+.colour-circle:nth-child(4) {
+    background-color: #FFA8A7;
+}
+
+.colour-circle:nth-child(5) {
+    background: radial-gradient(#D0C143 5.21%, rgba(208, 141, 67, 0.587879) 46.87%, rgba(208, 67, 67, 0) 91.15%);
+}
+
+.colour-circle:nth-child(6) {
+    background: conic-gradient(rgba(208, 67, 67, 0.53) 0deg, rgba(138, 67, 154, 0.54) 105deg, rgba(95, 67, 208, 0.3) 200.63deg, rgba(208, 67, 67, 0.24) 337.5deg, rgba(208, 67, 67, 0.53) 360deg);
+}
+
+.colour-circle:nth-child(7) {
+    background-color: #A7DAFF;
+}
+
+.colour-circle:nth-child(8) {
+    background-color: #D0CA43;
+}
+
+.font-flex {
+    flex-wrap: wrap;
+    width: 10em
+}
+
+.font-flex_text {
+    font-size: .75rem;
+}
+
+/* responsiveness */
+@media (max-width: 500px) {
+
+    .preview-container {
+        margin: 2em 1em;
+    }
+
+    .preview-header {
+        font-size: 2rem;
+    }
+
+    .preview-box_header {
+        font-size: 1.5rem;
+    }
+
+    .preview-box_subtext {
+        font-size: .875rem;
+    }
+
+    .preview-box_flex {
+        flex-direction: column;
+        gap: 2em;
+        align-items: flex-start;
+    }
+
+    .preview-box_flex-header {
+        font-size: 1.25rem;
+    }
+
+    .preview-box_icon {
+        font-size: 1.5rem;
+    }
+
+    .colour-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .font-flex {
+        gap: 1em;
+    }
+}

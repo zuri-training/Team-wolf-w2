@@ -1,52 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-
-.social{
-    color: #FFFFFF !important;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+*{
+   margin: 0;
+   padding: 0;
 }
-
-.about{
-    padding: 50px 30px;
+body{
+   font-family: 'Roboto', sans-serif;
+   background-color: #FFFFFF;
 }
-.about1{    
-    font-family: 'Roboto', sans-serif;
-    font-size: 15px; 
-    color: #5837DB;    
+.aboutus-head{
+   background-color:  #7C5DED;
 }
-.about1 h2{
-    font-weight: bold;
-    text-align: left;
+.head-h{
+   font-size: 48px;
+   font-weight: 700;
+   line-height: 56px;
+   padding: 1rem;
+   padding-top: 10rem;
+   color:  #FFFFFF;
 }
-.about1 p{
-    color: #240A8D;
-    font-size: 16px;
-    
-    margin: 0;
+.head-p{
+   padding: 1rem;
+  padding-bottom: ;
+  color:  #FFFFFF;
 }
-.nav-about2{
-    display: fle;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
+.text{
+ text-align: center;
 }
-.button-nav{
-    background-color:#777777;
-    color: #FFFFFF;
-    border-color: #2D0DB1;
-    padding: 5px 15px;
-    border-radius: 8px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 18px; 
+.text-head{
+   font-size: 45px;
+   font-weight: 400;
+   background-color: #221144;
+   color:  #FFFFFF;
+   padding: 1rem;
 }
-.button-nav2{
-background-color:#240A8D;
-color: #FFFFFF;
-border-color: #2D0DB1;
-padding: 5px 15px;
-border-radius: 8px;
-font-family: 'Inter', sans-serif;
-font-weight: 400;
-font-size: 18px; 
+.text-p{
+   margin: 5px 0px 0px;
+   line-height: 26px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
+   font-size: 20px;
 }

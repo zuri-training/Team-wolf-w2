@@ -1,65 +1,69 @@
 <head>
-  <title>weCode | SignUp</title>
-  <link rel="stylesheet" href="/styles/signup.css" />
-  <!-- add fontawesome -->
-  <script
-    src="https://kit.fontawesome.com/51e04b70b4.js"
-    crossorigin="anonymous"
-  ></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weCode | Sign Up</title>
+    <link rel="stylesheet" href="/styles/SignUp.css"/>
+    <!-- add fontawesome -->
+    <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
 
+
 <body>
-  <a class="navbar-brand" href="/">
-    <img src="images/weCode.png" alt="" />
-  </a>
-  <div class="sign-up_container container">
-    <!-- left/image section of the sign-up container -->
-    <div class="sign-up_img"></div>
+    <div class="sign-up_container container">
 
-    <!-- right/form section of the sign-up container -->
-    <div class="sign-up_form">
-      <h1 class="sign-up_header">Sign Up</h1>
-      <h4 class="sign-up_subtext">
-        <a href="/login"
-          >Already have an account? <span class="log-in_span">Log in</span></a
-        >
-      </h4>
+        <!-- left/image section of the sign-up container -->
+        <div class="sign-up_img"></div>
 
-      <!-- form -->
-      <form action="/register" method="post">
-        <label for="fullname">Fullname</label>
-        <input type="text" name="fullName" placeholder="John Example" />
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="username" />
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="example@gmail.com" />
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-        />
-        <!-- terms -->
-        <div class="agree-terms_flex flex">
-          <input type="checkbox" name="" id="agree-terms" />
-          <label for="checkbox" class="agree-terms"
-            >I agree to the Terms of User</label
-          >
+        <!-- right/form section of the sign-up container -->
+        <div class="sign-up_form">
+
+            <!-- logo -->
+            <aside class="signup-logo_container">
+                <img class="sign-up_logo" src="images/weCodeLogo.png" alt="weCode Logo">
+            </aside>
+
+            <h1 class="sign-up_header">Sign Up</h1>
+            <h4 class="sign-up_subtext"> <a href="/login">Already have an account? <span class="log-in_span">Log in</span></a></h4>
+
+            <!-- form -->
+            <form action="/register" method="post">
+                <!-- full name -->
+                <label for="fname">Full name</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter your name" required>
+                <!-- email address -->
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                <!-- password -->
+                <label for="password">Password</label>
+                <input
+                type="password" name="password" id="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                placeholder="Enter your password"
+                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                required>
+                <!-- password validation message -->
+                <div id="message">
+                    <h4 class="password-contain">Password must contain the following:</h4>
+                    <p id="lowercase" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="uppercase" class="invalid">An <b>uppercase</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                </div>
+                <!-- repeat password -->
+                <label for="password">Re-enter Password</label>
+                <input type="password" name="repeat_password" id="repeat_password" placeholder="Enter your password again" required>
+                <!-- terms -->
+                <div class="agree-terms_flex flex">
+                    <input type="checkbox" name="" id="agree-terms">
+                    <label for="checkbox" class="agree-terms">I agree to the Terms of User</label>
+                </div>
+                <!-- sign up button -->
+                <input type="submit" value="Sign Up">
+            </form>
         </div>
-        <!-- sign up button -->
-        <input type="submit" value="Sign Up" />
-      </form>
-      <div class="login-options_icons">
-        <i class="fa-brands fa-facebook login-icon"></i>
-        <a href="/google"><i class="fa-brands fa-google login-icon"></i></a>
-        <i class="fa-brands fa-apple login-icon"></i>
-        <i class="fa-brands fa-twitter login-icon"></i>
-      </div>
-      <p class="login-options">or login with</p>
-      <!-- <a href="/google">Login with Google</a> -->
     </div>
-  </div>
 
-  <!-- link javascript -->
-  <!-- <script src="/public/js/signuplogin.js"></script> -->
+    <script src="/public/js/signuplogin.js"></script>
+
 </body>

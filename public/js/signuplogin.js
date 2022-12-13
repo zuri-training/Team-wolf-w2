@@ -58,3 +58,13 @@ userInput.onkeyup = function () {
     length.classList.add("invalid");
   }
 };
+
+    // validate length
+    if (userInput.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+    }
+}

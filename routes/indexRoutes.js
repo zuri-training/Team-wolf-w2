@@ -24,6 +24,21 @@ router.get("/payment", isLoggedIn, function (req, res) {
 router.get("/sidebar", isLoggedIn, function (req, res) {
   res.render("pages/sidebar");
 });
+router.get("/settings", (req, res) => {
+  res.render("pages/settings");
+});
+
+router.get("/subscription", function (req, res) {
+  res.render("pages/subscription");
+});
+
+router.get("/template", function (req, res) {
+  res.render("pages/template");
+});
+
+router.get("/createtemplate", function (req, res) {
+  res.render("pages/createtemplate");
+});
 // 404 Route
 router.get("*", isLoggedIn, function (req, res) {
   res.render("pages/404");

@@ -1,75 +1,58 @@
-body {background-color: var(--light-purple);}
-
-/* navbar */
 header {
     background-color: var(--dark-blue);
     padding: 2em 0;
 }
 
-/* side panel */
-.settings-container_side-panel {
-    background-color: var(--light-purple);
+/* side bar */
+
+.settings-container_side-bar {
+    background-color: #39305B;
     width: 15%;
     inset: 0;
-    top: 4em;
+    top: 0; /* top 4em - old top */
     overflow: auto;
-    padding-top: 2.5em;
+    padding-top: 2em;
     position: fixed;
-}
-
-.left-pane_top-container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-}
-
-.back-flex {
     display: flex;
-    gap: 1em;
-    margin-bottom: 2.5em;
-    margin-left: 1.5em;
+    flex-direction: column;
+}
+
+.logo-container {
+    margin-left: 1em;
+}
+
+.logo {
+    width: 90px;
+}
+
+.side-bar_menu {
+    color: #8B8888;
+}
+
+.side-bar_menu-item {
+    display: flex;
+    align-items: center;
+    padding: .7em 1em;
+    transition: 0.2s;
+    position: relative;
+}
+
+.side-bar_menu-item:hover {
+    background-color: #6B6A71;
+    color: var(--white);
+}
+
+#logout-menu-item {
     cursor: pointer;
 }
 
-.back-text {
+.side-bar_menu-icon_container {
+    width: 24px;
+}
+
+.side-bar_menu-text {
     font-size: .875rem;
-}
-
-.user-pfp {
-    width: 80px;
-    margin: 0 auto;
-}
-
-.user-name {
-    margin-top: 1.5em;
-    margin-bottom: .25em;
-    font-size: .875rem;
-    font-weight: 600;
-}
-
-.user-email {
-    margin-bottom: 2.5em;
-    color: var(--light-gray);
-    font-size: .75rem;
-}
-
-/* hide settings icon for desktop */
-.settings-icon { display: none; }
-
-.settings-btn {
-    font-size: .875rem;
-    padding: 1em;
-    padding-left: 1.5em;
-    width: 100%;
-    position: relative;
-    color: var(--dark-gray);
-}
-
-.settings-btn:hover,
-.settings-btn:active,
-.settings-btn:focus {
-    background-color: var(--purple);
-    color: var(--white);
+    margin-left: .5em;
 }
 
 /* main panel */
@@ -79,52 +62,81 @@ header {
     position: relative;
     left: 15%;
     min-height: 100vh;
-    padding: 3em 2em;
+    padding: 3em 4em;
+}
+
+.overlay {
+    inset: 0;
+    background-color: var(--very-dark-gray);
+    position: absolute;
+    opacity: 0.5;
+    display: none;
+    z-index: 50;
+}
+
+/* logout popup window : hidden on default */
+.logout-popup {
+    width: fit-content;
+    border-radius: 24px;
+    text-align: center;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 999;
+    left: calc(85% / 2);
+    top: 33%;
+    display: none;
+}
+
+.logout-header {
+    font-size: 1.5rem;
+    padding: 1.5em 4em 1em;
+}
+
+.logout-subtext {
+    font-size: 1rem;
+    padding: 0 5em 2em;
+}
+
+.logout-flex {
+    display: flex;
+    border-top: 1px solid #C6C6C6;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logout-cancel {
+    border-right: 1px solid #C6C6C6;
+    width: 50%;
+    padding: 1.5em 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.logout-logout {
+    width: 50%;
+    color: #C61D1D;
+    padding: 1.5em 0;
+    position: relative;
 }
 
 /* responsiveness */
 @media (max-width: 500px) {
 
-    .back-flex {
-        display: block;
+    .side-bar_menu-item {
+        justify-content: center;
         text-align: center;
-        margin-bottom: 2em;
-        margin-left: 0;
     }
 
-    .back-text {
+    .logo-container {
+        margin: 0 auto;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .side-bar_menu-text {
         display: none;
-    }
-
-    .left-pane_top-container {
-        display: block;
-    }
-
-    .user-pfp {
-        width: 40px;
-        margin-left: 0;
-        margin-bottom: 2em;
-    }
-
-    .user-email, .user-name {display: none;}
-
-    /* hide settings icon for mobile */
-    .settings-btn { display: none; }
-
-    .settings-icon {
-        display: block;
-        font-size: 1.125rem;
-        margin-bottom: 1.25em;
-        text-align: center;
-    }
-
-    .settings-flex {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .fa-right-from-bracket {
-        color: rgb(245, 113, 113);
     }
 
     .settings-container_main-panel {
