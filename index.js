@@ -162,8 +162,12 @@ app.post("/contacts", (req, res) => {
   });
 });
 
-app.get("/aboutus", (req, res) => {
-  res.render("pages/aboutus");
+app.get("/element", (req, res) => {
+  res.render("pages/element");
+});
+
+app.get("/insights", (req, res) => {
+  res.render("pages/insights");
 });
 
 app.get("/aboutus",  (req, res) => {
