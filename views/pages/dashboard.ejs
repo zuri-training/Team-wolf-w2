@@ -4,149 +4,201 @@
   <link rel="stylesheet" href="/styles/dashboard.css" />
 </head>
 
-<div class="side-nav">
-  <a href="" class="home"> <img src="./home.png" alt="icon" /> Home</a>
-  <a href=""> <img src="./add_home.png" alt="icon" /> Add Templates</a>
-  <a href=""> <img src="./dashboard.png" alt="icon" /> Templates</a>
-  <a href=""> <img src="./insights.png" alt="icon" /> Insights</a>
-  <a href=""> <img src="./dark_mode.png" alt="icon" /> Theme</a>
-</div>
-<main>
-  <h6 style="margin-bottom: -2.5%; font-size: 16px">
-    <span
-      style="
-        color: #605e5c;
-        font-family: 'Inter', sans-serif;
-        opacity: 0.3;
-        font-weight: lighter;
-      "
-      >Dashboard > Home > </span
-    ><span style="color: #323130; opacity: 0.7">Home</span>
-  </h6>
-  <div class="welcome">
-    <p style="margin-right: 45%; font-size: 39px; white-space: nowrap">
-      Welcome, Matthew
-    </p>
-    <div class="select" style="margin-top: 3%">
-      Site Actions
-      <i class="fa fa-sort-desc" aria-hidden="true" style="margin-left: 6%"></i>
-    </div>
-    <div class="customize" style="margin-top: 3%">
-      Customize Site
-      <i class="fa fa-pencil" aria-hidden="true" style="margin-left: 6%"></i>
-    </div>
-  </div>
-  <p style="margin-top: -3%; font-size: 20px; margin-bottom: 3%">
-    It's personalized for your site type: <u>Consultant</u>
-  </p>
-  <div class="column">
-    <p>Want a Free Plan? Compare Plans</p>
-    <p style="padding-top: 4%">Not connected? Connect Your Own Domain</p>
-    <p style="padding-top: 4%">No Business Email? Get a Business Email</p>
-    <p style="padding-top: 4%">
-      <i
-        class="fa fa-info-circle"
-        aria-hidden="true"
-        style="margin-right: 3%"
-      ></i>
-      Business info
-    </p>
-  </div>
 
-  <section>
-    <div>
-      <div
-        style="
-          padding: 1% 0;
-          display: flex;
-          white-space: nowrap;
-          margin-bottom: 1%;
-        "
-      >
-        <span style="margin-right: 43%; font-size: 25px"
-          >Let's set up your business</span
-        >
-        <span style="margin-right: 1%; font-size: 16px">1/6 completed</span>
-        <div
-          class="progress-bar"
-          style="
-            background-color: #eeeeee;
-            width: 20%;
-            height: 10px;
-            margin-top: 0.5%;
-          "
-        >
-          <div
-            class="inner"
-            style="height: 100%; width: 32%; background-color: #360fd4"
-          ></div>
+<body>
+  <main>
+  
+     <div class="side-nav">
+      <div>
+        <p>Dashboard</p>
+      </div>
+      <div>
+        <p>Home</p>
+        <p>Update</p>
+      </div>
+      <div>
+        <p>Dashboard</p>
+      </div>
+      <div>
+        <p>Media</p>
+      </div>
+      <div>
+        <p>Pages</p>
+      </div>
+      <div>
+        <p>Comment</p>
+      </div>
+      <div>
+        <p>Testimonial</p>
+      </div>
+      <div>
+        <p>Our Team</p>
+      </div>
+      <div>
+        <p>Plugins</p>
+      </div>
+      <div>
+        <p>User</p>
+      </div>
+      <div>
+        <p>Tools</p>
+      </div>
+      <div>
+        <p>Settings</p>
+      </div>
+      <div>
+        <p>Collapse Menu</p>
+      </div>
+      <div>
+        <p>Log Out</p>
+      </div>
+    </div>
+
+    <div class="main-dash">
+      <div>
+        <div class="profile-dash">
+          <p class="main-profile">Profile</p>
+          <button class="select">
+            My Sites
+          </button>
+      </div>
+      </div>
+
+      <div class="profile-dash">
+        <div >
+          <div class="acc-dash">
+          <img src="images/joy-pfp.png" alt="profile-img" class="profile-img">
+          <div class="profile">
+            <p>Joygirl</p>
+            <p>@joy on weCode</p>
+          </div>
         </div>
-        <!-- <label for="progress" style="margin-right: 1%;">1/6 completed</label>
-                    <progress id="progress" value="30" max="100">30%</progress> -->
+        </div>
+          <div class="min-dash">
+          <p>Edit Profile</p>
+          <p>Edit Forum Profile</p>
+          <p>Edit Notification Settings</p>
+          </div>
       </div>
 
-      <div class="one">
-        <span class="main-words" style="margin-right: 71.5%">
-          <i class="fa fa-check" aria-hidden="true" style="color: #18a91e"></i
-          ><s>Update your business type</s></span
-        >
-        <span class="purple-words">Update site type</span>
-      </div>
-      <div class="two">
-        <span class="main-words" style="margin-right: 83.5%">
-          <i
-            class="fa fa-square"
-            aria-hidden="true"
-            style="color: #360fd4; font-size: 12px"
-          ></i>
-          Add Service</span
-        >
-        <span class="purple-words">Add Service</span>
-      </div>
-      <div class="three">
-        <span class="main-words" style="margin-right: 69%">
-          <i
-            class="fa fa-square"
-            aria-hidden="true"
-            style="color: #360fd4; font-size: 12px"
-          ></i>
-          Set up your payment methods</span
-        >
-        <span class="purple-words">Set up payments</span>
-      </div>
-      <div class="four">
-        <span class="main-words" style="margin-right: 71.5%">
-          <i
-            class="fa fa-square"
-            aria-hidden="true"
-            style="color: #360fd4; font-size: 12px"
-          ></i>
-          Connect a custom domain</span
-        >
-        <span class="purple-words"> Connect Domain</span>
-      </div>
-      <div class="five">
-        <span class="main-words" style="margin-right: 76.5%">
-          <i
-            class="fa fa-square"
-            aria-hidden="true"
-            style="color: #360fd4; font-size: 12px"
-          ></i>
-          Design your website</span
-        >
-        <span class="purple-words">Customize Site</span>
-      </div>
-      <div class="six">
-        <span class="main-words" style="margin-right: 78.5%">
-          <i
-            class="fa fa-square"
-            aria-hidden="true"
-            style="color: #360fd4; font-size: 12px"
-          ></i>
-          Get found on Google</span
-        >
-        <span class="purple-words">Get started</span>
+      
+      <div class="section">
+        <div class="sections"> 
+        <div class="section1">
+          <p class="dash-content">At a glance</p>
+          <div>
+            <div class="min-content">
+              <p>5 post</p>
+              <p>5 post</p>
+            </div>
+            <div class="min-content1"> 
+            <p>2 comments</p>
+            <p>
+              weCode running Multipurpose theme.<br>
+              Search Engines Discourage
+            </p>
+          </div>
+          </div>
+        </div>
+        <div class="section2">
+          <p class="dash-content">Activity</p>
+          <p class="min-content1">Recently Published</p>
+          <div class="">
+            <div class="min-content3">
+              <p>December 12th 2022, 5:05pm</p>
+              <p class="content4">Post for learn Education</p>
+            </div>
+            <div class="min-content3">
+              <p>December 12th 2022, 5:05pm</p>
+              <p class="content4">Post for Advanced Education</p>
+            </div>
+            <div class="min-content3">
+              <p>December 12th 2022, 5:05pm</p>
+              <p class="content4">This is a sample page</p>
+            </div>
+            <div class="min-content3">
+              <p>December 12th 2022, 5:05pm</p>
+              <p class="content4">Dummy Post for Education</p>
+            </div>
+            <div class="min-content3">
+              <p>December 12th 2022, 5:05pm</p>
+              <p class="content4">Hello David!</p>
+            </div>
+          </div>
+          <p class="dash-content">Recent Comments</p>
+          <div class="acc-dash1">
+            <img src="images/joy-pfp.png" alt="" class="profile-img1">
+            <div class="img-content"> 
+              <p>From admin on Hello David!</p>
+            <p>Thanks so much</p>
+            </div>
+          </div>
+          <div class="acc-dash1">
+            <img src="images/joy-pfp.png" alt="" class="profile-img1">
+            <div class="img-content"> 
+              <p>From weCode on Hello David!</p>
+            <p>You are welcome</p>
+            </div>
+          </div>
+          <button class="ld-more">Load More</button>
+        </div>
+        </div>
+        <div class="sections"> 
+        <div class="section3">
+          <p class="dash-content">Quick draft</p>
+          <div>
+            <form action="" class="formstyle">
+              <label for="Title"></label><br>
+              <input type="text" id="title" name="title" placeholder="Title"><br>
+              <label for="What is on your mind"></label>
+              <textarea name="" id="" cols="20" rows="5" placeholder="What is on Your mind?"></textarea><br>
+              <button class="ld-more">Submit</button>
+            </form>
+          </div>
+         </div>
+         <div class="section4">
+          <p class="dash-content">
+            weCode Events and News
+          </p>
+          <div class="box-blog">
+            <p class="box-blog1"> Attend and upcoming Event near you.</p>
+            <div class="box-blog1">
+              <p>Global weCode Translation Day</p>
+              <p>Ikeja, Lagos</p>
+            </div>
+            <div class="box-blog1">
+              <p>Global weCode Translation Day 3</p>
+              <p>Dev Blog: Global weCode Translation Day 4</p>
+            </div>
+            <div class="box-blog1">
+              <p>Hero Bliss: Challenge Gladly Accepted</p>
+              <p>Dev Blog: Global weCode Translation Day 4</p>
+            </div>
+            <div class="">
+              <p>Designers Day</p>
+              <p>Dev Blog: Global weCode Translation Day 4</p>
+            </div>
+          </div>
+         </div>
+        </div>
       </div>
     </div>
-  </section>
-</main>
+
+  
+
+
+
+
+
+
+
+ 
+  
+
+  
+
+
+  </main>
+</body>
+
+

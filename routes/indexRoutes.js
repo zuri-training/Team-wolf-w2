@@ -11,7 +11,7 @@ router.get("/aboutus", function (req, res) {
   res.render("pages/aboutus");
 });
 // Dashboard Route
-router.get("/dashboard", isLoggedIn, function (req, res) {
+router.get("/dashboard", function (req, res) {
   res.render("pages/dashboard", { currentUser: req.user });
 });
 router.get("/templates", isLoggedIn, function (req, res) {
