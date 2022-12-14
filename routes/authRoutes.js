@@ -4,6 +4,7 @@ var router = express.Router();
 var User = require("../models/User"),
   passport = require("passport");
 const flash = require("connect-flash");
+require("../pass");
 // Sign Up Route
 router.get("/register", function (req, res) {
   res.render("pages/SignUp");
@@ -52,8 +53,8 @@ router.get("/failed", (req, res) => {
   res.render("pages/failed");
 });
 router.get("/success", isLoggedIn, (req, res) => {
-  res.redirect("/");
-  // res.render("pages/success");
+  // res.redirect("/");
+  res.render("pages/success", { currentUser: req.user });
 });
 // Login Route
 router.get("/login", function (req, res) {

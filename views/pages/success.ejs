@@ -20,15 +20,41 @@
   <body>
     <div class="container">
       <div class="jumbotron text-center text-primary">
-        <!-- <h1><span>🤣😋</span> WELCOME TO THIS TEST APPLICATION</h1>
+        <h1><span>🤣😋</span> WELCOME TO THIS TEST APPLICATION</h1>
         <p>YOU HAVE SUCCESSFULLY LOGIN.</p>
-        <a href="/">Go to Home Page</a>
+        <button
+          style="
+            background-color: #623cea;
+            padding: 16px 20px;
+            color: white;
+            font-size: 16px;
+            border: none;
+          "
+        >
+          <a href="/" style="color: white">Go to Home Page</a>
+        </button>
+        <button
+          type="button"
+          class="nav-btn1"
+          style="
+            background-color: #623cea;
+            padding: 16px 20px;
+            color: white;
+            font-size: 16px;
+            border: none;
+          "
+        >
+          <a href="/dashboard" style="color: white">
+            Hello, <%= currentUser.email %>
+            <img src="images/profile.png" alt="" />
+          </a>
+        </button>
         <a href="/logout" class="btn btn-danger"
           ><span class="fa fa-google"></span> Sign Out Here</a
-        > -->
-        <img class="center-image" src="<%= 'images/loading.png' %>" alt="" />
+        >
+        <!-- <img class="center-image" src="<%= 'images/loading.png' %>" alt="" />
         <h1>LOADING</h1>
-        <P>It will take a few seconds</P>
+        <P>It will take a few seconds</P> -->
       </div>
     </div>
   </body>
