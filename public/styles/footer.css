@@ -6,7 +6,7 @@
 }
 
 body {
-  max-width: 100vw;
+  width: 100%;
 }
 
 footer {
@@ -18,7 +18,7 @@ footer {
   color: #303030;
   font-family: "Roboto";
   border-top: 50px solid #21144e;
-  width: 100vw;
+  width: 100%;
 }
 
 .container1 {

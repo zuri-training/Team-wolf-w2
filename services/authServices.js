@@ -6,23 +6,34 @@ const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
 
 const signup = async (data) => {
-  let user = await resetUser.findOne({ email: data.email });
-  if (user) {
-    throw new Error("Email already exist");
+  try{ 
+    let user = await resetUser.findOne({ email: data.email });
+    if (user) {
+      throw new Error("Email already exist");
+    }
+    user = new User(data);
+    const token = JWT.sign({ id: user._id }, JWTSecret);
+    await user.save();
+    return (data = {
+      userId: user._id,
+      email: user.email,
+      name: user.name,
+      token: token,
+    });
   }
-  user = new User(data);
-  const token = JWT.sign({ id: user._id }, JWTSecret);
-  await user.save();
-  return (data = {
-    userId: user._id,
-    email: user.email,
-    name: user.name,
-    token: token,
-  });
+  catch(error){
+  res.status(500).json({
+      success:false,
+      message: 'internal server error',
+      error: error.message
+  })
+  }
+
 };
 
 const requestPasswordReset = async (email) => {
-  const user = await resetUser.findOne({ email });
+  try {
+    const user = await resetUser.findOne({ email });
   if (!user) {
     throw new Error("User does not exist");
   }
@@ -45,10 +56,15 @@ const requestPasswordReset = async (email) => {
     "./template/requestResetPassword.handlebars"
   );
   return link;
+  } catch (error) {
+     error.message
+  }
+  
 };
 
 const resetPassword = async (userId, token, password) => {
-  let passwordResetToken = await Token.findOne({ userId });
+  try {
+    let passwordResetToken = await Token.findOne({ userId });
   if (!passwordResetToken) {
     throw new Error("Invalid or expired password reset token ");
   }
@@ -73,6 +89,13 @@ const resetPassword = async (userId, token, password) => {
   );
   await passwordResetToken.deleteOne();
   return true;
+  } catch (error) {
+    res.status(500).json({
+      success:false,
+      message: 'internal server error',
+      error: error.message
+  })
+  }
 };
 
 module.exports = { signup, resetPassword, requestPasswordReset };
