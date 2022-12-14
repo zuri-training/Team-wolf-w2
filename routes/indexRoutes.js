@@ -36,7 +36,15 @@ router.get("/subscription", function (req, res) {
 router.get("/template", function (req, res) {
   res.render("pages/template", { currentUser: req.user });
 });
-
+router.get("/element", function (req, res) {
+  res.render("pages/element", { currentUser: req.user });
+});
+router.get("/insight", function (req, res) {
+  res.render("pages/insights", { currentUser: req.user });
+});
+router.get("/preview", function (req, res) {
+  res.render("pages/preview", { currentUser: req.user });
+});
 router.get("/createtemplate", isLoggedIn, function (req, res) {
   res.render("pages/createtemplate", { currentUser: req.user });
 });
