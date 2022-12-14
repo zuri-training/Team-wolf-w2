@@ -12,10 +12,11 @@ body {
 .nabar {
   background: #21144e;
   display: flex;
+  align-content: center;
  flex-direction: column;
-  gap: 0.5em;
+  gap: 0em;
   color: white;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .nabar-brand1 {
@@ -29,9 +30,10 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   padding-right: 2%;
 }
+
 .div1 a {
    color: white;
    text-decoration: none;
@@ -69,17 +71,19 @@ body {
 .nabar ul {
   display: flex;
   list-style: none;
-  gap: 2em;
+  color: white;
+  gap: 1.5em;
 }
 
-.nav-lin {
+.na-item a {
   color: white;
   text-decoration: none;
   font-family: "Roboto";
 }
 
-.nav-lin:hover {
+.na-item a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .e-flex {
@@ -132,11 +136,9 @@ body {
 }
 
 .nav-btn1 {
-  border: 1px solid #623cea;
+  border: 0;
   background: transparent;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
   font-family: "Inter";
   font-size: 1em;
   font-weight: bold;

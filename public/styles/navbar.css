@@ -12,10 +12,11 @@ body {
 .nabar {
   background: #21144e;
   display: flex;
- flex-direction: column;
+  align-content: center;
+  flex-direction: column;
   gap: 0.5em;
   color: white;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .nabar-brand1 {
@@ -29,15 +30,15 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: .1em;
+  gap: 0.1em;
   padding-right: 2%;
 }
 .div1 a {
-   color: white;
-   text-decoration: none;
-   font-family: "Inter";
-   font-weight: bold;
-   font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .div1 a:hover {
@@ -48,15 +49,18 @@ body {
   display: flex;
   padding: 0px 4%;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   color: white;
+}
+
+.nabar-brand1 img {
+  display: block;
 }
 
 .na-flex1 {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
-   gap: 1.0em;
+  align-items: center;
+  gap: 1.5em;
   width: 43%;
 }
 
@@ -69,17 +73,19 @@ body {
 .nabar ul {
   display: flex;
   list-style: none;
-  gap: 2em;
+  color: white;
+  gap: 1.5em;
 }
 
-.nav-lin {
+.na-item a {
   color: white;
   text-decoration: none;
   font-family: "Roboto";
 }
 
-.nav-lin:hover {
+.na-item a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .e-flex {
@@ -124,18 +130,17 @@ body {
   opacity: 0.8;
 }
 
-.nav-lin button:hover {
+.nav-btn2:hover {
   background-color: white;
   color: #21144e;
-  border: 1px solid white;
   transition: 0.2s ease-in-out 0.2s;
 }
 
 .nav-btn1 {
-  border: 1px solid #623cea;
+  border: 0;
   background: transparent;
   color: white;
-  padding: 8px 18px;
+  padding: 0px 18px;
   border-radius: 5px;
   font-family: "Inter";
   font-size: 1em;
@@ -143,7 +148,7 @@ body {
 }
 
 .nav-btn2 {
-  border: 1px solid #623cea;
+  border: 0;
   background: #623cea;
   color: white;
   padding: 8px 18px;
