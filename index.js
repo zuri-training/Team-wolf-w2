@@ -181,6 +181,10 @@ app.get("/createtemplate", function (req, res) {
   res.render("pages/createtemplate");
 });
 
+app.get("/infotemplate", (req, res) => {
+  res.render("pages/infotemplate")
+});
+
 app.get("*", function (req, res) {
   res.render("pages/404");
 });
