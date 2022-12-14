@@ -1,14 +1,16 @@
+<%- include('../partials/header'); -%>
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>weCode | Sign Up</title>
   <link rel="stylesheet" href="/styles/SignUp.css" />
-  <!-- add fontawesome -->
-  <script
-    src="https://kit.fontawesome.com/51e04b70b4.js"
-    crossorigin="anonymous"
-  ></script>
+  <link
+    rel="icon"
+    type="images/x-icon"
+    sizes="16x16 32x32 96x96 120x120 180x180 300x300 512x512"
+    href="/images/favicon32x32.ico"
+  />
 </head>
 
 <body>
@@ -61,8 +63,7 @@
       </form>
       <div class="container">
         <div class="jumbotron text-center text-primary">
-          <h1><span class="fa fa-lock"></span> Social Authentication</h1>
-          <p>Login or Register with:</p>
+          <h1><span class="fa fa-lock"></span> OR</h1>
           <button
             style="
               background-color: #623cea;
@@ -73,13 +74,17 @@
             "
           >
             <a href="/google" class="btn btn-danger"
-              ><span class="fa fa-google"></span> SignIn with Google</a
+              ><span class="fa fa-google"></span> Sign Up with Google</a
             >
           </button>
         </div>
       </div>
     </div>
   </div>
-
+  <!-- add fontawesome -->
+  <script
+    src="https://kit.fontawesome.com/51e04b70b4.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="/public/js/signuplogin.js"></script>
 </body>

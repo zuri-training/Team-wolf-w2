@@ -1,16 +1,110 @@
-.side-main {
+/* side bar */
+
+.settings-container_side-bar {
+    background-color: #39305B;
+    width: 15%;
+    inset: 0;
+    top: 5.75em;
+    overflow: auto;
+    padding-top: 2em;
+    position: fixed;
     display: flex;
-     background-color: var(--gray);
+    flex-direction: column;
 }
+
+.side-bar_menu {
+    color: #8B8888;
+    margin: 0 0 2em;
+}
+
+.side-bar_menu-item {
+    display: flex;
+    align-items: center;
+    padding: .7em 2% .7em 3.5em;
+    transition: 0.2s;
+    position: relative;
+}
+
+.side-bar_menu-item:hover {
+    background-color: #6B6A71;
+    color: var(--white);
+}
+
+#logout-menu-item {
+    cursor: pointer;
+}
+
+.side-bar_menu-icon_container {
+    width: 24px;
+}
+
+.side-bar_menu-text {
+    font-size: .875rem;
+    margin-left: .5em;
+}
+
 /* main panel */
 .settings-container_main-panel {
     background-color: var(--gray);
-    width: 80%;
+    width: 85%;
     position: relative;
+    left: 15%;
     min-height: 100vh;
-    padding: 7em 1em;
-    left: 14%;
-    /* padding: 3em 0; */
+    padding: 3em 4em;
+}
+
+.overlay {
+    inset: 0;
+    background-color: var(--very-dark-gray);
+    position: absolute;
+    opacity: 0.5;
+    display: none;
+    z-index: 50;
+}
+
+/* logout popup window : hidden on default */
+.logout-popup {
+    width: fit-content;
+    border-radius: 24px;
+    text-align: center;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 999;
+    left: calc(85% / 2);
+    top: 33%;
+    display: none;
+}
+
+.logout-header {
+    font-size: 1.5rem;
+    padding: 1.5em 4em 1em;
+}
+
+.logout-subtext {
+    font-size: 1rem;
+    padding: 0 5em 2em;
+}
+
+.logout-flex {
+    display: flex;
+    border-top: 1px solid #C6C6C6;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logout-cancel {
+    border-right: 1px solid #C6C6C6;
+    width: 50%;
+    padding: 1.5em 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.logout-logout {
+    width: 50%;
+    color: #C61D1D;
+    padding: 1.5em 0;
+    position: relative;
 }
 
 .account-settings_header {
@@ -63,7 +157,6 @@
     border: .5px solid var(--light-gray);
     padding: .875em .65em;
     margin-top: .25em;
-    outline: 0;
 }
 
 .info_label {
