@@ -1,54 +1,75 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
 
-<body>
-<header>
-      <nav class="navbar">
-        <div class="div1">
-          <a href="/register">Sign Up</a>
-          <a href="/Login">Login</a>
-        </div>
-        <div class="div2">
-          <div class="nav-flex1">
-          <a class="navbar-brand" href="#"> <img src="images/weCode.png" alt=""> </a>
-          <div class="collapse">
-            <ul class="nav">
-              <li class="nav-item">
-                <a href="" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="/template" class="nav-link">Products</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Features</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Resources</a>
-              </li>
-              <li class="nav-item">
-                <a href="/aboutus" class="nav-link">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nav-flex2">
-          <form action="" class="form">
-            <button>
-              <img src="images/search-interface-symbol.png" alt="" />
-            </button>
-            <input
-              type="search"
-              name="search-bar"
-              id=""
-              placeholder="Search"
-            />
-          </form>
-          <div class="d-flex">
-            <a href="" class="nav-link">
-              <button type="button" class="nav-btn2">Get weCode</button>
-            </a>
-          </div>
-        </div>
-        </div>
-      </nav>
-    </header>
-    </body>
+<nav class="nabar">
+  <div class="div1">
+    <% if (!currentUser){ %>
+    <a href="/register" class="nav-link">
+      <button type="button" class="nav-btn1">Register</button>
+    </a>
+    <a href="/login" class="nav-link">
+      <button type="button" class="nav-btn2">Login</button>
+    </a>
+    <!-- <a href="/register">Sign Up</a>
+    <a href="/login">Login</a> -->
+    <% } else{ %>
+    <a href="/settings" class="nav-link">
+      <button type="button" class="nav-btn1">
+        Hello, <%= currentUser.username %>
+        <img src="images/profile.png" alt="" />
+      </button>
+    </a>
+    <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
+    <a href="/logout" class="nav-link">
+      <button type="button" class="nav-btn1">Logout</button>
+    </a>
+    <% } %>
+  </div>
+  <div class="div2">
+    <div class="na-flex1">
+      <div>
+        <a class="nabar-brand1" href="/">
+          <img src="images/weCode.png" alt="" />
+        </a>
+      </div>
+      <div class="collapsey">
+        <ul class="na">
+          <li class="na-item">
+            <a href="/" class="nav-lin">Home</a>
+          </li>
+          <li class="na-item">
+            <a href="/aboutus" class="nav-lin">About</a>
+          </li>
+          <li class="na-item">
+            <a href="/templates" class="nav-lin">Products</a>
+          </li>
+          <li class="na-item">
+            <a href="" class="nav-lin">Features</a>
+          </li>
+          <li class="na-item">
+            <a href="/contacts" class="nav-lin">Conntact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="na-flex2">
+      <form action="" class="form">
+        <button>
+          <img src="images/search-interface-symbol.png" alt="" />
+        </button>
+        <input type="search" name="search-bar" id="" placeholder="Search" />
+      </form>
+      <div class="e-flex">
+        <a href="/templates" class="nav-lin">
+          <button type="button" class="nav-btn2">Get weCode</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<% if(error && error.length>0){ %>
+<div class="alert alert-primary" role="alert"><%= error %></div>
+<% } else if(success &&success.length>0){ %>
+<div class="alert alert-success" role="alert"><%= success %></div>
+<% } else if(welcome && welcome.length>0){ %>
+<div class="alert alert-info" role="alert"><%= welcome %></div>
+<% }%>

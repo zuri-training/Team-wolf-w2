@@ -1,6 +1,7 @@
 const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
+const flash = require("connect-flash");
 
 // Home Route
 router.get("/", function (req, res) {
@@ -15,29 +16,29 @@ router.get("/dashboard", isLoggedIn, function (req, res) {
   res.render("pages/dashboard", { currentUser: req.user });
 });
 router.get("/templates", isLoggedIn, function (req, res) {
-  res.render("pages/templates");
+  res.render("pages/templates", { currentUser: req.user });
 });
 
 router.get("/payment", isLoggedIn, function (req, res) {
-  res.render("pages/payment");
+  res.render("pages/payment", { currentUser: req.user });
 });
 router.get("/sidebar", isLoggedIn, function (req, res) {
   res.render("pages/sidebar");
 });
 router.get("/settings", (req, res) => {
-  res.render("pages/settings");
+  res.render("pages/settings", { currentUser: req.user });
 });
 
 router.get("/subscription", function (req, res) {
-  res.render("pages/subscription");
+  res.render("pages/subscription", { currentUser: req.user });
 });
 
 router.get("/template", function (req, res) {
-  res.render("pages/template");
+  res.render("pages/template", { currentUser: req.user });
 });
 
 router.get("/createtemplate", function (req, res) {
-  res.render("pages/createtemplate");
+  res.render("pages/createtemplate", { currentUser: req.user });
 });
 // 404 Route
 router.get("*", isLoggedIn, function (req, res) {

@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 var User = require("../models/User"),
   passport = require("passport");
-
+const flash = require("connect-flash");
 // Sign Up Route
 router.get("/register", function (req, res) {
   res.render("pages/SignUp");
@@ -62,8 +62,8 @@ router.get("/login", function (req, res) {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/Login",
+    successRedirect: "/dashboard",
+    failureRedirect: "/login",
   }),
   (req, res) => {
     // res.status(200).json({ message: "Login successfully" });

@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/styles/navbar.css" />
+
+<nav class="navbar">
+  <div class="nav-flex1">
+    <a class="navbar-brand" href="/">
+      <img src="images/weCode.png" alt="" />
+    </a>
+    <div class="collapsey">
+      <a href="" class="nav-lin">Home</a>
+      <a href="/templates" class="nav-lin">Products</a>
+      <a href="/payment" class="nav-lin">Features</a>
+      <a href="/templates" class="nav-lin">Resources</a>
+      <a href="/contacts" class="nav-lin">Contact Us</a>
+      <a href="/aboutus" class="nav-lin">About</a>
+    </div>
+  </div>
+  <div class="nav-flex2">
+    <form action="">
+      <button>
+        <img src="images/search-interface-symbol.png" alt="" />
+      </button>
+      <input
+        type="search"
+        name="search-bar"
+        id=""
+        placeholder="search template"
+      />
+    </form>
+    <div>
+      <div class="d-flex">
+        <% if (!currentUser){ %>
+        <a href="/register" class="nav-links">
+          <button type="button" class="nav-btn1">Register</button>
+        </a>
+        <a href="/login" class="nav-links">
+          <button type="button" class="nav-btn2">Login</button>
+        </a>
+        <% } else{ %>
+        <a href="/settings" class="nav-links">
+          <button type="button" class="nav-btn1">
+            <%= currentUser.username %> <img src="images/profile.png" alt="" />
+          </button>
+        </a>
+        <a href="/logout" class="nav-links">
+          <button type="button" class="nav-btn1">Logout</button>
+        </a>
+        <% } %>
+      </div>
+      <!-- <div class="d-flex">
+        <a href="" class="nav-link">
+          <button type="button" class="nav-btn2">Get weCode</button>
+        </a>
+      </div> -->
+    </div>
+  </div>
+</nav>
+
+<% if(error && error.length>0){ %>
+<div class="alert alert-primary" role="alert"><%= error %></div>
+<% } else if(success &&success.length>0){ %>
+<div class="alert alert-success" role="alert"><%= success %></div>
+<% } else if(welcome && welcome.length>0){ %>
+<div class="alert alert-info" role="alert"><%= welcome %></div>
+<% }%>

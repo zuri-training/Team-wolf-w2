@@ -3,6 +3,8 @@ var mongoose = require("mongoose"),
 
 var messageSchema = new mongoose.Schema({
   names: String,
+  email: String,
+  subject: String,
   message: String,
 });
 messageSchema.plugin(passportLocalMongoose);

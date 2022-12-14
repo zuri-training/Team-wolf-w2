@@ -1,3 +1,65 @@
-body{
-    background-image: url(images/image9.png); 
+*, body, html{
+    margin: 0%;
+    padding: 0%;
+    
+}
+.tiny-div{
+    padding: 20px 10px;
+    background-color: #360fd4;
+    color: #360fd4;
+    width: 20%;
+    margin: 20px;
+}
+.hd{
+    width: 60%;
+    margin-left: 30px;
+}
+.grid{
+    display: flex;
+    padding: 30px 0;
+    width: 100%;
+    margin: 0 50px;
+    padding: 80px 0;
+}
+.two-img{
+    display: flex;
+    width: 60%;
+    
+}
+.cont{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+    padding: 0;
+}
+.formm{
+    width: 40%;
+    margin: 0;
+    padding: 0;
+}
+form input, textarea{
+    display: block;
+    margin-top: 16px ;
+    padding: 10px 0;
+    width: 100%;
+}
+::placeholder{
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: #4F4F4F;
+}
+button{
+    padding: 10px 15px;
+    color: white;
+    background-color: #623CEA;
+    width: 60%;
+}
+.formm button{
+    width: 100%;
+    margin: 10px 0;
+}
+ a:hover{
+    color: #623CEA;
 }
