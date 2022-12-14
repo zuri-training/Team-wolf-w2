@@ -2,6 +2,7 @@
 <head>
   <title>weCode | dashboard</title>
   <link rel="stylesheet" href="/styles/dashboard.css" />
+  <script src="https://kit.fontawesome.com/51e04b70b4.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -9,49 +10,168 @@
   <main>
   
      <div class="side-nav">
-      <div>
-        <p>Dashboard</p>
-      </div>
-      <div>
-        <p>Home</p>
-        <p>Update</p>
-      </div>
-      <div>
-        <p>Dashboard</p>
-      </div>
-      <div>
-        <p>Media</p>
-      </div>
-      <div>
-        <p>Pages</p>
-      </div>
-      <div>
-        <p>Comment</p>
-      </div>
-      <div>
-        <p>Testimonial</p>
-      </div>
-      <div>
-        <p>Our Team</p>
-      </div>
-      <div>
-        <p>Plugins</p>
-      </div>
-      <div>
-        <p>User</p>
-      </div>
-      <div>
-        <p>Tools</p>
-      </div>
-      <div>
-        <p>Settings</p>
-      </div>
-      <div>
-        <p>Collapse Menu</p>
-      </div>
-      <div>
-        <p>Log Out</p>
-      </div>
+          <!-- side bar -->
+          <article class="settings-container_side-bar">
+
+            <!-- side bar menu -->
+            <ul class="side-bar_menu">
+                <!-- home menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-house-user"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Home</p>
+                    </a>
+                </li>
+
+                <!-- dashboard menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-grip"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Dashboard</p>
+                    </a>
+                </li>
+
+                <!-- update menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-bell"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Updates</p>
+                    </a>
+                </li>
+
+                <!-- media menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-photo-film"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Media</p>
+                    </a>
+                </li>
+
+                <!-- pages menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-file-circle-plus"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Pages</p>
+                    </a>
+                </li>
+
+                <!-- comments menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-comments"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Comments</p>
+                    </a>
+                </li>
+
+                <!-- testimonials menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Testimonials</p>
+                    </a>
+                </li>
+
+                <!-- our teams menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Our Teams</p>
+                    </a>
+                </li>
+
+                <!-- plugins menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-sharp fa-solid fa-sliders"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Plugins</p>
+                    </a>
+                </li>
+
+                <!-- users menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Users</p>
+                    </a>
+                </li>
+
+                <!-- tools menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-wrench"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Tools</p>
+                    </a>
+                </li>
+
+                <!-- settings menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-gear"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Settings</p>
+                    </a>
+                </li>
+
+                <!-- logout menu item -->
+                <li>
+                    <a class="side-bar_menu-item" id="logout-menu-item" type="button">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Logout</p>
+                    </a>
+                </li>
+
+                <!-- collapse menu item -->
+                <li>
+                    <a href="" class="side-bar_menu-item">
+                        <span class="side-bar_menu-icon_container">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </span>
+                        <p class="side-bar_menu-text">Collapse Menu</p>
+                    </a>
+                </li>
+            </ul>
+        </article>
+
+        <!-- main panel -->
+        <section class="settings-container_main-panel">
+
+            <!-- logout popup screen : hidden by default -->
+            <div class="overlay"></div>
+            <aside class="logout-popup">
+                <h4 class="logout-header">Logout</h4>
+                <p class="logout-subtext">
+                    Are you sure you want to log out?
+                </p>
+                <div class="logout-flex">
+                    <a class="logout-cancel" type="button">Cancel</a>
+                    <a href="" class="logout-logout">Logout</a>
+                </div>
+            </aside>
     </div>
 
     <div class="main-dash">
@@ -88,11 +208,20 @@
           <p class="dash-content">At a glance</p>
           <div>
             <div class="min-content">
-              <p>5 post</p>
-              <p>5 post</p>
+              <div class="min-content5">
+                <i class="fa-solid fa-thumbtack"></i>
+                  <p class="content4">5 post</p>
+              </div>
+              <div class="min-content5">
+                <i class="fa-solid fa-file-circle-plus"></i>
+                  <p class="content4">5 post</p>
+              </div>
             </div>
-            <div class="min-content1"> 
-            <p>2 comments</p>
+            <div class="min-content1">
+              <div class="min-content5">
+                <i class="fa-regular fa-message"></i>
+                <p class="class= content4">2 comments</p>
+              </div>
             <p>
               weCode running Multipurpose theme.<br>
               Search Engines Discourage
@@ -174,7 +303,7 @@
               <p>Hero Bliss: Challenge Gladly Accepted</p>
               <p>Dev Blog: Global weCode Translation Day 4</p>
             </div>
-            <div class="">
+            <div class="box-blg">
               <p>Designers Day</p>
               <p>Dev Blog: Global weCode Translation Day 4</p>
             </div>
