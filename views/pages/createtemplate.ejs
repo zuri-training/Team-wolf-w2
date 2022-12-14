@@ -1,180 +1,193 @@
 <%- include('../partials/header'); -%> <%- include('../partials/navbar2'); -%>
-    <title>weCode | Create Template</title>
-    <link rel="stylesheet" href="styles/SignUp.css"/>
-    <link rel="stylesheet" href="styles/createtemplate.css"/>
+
+<title>weCode | Create Template</title>
+<link rel="stylesheet" href="styles/SignUp.css" />
+<link rel="stylesheet" href="styles/createtemplate.css" />
 
 <body>
+  <!-- nav -->
+  <header></header>
 
-    <!-- nav -->
-    <header></header>
+  <!-- hero container -->
+  <section class="hero">
+    <div class="ct-container">
+      <div class="hero-container">
+        <!-- hero text container left section -->
+        <div class="hero-text_container">
+          <h3 class="hero-text_header">Patterns</h3>
+          <p class="hero-text_subtext">
+            Add a beautiful ready-to-go layout to any weCode site with a simple
+            copy & paste.
+          </p>
 
-    <!-- hero container -->
-    <section class="hero">
-        <div class="ct-container">
-            <div class="hero-container">
+          <!-- search container -->
+          <div class="search-container">
+            <!-- search input -->
+            <input
+              type="search"
+              name="search-pattern"
+              id="search-pattern"
+              placeholder="Search for Patterns"
+            />
+            <!-- search icon -->
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
 
-                <!-- hero text container left section -->
-                <div class="hero-text_container">
-                    <h3 class="hero-text_header">Patterns</h3>
-                    <p class="hero-text_subtext">
-                        Add a beautiful ready-to-go layout to any weCode site with a simple copy & paste.
-                    </p>
-
-                    <!-- search container -->
-                    <div class="search-container">
-                        <!-- search input -->
-                        <input type="search" name="search-pattern" id="search-pattern" placeholder="Search for Patterns">
-                        <!-- search icon -->
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    </div>
-
-                    <!-- favorite / create new pattern button -->
-                    <div class="favorite-create-new_container">
-                        <a class="ct-btn favorite-btn" href="">Favorite</a>
-                        <button class="ct-btn create-pattern-btn"> <a href="">Create a New Pattern</a> </button>
-                    </div>
-                </div>
-
-                <!-- hero image container right section -->
-                <div class="hero-image_container">
-                    <img src="images/hero-image-1.png" alt="hero illustration" class="hero-image hero-image-1"> <br>
-                    <img src="images/hero-image-2.png" alt="hero illustration" class="hero-image hero-image-2">
-                    <img src="images/hero-image-3.png" alt="hero illustration" class="hero-image hero-image-3">
-                </div>
-
-            </div>
+          <!-- favorite / create new pattern button -->
+          <div class="favorite-create-new_container">
+            <a class="ct-btn favorite-btn" href="">Favorite</a>
+            <button class="ct-btn create-pattern-btn">
+              <a href="">Create a New Pattern</a>
+            </button>
+          </div>
         </div>
-    </section>
 
-    <!-- commercial templates divider -->
-    <article class="commercial-temp_container">
-        <div class="ct-container">
-            <h3 class="commercial-temp_text">
-                Commercial Templates
-            </h3>
+        <!-- hero image container right section -->
+        <div class="hero-image_container">
+          <img
+            src="images/hero-image-1.png"
+            alt="hero illustration"
+            class="hero-image hero-image-1"
+          />
+          <br />
+          <img
+            src="images/hero-image-2.png"
+            alt="hero illustration"
+            class="hero-image hero-image-2"
+          />
+          <img
+            src="images/hero-image-3.png"
+            alt="hero illustration"
+            class="hero-image hero-image-3"
+          />
         </div>
-    </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- return to template divider -->
-    <article class="return-to-temp_container">
-        <div class="return-to-temp">
-            <div class="return-to-temp_flex">
+  <!-- commercial templates divider -->
+  <article class="commercial-temp_container">
+    <div class="ct-container">
+      <h3 class="commercial-temp_text">Commercial Templates</h3>
+    </div>
+  </article>
 
-                <!-- return to template left flex container -->
-                <div class="return-to-temp_left-flex">
-                    <i class="fa-solid fa-arrow-left return-to-temp_back"></i>
-                    <p class="return-to-temp_left-flex_text-1">Return to Templates</p>
-                    <p class="return-to-temp_left-flex_text-2">Create a New Pattern</p>
-                </div>
-
-                <!-- return to template right flex container -->
-                <div class="return-to-temp_right-flex">
-                    <span class="return-to-temp_right-flex_left">
-                        <i class="fa-solid fa-angle-left"></i>
-                    </span>
-                    <span class="return-to-temp_right-flex_right">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </span>
-                </div>
-            </div>
+  <!-- return to template divider -->
+  <article class="return-to-temp_container">
+    <div class="return-to-temp">
+      <div class="return-to-temp_flex">
+        <!-- return to template left flex container -->
+        <div class="return-to-temp_left-flex">
+          <i class="fa-solid fa-arrow-left return-to-temp_back"></i>
+          <p class="return-to-temp_left-flex_text-1">Return to Templates</p>
+          <p class="return-to-temp_left-flex_text-2">Create a New Pattern</p>
         </div>
-    </article>
 
-    <section class="templates-frame">
-        <div class="ct-container">
-
-            <!-- templates frame container -->
-            <div class="templates-frame_container">
-
-                <!-- nav bar -->
-                <nav class="templates-frame_navbar">
-                    <span class="templates-frame_navbar-hamburger">
-                        <i class="fa-solid fa-bars"></i>
-                    </span>
-                    <!-- nav group -->
-                    <ul class="ct-nav-group">
-                        <li class="ct-nav-item nav-item_all"><a href="">All</a></li>
-                        <li class="ct-nav-item"><a href="">Buttons</a></li>
-                        <li class="ct-nav-item"><a href="">Columns</a></li>
-                        <li class="ct-nav-item"><a href="">Featured</a></li>
-                        <li class="ct-nav-item"><a href="">Footers</a></li>
-                        <li class="ct-nav-item"><a href="">Gallery</a></li>
-                        <li class="ct-nav-item"><a href="">Headers</a></li>
-                        <li class="ct-nav-item"><a href="">Images</a></li>
-                        <li class="ct-nav-item"><a href="">Query</a></li>
-                        <li class="ct-nav-item"><a href="">Text</a></li>
-                        <li class="ct-nav-item"><a href="">Wireframe</a></li>
-                    </ul>
-
-                    <!-- nav button -->
-                    <button class="nav-btn"><a href="">Newest</a></button>
-                </nav>
-
-                <!-- template frame image grid container -->
-                <article class="template-frame_grid-container">
-                    <!-- template frame 1 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image1"></div>
-                        <div class="template-frame_image-header">Coming Soon Templates</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/ben-pfp.png" alt="">
-                            <p class="profile-name">Ben Jeffery</p>
-                        </span>
-                    </div>
-
-                    <!-- template frame 2 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image2"></div>
-                        <div class="template-frame_image-header">Pricing</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/august-pfp.png" alt="">
-                            <p class="profile-name">August Rush</p>
-                        </span>
-                    </div>
-
-                    <!-- template frame 3 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image3"></div>
-                        <div class="template-frame_image-header">Featured Section</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/von-pfp.png" alt="">
-                            <p class="profile-name">Von Vincent</p>
-                        </span>
-                    </div>
-
-                    <!-- template frame 4 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image4"></div>
-                        <div class="template-frame_image-header">Our Team Block</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/joy-pfp.png" alt="">
-                            <p class="profile-name">Joy Girl</p>
-                        </span>
-                    </div>
-
-                    <!-- template frame 5 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image5"></div>
-                        <div class="template-frame_image-header">Three Column Section</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/dolphin-pfp.png" alt="">
-                            <p class="profile-name">Dolphin Dave</p>
-                        </span>
-                    </div>
-
-                    <!-- template frame 6 -->
-                    <div class="template-frame_image-container">
-                        <div class="template-frame_image template-frame_image6"></div>
-                        <div class="template-frame_image-header">Service Block</div>
-                        <span class="profile-name_flex">
-                            <img class="profile-pfp" src="images/friday-pfp.png" alt="">
-                            <p class="profile-name">Friday Friendly</p>
-                        </span>
-                    </div>
-                </article>
-            </div>
-
+        <!-- return to template right flex container -->
+        <div class="return-to-temp_right-flex">
+          <span class="return-to-temp_right-flex_left">
+            <i class="fa-solid fa-angle-left"></i>
+          </span>
+          <span class="return-to-temp_right-flex_right">
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
         </div>
-    </section>
-<%- include('../partials/footer'); -%>
+      </div>
+    </div>
+  </article>
+
+  <section class="templates-frame">
+    <div class="ct-container">
+      <!-- templates frame container -->
+      <div class="templates-frame_container">
+        <!-- nav bar -->
+        <nav class="templates-frame_navbar">
+          <span class="templates-frame_navbar-hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+          <!-- nav group -->
+          <ul class="ct-nav-group">
+            <li class="ct-nav-item nav-item_all"><a href="">All</a></li>
+            <li class="ct-nav-item"><a href="">Buttons</a></li>
+            <li class="ct-nav-item"><a href="">Columns</a></li>
+            <li class="ct-nav-item"><a href="">Featured</a></li>
+            <li class="ct-nav-item"><a href="">Footers</a></li>
+            <li class="ct-nav-item"><a href="">Gallery</a></li>
+            <li class="ct-nav-item"><a href="">Headers</a></li>
+            <li class="ct-nav-item"><a href="">Images</a></li>
+            <li class="ct-nav-item"><a href="">Query</a></li>
+            <li class="ct-nav-item"><a href="">Text</a></li>
+            <li class="ct-nav-item"><a href="">Wireframe</a></li>
+          </ul>
+
+          <!-- nav button -->
+          <button class="nav-btn"><a href="">Newest</a></button>
+        </nav>
+
+        <!-- template frame image grid container -->
+        <article class="template-frame_grid-container">
+          <!-- template frame 1 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image1"></div>
+            <div class="template-frame_image-header">Coming Soon Templates</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/ben-pfp.png" alt="" />
+              <p class="profile-name">Ben Jeffery</p>
+            </span>
+          </div>
+
+          <!-- template frame 2 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image2"></div>
+            <div class="template-frame_image-header">Pricing</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/august-pfp.png" alt="" />
+              <p class="profile-name">August Rush</p>
+            </span>
+          </div>
+
+          <!-- template frame 3 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image3"></div>
+            <div class="template-frame_image-header">Featured Section</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/von-pfp.png" alt="" />
+              <p class="profile-name">Von Vincent</p>
+            </span>
+          </div>
+
+          <!-- template frame 4 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image4"></div>
+            <div class="template-frame_image-header">Our Team Block</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/joy-pfp.png" alt="" />
+              <p class="profile-name">Joy Girl</p>
+            </span>
+          </div>
+
+          <!-- template frame 5 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image5"></div>
+            <div class="template-frame_image-header">Three Column Section</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/dolphin-pfp.png" alt="" />
+              <p class="profile-name">Dolphin Dave</p>
+            </span>
+          </div>
+
+          <!-- template frame 6 -->
+          <div class="template-frame_image-container">
+            <div class="template-frame_image template-frame_image6"></div>
+            <div class="template-frame_image-header">Service Block</div>
+            <span class="profile-name_flex">
+              <img class="profile-pfp" src="images/friday-pfp.png" alt="" />
+              <p class="profile-name">Friday Friendly</p>
+            </span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <%- include('../partials/footer'); -%>
 </body>

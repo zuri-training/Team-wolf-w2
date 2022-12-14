@@ -37,7 +37,7 @@ router.get("/template", function (req, res) {
   res.render("pages/template", { currentUser: req.user });
 });
 
-router.get("/createtemplate", function (req, res) {
+router.get("/createtemplate", isLoggedIn, function (req, res) {
   res.render("pages/createtemplate", { currentUser: req.user });
 });
 // 404 Route
