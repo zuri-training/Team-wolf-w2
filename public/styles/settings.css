@@ -1,4 +1,3 @@
-
 /* side bar */
 
 .settings-container_side-bar {
@@ -132,11 +131,11 @@
 
 .info_top {
     border-bottom: 1px solid var(--very-dark-gray);
-    padding: .5em;
+    padding: 1.5em;
 }
 
 .info_bottom {
-    padding: 1.5em 1.5em 1em;
+    padding: 2.5em 1.5em 3em;
     padding-right: 3em;
     display: flex;
     justify-content: space-between;
