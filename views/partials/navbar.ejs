@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
-
-<<<<<<< HEAD
 <nav class="nabar">
   <div class="div1">
     <% if (!currentUser){ %>
@@ -10,8 +8,6 @@
     <a href="/login" class="nav-link">
       <button type="button" class="nav-btn2">Login</button>
     </a>
-    <!-- <a href="/register">Sign Up</a>
-    <a href="/login">Login</a> -->
     <% } else{ %>
     <a href="/settings" class="nav-link">
       <button type="button" class="nav-btn1">
@@ -74,57 +70,3 @@
 <% } else if(welcome && welcome.length>0){ %>
 <div class="alert alert-info" role="alert"><%= welcome %></div>
 <% }%>
-=======
-<body>
-<header>
-      <nav class="navbar">
-        <div class="div1">
-          <a href="/register">Sign Up</a>
-          <a href="/login">Login</a>
-        </div>
-        <div class="div2">
-          <div class="nav-flex1">
-          <a class="navbar-brand" href="/"> <img src="images/weCode.png" alt=""> </a>
-          <div class="collapse">
-            <ul class="nav">
-              <li class="nav-item">
-                <a href="" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="/templates" class="nav-link">Products</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Features</a>
-              </li>
-              <li class="nav-item">
-                <a href="/payment" class="nav-link">Resources</a>
-              </li>
-              <li class="nav-item">
-                <a href="/aboutus" class="nav-link">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="nav-flex2">
-          <form action="" class="form">
-            <button>
-              <img src="images/search-interface-symbol.png" alt="" />
-            </button>
-            <input
-              type="search"
-              name="search-bar"
-              id=""
-              placeholder="Search"
-            />
-          </form>
-          <div class="d-flex">
-            <a href="" class="nav-link">
-              <button type="button" class="nav-btn2">Get weCode</button>
-            </a>
-          </div>
-        </div>
-        </div>
-      </nav>
-    </header>
-    </body>
->>>>>>> bd9fecd2c20031fddb2856584b49716908650ac6
