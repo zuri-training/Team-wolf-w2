@@ -1,327 +1,164 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar2'); -%>
+<%- include('../partials/header'); -%>
 <head>
-  <link rel="stylesheet" href="/styles/SignUp.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/settings.css" />
-  <title>weCode | Settings</title>
+    <link rel="stylesheet" href="/styles/SignUp.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/settings.css">
+    <title>weCode | Settings</title>
 </head>
 
 <body>
-  <!-- side bar -->
-  <article class="settings-container_side-bar">
-    <!-- side bar menu -->
-    <ul class="side-bar_menu">
-      <!-- home menu item -->
-      <li>
-        <a href="/" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-house-user"></i>
-          </span>
-          <p class="side-bar_menu-text">Home</p>
-        </a>
-      </li>
-
-      <!-- dashboard menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-grip"></i>
-          </span>
-          <p class="side-bar_menu-text">Dashboard</p>
-        </a>
-      </li>
-
-      <!-- update menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-bell"></i>
-          </span>
-          <p class="side-bar_menu-text">Updates</p>
-        </a>
-      </li>
-
-      <!-- media menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-photo-film"></i>
-          </span>
-          <p class="side-bar_menu-text">Media</p>
-        </a>
-      </li>
-
-      <!-- pages menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-file-circle-plus"></i>
-          </span>
-          <p class="side-bar_menu-text">Pages</p>
-        </a>
-      </li>
-
-      <!-- comments menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-comments"></i>
-          </span>
-          <p class="side-bar_menu-text">Comments</p>
-        </a>
-      </li>
-
-      <!-- testimonials menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-quote-right"></i>
-          </span>
-          <p class="side-bar_menu-text">Testimonials</p>
-        </a>
-      </li>
-
-      <!-- our teams menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-users"></i>
-          </span>
-          <p class="side-bar_menu-text">Our Teams</p>
-        </a>
-      </li>
-
-      <!-- plugins menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-sharp fa-solid fa-sliders"></i>
-          </span>
-          <p class="side-bar_menu-text">Plugins</p>
-        </a>
-      </li>
-
-      <!-- users menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-user"></i>
-          </span>
-          <p class="side-bar_menu-text">Users</p>
-        </a>
-      </li>
-
-      <!-- tools menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-wrench"></i>
-          </span>
-          <p class="side-bar_menu-text">Tools</p>
-        </a>
-      </li>
-
-      <!-- settings menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-gear"></i>
-          </span>
-          <p class="side-bar_menu-text">Settings</p>
-        </a>
-      </li>
-
-      <!-- logout menu item -->
-      <li>
-        <a class="side-bar_menu-item" id="logout-menu-item" type="button">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-right-from-bracket"></i>
-          </span>
-          <p class="side-bar_menu-text">Logout</p>
-        </a>
-      </li>
-
-      <!-- collapse menu item -->
-      <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
-            <i class="fa-solid fa-angles-left"></i>
-          </span>
-          <p class="side-bar_menu-text">Collapse Menu</p>
-        </a>
-      </li>
-    </ul>
-  </article>
-
-  <!-- main panel -->
-  <section class="settings-container_main-panel">
-    <!-- logout popup screen : hidden by default -->
-    <div class="overlay"></div>
-    <aside class="logout-popup">
-      <h4 class="logout-header">Logout</h4>
-      <p class="logout-subtext">Are you sure you want to log out?</p>
-      <div class="logout-flex">
-        <a class="logout-cancel" type="button">Cancel</a>
-        <a href="/logout" class="logout-logout">Logout</a>
-      </div>
-    </aside>
-
-    <h2 class="account-settings_header">Account Settings</h2>
-    <p class="account-settings_subtext">
-      View and update your account details, profile and more.
-    </p>
-
-    <!-- basic info -->
-    <div class="info_container">
-      <div class="info_top">
-        <h4 class="info_header">Basic Info</h4>
-      </div>
-
-      <!-- basic info: name and pfp section -->
-      <div class="info_bottom">
-        <!-- basic info bottom left: name -->
-        <div class="info_bottom-left">
-          <!-- first name -->
-          <label class="info_label" for="fname">First Name</label>
-          <input
-            class="info_input"
-            type="text"
-            name="fname"
-            id="fname"
-            placeholder="Fatimah"
-          />
-          <!-- last name -->
-          <label class="info_label lname" for="fname">Last Name</label>
-          <input
-            class="info_input"
-            type="text"
-            name="fname"
-            id="fname"
-            placeholder="Oladigbolu"
-          />
+    <%- include('../partials/navbar2'); -%>
+    <main class="side-main">
+        <div>
+            <%- include('../partials/sidebar'); -%>
         </div>
-      </div>
-    </div>
+        <!-- main panel -->
+        <section class="settings-container_main-panel">
 
-    <!-- login info -->
-    <div class="info_container">
-      <div class="info_top">
-        <h4 class="info_header">Login Info</h4>
-      </div>
+            <!-- logout popup screen : hidden by default -->
+            <div class="overlay"></div>
+            <aside class="logout-popup">
+                <h4 class="logout-header">Logout</h4>
+                <p class="logout-subtext">
+                    Are you sure you want to log out?
+                </p>
+                <div class="logout-flex">
+                    <a class="logout-cancel" type="button">Cancel</a>
+                    <a href="" class="logout-logout">Logout</a>
+                </div>
+            </aside>
 
-      <!-- login info account email section -->
-      <div class="info_bottom login-bottom">
-        <!-- login account email section bottom -->
-        <div class="info_bottom-left">
-          <!-- account email -->
-          <label class="info_label" for="accemail">Account Email</label>
-          <input
-            class="info_input"
-            type="email"
-            name="fname"
-            id="fname"
-            placeholder="foladigbolu@gmail.com"
-          />
-        </div>
+            <h2 class="account-settings_header">Account Settings</h2>
+            <p class="account-settings_subtext">View and update your account details, profile and more.</p>
 
-        <!-- login account email: confirmed -->
-        <div class="info_bottom-right login-bottom_accemail-confirmed">
-          <i class="fa-solid fa-check"></i>
-          <p class="accemail-confirmed">Confirmed</p>
-        </div>
-      </div>
+            <!-- basic info -->
+            <div class="info_container">
+                <div class="info_top">
+                    <h4 class="info_header">Basic Info</h4>
+                </div>
 
-      <!-- login password section -->
-      <div class="info_bottom login-bottom_password">
-        <!-- login password section bottom -->
-        <div class="info_bottom-left">
-          <!-- password -->
-          <label class="info_label" for="password">Password</label>
-          <input
-            class="info_input"
-            type="password"
-            name="fname"
-            id="fname"
-            placeholder="**********"
-          />
-        </div>
+                <!-- basic info: name and pfp section -->
+                <div class="info_bottom">
 
-        <!-- login account email: confirmed -->
-        <div class="info_bottom-right">
-          <button class="edit-password_btn">
-            <a href="/changepassword">Edit Password</a>
-          </button>
-        </div>
-      </div>
-    </div>
+                    <!-- basic info bottom left: name -->
+                    <div class="info_bottom-left">
+                        <!-- first name -->
+                        <label class="info_label" for="fname">First Name</label>
+                        <input class="info_input" type="text" name="fname" id="fname" placeholder="Fatimah">
+                        <!-- last name -->
+                        <label class="info_label lname" for="fname">Last Name</label>
+                        <input class="info_input" type="text" name="fname" id="fname" placeholder="Oladigbolu">
+                    </div>
+                </div>
+            </div>
 
-    <!-- email notification settings -->
-    <div class="info_container">
-      <div class="info_top">
-        <h4 class="info_header">Email Notification Settings</h4>
-        <p class="control-what-emails">Control what emails to receive.</p>
-      </div>
+            <!-- login info -->
+            <div class="info_container">
+                <div class="info_top">
+                    <h4 class="info_header">Login Info</h4>
+                </div>
 
-      <!-- promotions container top -->
-      <div class="info_bottom promotions-container promotions-box_top">
-        <div class="promotions-box">
-          <p class="promotions-box_text">Promotions</p>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
+                <!-- login info account email section -->
+                <div class="info_bottom login-bottom">
 
-        <div class="promotions-box">
-          <p class="promotions-box_text">Promotions</p>
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-      </div>
-    </div>
+                    <!-- login account email section bottom -->
+                    <div class="info_bottom-left">
+                        <!-- account email -->
+                        <label class="info_label" for="accemail">Account Email</label>
+                        <input class="info_input" type="email" name="fname" id="fname" placeholder="foladigbolu@gmail.com">
+                    </div>
 
-    <!-- language -->
-    <div class="info_container">
-      <div class="info_top">
-        <h4 class="info_header">Language</h4>
-      </div>
+                    <!-- login account email: confirmed -->
+                    <div class="info_bottom-right login-bottom_accemail-confirmed">
+                        <i class="fa-solid fa-check"></i>
+                        <p class="accemail-confirmed">Confirmed</p>
+                    </div>
+                </div>
 
-      <!-- promotions container top -->
-      <div class="info_bottom">
-        <select value="languages" id="languages">
-          <option value="French">English</option>
-          <option value="Igbo">Igbo</option>
-          <option value="Yoruba">Yoruba</option>
-          <option value="Hausa">Hausa</option>
-        </select>
-      </div>
-    </div>
+                <!-- login password section -->
+                <div class="info_bottom login-bottom_password">
 
-    <!-- delete account -->
-    <div class="info_container delete-account_container">
-      <div class="info_top">
-        <h4 class="info_header">Delete Account</h4>
-      </div>
+                    <!-- login password section bottom -->
+                    <div class="info_bottom-left">
+                        <!-- password -->
+                        <label class="info_label" for="password">Password</label>
+                        <input class="info_input" type="password" name="fname" id="fname" placeholder="**********">
+                    </div>
 
-      <!-- delete account bottom container -->
-      <div class="info_bottom login-bottom_password delete-account_container">
-        <!-- delete account bottom left -->
-        <div class="info_bottom-left">
-          <p class="delete-account_text delete-account_text-top">
-            Deleting your account is a permanent action.
-          </p>
-          <p class="delete-account_text delete-account_text-bottom">
-            You would lose all details and cannot access your sites anymore.
-          </p>
-        </div>
+                    <!-- login account email: confirmed -->
+                    <div class="info_bottom-right">
+                        <button class="edit-password_btn"><a href="">Edit Password</a></button>
+                    </div>
+                </div>
+            </div>
 
-        <!-- login account email: confirmed -->
-        <div class="info_bottom-right">
-          <button class="edit-password_btn delete-account_btn">
-            <a href="">Delete Account</a>
-          </button>
-        </div>
-      </div>
-    </div>
+            <!-- email notification settings -->
+            <div class="info_container">
+                <div class="info_top">
+                    <h4 class="info_header">Email Notification Settings</h4>
+                    <p class="control-what-emails">Control what emails to receive.</p>
+                </div>
 
-    <button class="save-changes"><a href="">Save Changes</a></button>
-  </section>
+                <!-- promotions container top -->
+                <div class="info_bottom promotions-container promotions-box_top">
+                    <div class="promotions-box">
+                        <p class="promotions-box_text">
+                            Promotions
+                        </p>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
 
-  <!-- link javascript -->
-  <script src="/js/sidebar.js"></script>
+                    <div class="promotions-box">
+                        <p class="promotions-box_text">
+                            Promotions
+                        </p>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- language -->
+            <div class="info_container">
+                <div class="info_top">
+                    <h4 class="info_header">Language</h4>
+                </div>
+
+                <!-- promotions container top -->
+                <div class="info_bottom">
+                    <select value="languages" id="languages">
+                        <option value="French">English</option>
+                        <option value="Igbo">Igbo</option>
+                        <option value="Yoruba">Yoruba</option>
+                        <option value="Hausa">Hausa</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- delete account -->
+            <div class="info_container delete-account_container">
+                <div class="info_top">
+                    <h4 class="info_header">Delete Account</h4>
+                </div>
+
+                <!-- delete account bottom container -->
+                <div class="info_bottom login-bottom_password delete-account_container">
+
+                    <!-- delete account bottom left -->
+                    <div class="info_bottom-left">
+                        <p class="delete-account_text delete-account_text-top">Deleting your account is a permanent action.</p>
+                        <p class="delete-account_text delete-account_text-bottom">You would lose all details and cannot access your sites anymore.</p>
+                    </div>
+
+                    <!-- login account email: confirmed -->
+                    <div class="info_bottom-right">
+                        <button class="edit-password_btn delete-account_btn"><a href="">Delete Account</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="save-changes"> <a href="">Save Changes</a> </button>
+        </section>
+        </main>
+
+        <!-- link javascript -->
+        <script src="/js/sidebar.js"></script>
 </body>
