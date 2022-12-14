@@ -18,6 +18,9 @@ router.get("/dashboard", isLoggedIn, function (req, res) {
 router.get("/templates", isLoggedIn, function (req, res) {
   res.render("pages/templates", { currentUser: req.user });
 });
+router.get("/infotemplate", isLoggedIn, function (req, res) {
+  res.render("pages/infotemplate", { currentUser: req.user });
+});
 
 router.get("/payment", isLoggedIn, function (req, res) {
   res.render("pages/payment", { currentUser: req.user });

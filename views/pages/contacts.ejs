@@ -1,4 +1,4 @@
-<%- include('../partials/header'); -%> <%- include('../partials/navbar2'); -%>
+<%- include('../partials/navbar2'); -%>
 <head>
   <title>weCode | contacts</title>
   <link rel="stylesheet" href="/styles/contacts.css" />
@@ -7,111 +7,113 @@
     rel="stylesheet"
   />
 </head>
-<div class="tiny-div"></div>
-<div class="hd">
-  <h1 style="font-size: 32px; font-weight: 500">Contact Us</h1>
-  <h6 style="font-size: 18px; font-weight: 400">
-    Whether you're curious about a feature or any inquries - We are ready to
-    answer any and all of your questions
-  </h6>
-</div>
+<div class="contac">
+  <div class="tiny-div"></div>
+  <div class="hd">
+    <h1 style="font-size: 32px; font-weight: 500">Contact Us</h1>
+    <h6 style="font-size: 18px; font-weight: 400">
+      Whether you're curious about a feature or any inquries - We are ready to
+      answer any and all of your questions
+    </h6>
+  </div>
 
-<div class="grid">
-  <div class="two-img">
-    <div class="one">
-      <img src="images/question.png" alt="" />
-      <h4 style="font-size: 20px; font-weight: 500">Get 24/7 Support</h4>
-      <p style="font-size: 16px">
-        Ask a questions, Watch Tutorials or Connect with an agent
-      </p>
-      <a href=""><button>Help Center</button></a>
+  <div class="grid">
+    <div class="two-img">
+      <div class="one">
+        <img src="images/question.png" alt="" />
+        <h4 style="font-size: 20px; font-weight: 500">Get 24/7 Support</h4>
+        <p style="font-size: 16px">
+          Ask a questions, Watch Tutorials or Connect with an agent
+        </p>
+        <a href=""><button id="but">Help Center</button></a>
+      </div>
+      <div class="two">
+        <img src="images/question.png" alt="" />
+        <h4 style="font-size: 20px; font-weight: 500">Got questions?</h4>
+        <p style="font-size: 16px">
+          Confirm if your questions have already been answered
+        </p>
+        <a href="/faq"><button id="but">FAQ</button></a>
+      </div>
     </div>
-    <div class="two">
-      <img src="images/question.png" alt="" />
-      <h4 style="font-size: 20px; font-weight: 500">Got questions?</h4>
-      <p style="font-size: 16px">
-        Confirm if your questions have already been answered
-      </p>
-      <a href="/faq"><button>FAQ</button></a>
+    <div class="image">
+      <img src="images/unsplash_BlIhVfXbi9s.png" width="70%" alt="" />
     </div>
   </div>
-  <div class="image">
-    <img src="images/unsplash_BlIhVfXbi9s.png" width="70%" alt="" />
-  </div>
-</div>
 
-<div class="cont">
-  <div class="formm">
-    <h4 style="font-size: 18px; font-weight: 500">
-      Here's how you can reach us
-    </h4>
-    <form method="POST" action="/contacts" class="">
-      <input type="text" id="name" placeholder="Full Names" name="names" />
-      <input type="email" placeholder="Email Address" name="email" required />
-      <input type="text" placeholder="Subject" name="subject" required />
-      <textarea
-        name="message"
-        placeholder="Message"
-        id=""
-        rows="6"
-        style="display: block"
-      ></textarea>
-      <button type="submit" id="submit">Send</button>
-    </form>
-  </div>
-  <div class="contact">
-    <h1
-      style="
-        text-align: justify;
-        font-size: 24px;
-        color: #4f4f4f;
-        font-weight: 500;
-      "
-    >
-      Contact our Team
-    </h1>
-    <h6
-      style="
-        text-align: justify;
-        font-size: 16px;
-        color: #4f4f4f;
-        font-weight: 500;
-      "
-    >
-      Let's explore how weCode can work for you
-    </h6>
+  <div class="cont">
+    <div class="formm">
+      <h4 style="font-size: 18px; font-weight: 500">
+        Here's how you can reach us
+      </h4>
+      <form method="POST" action="/contacts" class="">
+        <input type="text" id="name" placeholder="Full Names" name="names" />
+        <input type="email" placeholder="Email Address" name="email" required />
+        <input type="text" placeholder="Subject" name="subject" required />
+        <textarea
+          name="message"
+          placeholder="Message"
+          id=""
+          rows="6"
+          style="display: block"
+        ></textarea>
+        <button type="submit" id="buts">Send</button>
+      </form>
+    </div>
+    <div class="contact">
+      <h1
+        style="
+          text-align: justify;
+          font-size: 24px;
+          color: #4f4f4f;
+          font-weight: 500;
+        "
+      >
+        Contact our Team
+      </h1>
+      <h6
+        style="
+          text-align: justify;
+          font-size: 16px;
+          color: #4f4f4f;
+          font-weight: 500;
+        "
+      >
+        Let's explore how weCode can work for you
+      </h6>
 
-    <h1
-      style="
-        text-align: justify;
-        font-size: 24px;
-        color: #4f4f4f;
-        font-weight: 500;
-      "
-    >
-      General communication
-    </h1>
-    <h6 class="c-words">
-      For general queries, including partnership opportunities, please email
-      weCode@gmail.com
-    </h6>
+      <h1
+        style="
+          text-align: justify;
+          font-size: 24px;
+          color: #4f4f4f;
+          font-weight: 500;
+        "
+      >
+        General communication
+      </h1>
+      <h6 class="c-words">
+        For general queries, including partnership opportunities, please email
+        weCode@gmail.com
+      </h6>
 
-    <h1
-      style="
-        text-align: justify;
-        font-size: 24px;
-        color: #4f4f4f;
-        font-weight: 500;
-      "
-    >
-      Technical or account support
-    </h1>
-    <h6>We're here to help! If you have technical issues contact us</h6>
+      <h1
+        style="
+          text-align: justify;
+          font-size: 24px;
+          color: #4f4f4f;
+          font-weight: 500;
+        "
+      >
+        Technical or account support
+      </h1>
+      <h6>We're here to help! If you have technical issues contact us</h6>
 
-    <h6 style="font-size: 16px; font-weight: 500; color: #4f4f4f">
-      Looking for Support?
-      <a href="/help" style="color: red">Visit Help & Support</a>
-    </h6>
+      <h6 style="font-size: 16px; font-weight: 500; color: #4f4f4f">
+        Looking for Support?
+        <a href="/help" style="color: red">Visit Help & Support</a>
+      </h6>
+    </div>
   </div>
 </div>
 <script>

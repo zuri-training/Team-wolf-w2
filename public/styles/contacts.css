@@ -50,11 +50,16 @@ a{
     text-decoration: none;
     color: #4F4F4F;
 }
-button{
+#but, #buts {
     padding: 10px 15px;
+    margin-top: 15px;
     color: white;
     background-color: #623CEA;
     width: 60%;
+    border: none;
+}
+#buts{
+    width: 100%;
 }
 .formm button{
     width: 100%;
