@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
 <nav class="nabar">
-  <div class="div1">
+  <div class="div-a">
     <% if (!currentUser){ %>
     <a href="/register" class="nav-link">
       <button type="button" class="nav-btn1">Register</button>
@@ -16,20 +16,18 @@
       </button>
     </a>
     <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
-    <a href="/logout" class="nav-link">
-      <button type="button" class="nav-btn1">Logout</button>
+    <a href="/logout" class="nav-lin logout-responsive>
+      <button type="button" class="logout">Logout</button>
     </a>
     <% } %>
   </div>
-  <div class="div2">
-    <div class="na-flex1">
-      <div>
+  <div class="div-b">
+    <div class="na-flexx1">
         <a class="nabar-brand1" href="/">
           <img src="images/weCode.png" alt="" />
         </a>
-      </div>
       <div class="collapsey">
-        <ul class="na">
+        <ul id="list"">
           <li class="na-item">
             <a href="/" class="nav-lin">Home</a>
           </li>
@@ -43,8 +41,12 @@
             <a href="" class="nav-lin">Features</a>
           </li>
           <li class="na-item">
-            <a href="/contacts" class="nav-lin">Conntact</a>
+            <a href="/contacts" class="nav-lin">Contact</a>
           </li>
+          <li class="na-item logout-none">
+          <a href="/logout" class="nav-lin">
+            Logout
+          </a>
         </ul>
       </div>
     </div>
@@ -57,10 +59,15 @@
       </form>
       <div class="e-flex">
         <a href="/templates" class="nav-lin">
-          <button type="button" class="nav-btn2">Get weCode</button>
+          <button type="button" class="nav-btn2 get-we-code">Get weCode</button>
         </a>
       </div>
     </div>
+    <div id="navMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   </div>
 </nav>
 <% if(error && error.length>0){ %>
@@ -70,3 +77,13 @@
 <% } else if(welcome && welcome.length>0){ %>
 <div class="alert alert-info" role="alert"><%= welcome %></div>
 <% }%>
+
+<script>
+  const navMenu = document.querySelector("#navMenu");
+  const list = document.querySelector("#list");
+
+  navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    list.classList.toggle('active');
+;  })
+</script>

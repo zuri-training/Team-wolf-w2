@@ -18,8 +18,9 @@ main {
 }
 
 .banner {
-  height: 90vh;
+  height: 80vh;
   width: 100vw;
+  padding: 2%;
   background:linear-gradient(115deg,
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8),
@@ -38,7 +39,7 @@ main {
   text-align: center;
   margin: auto;
   gap: 1em;
-  height: 90vh;
+  height: 70vh;
   width: 60%;
   color: white;
 }
@@ -104,7 +105,7 @@ svg {
   color: white;
   font-family: "Roboto";
   background: #21144e;
-  padding: 3% 0;
+  padding: 2% 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +120,21 @@ svg {
   padding: 2.5% 0;
 }
 
+.industry-container2 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5% 0;
+}
+
 .industry-container a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.industry-container2 a {
   text-decoration: none;
   color: #303030;
 }
@@ -235,12 +250,12 @@ svg {
 }
 
 .btn5 {
-  border: 4px solid #623cea;
+  border: 0;
   border-radius: 5px;
   background: #623cea;
   color: white;
   width: 230px;
-  padding: 12px 10px;
+  padding: 16px 10px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
@@ -248,129 +263,114 @@ svg {
 }
 
 a .btn5:hover {
-  border: 4px solid #21144e;
   background-color: #21144e;
   transition: 0.3s ease-in-out 0.1s;
   transition-timing-function: linear;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 3em;
-  padding: 50px 4% 30px;
-  background: white;
-  color: #303030;
-  font-family: "Roboto";
-  border-top: 50px solid #21144e;
-}
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 60vh;
+  }
 
-.container1 {
-  display: flex;
-  justify-content: space-between;
-}
+  .banner_text {
+    width: 95%;
+    height: 60vh;
+  }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.3em;
-}
+  .banner_text h1 {
+    font-size: 34px;
+  }
 
-.title {
-  font-size: 1em;
-  font-weight: bold;
-}
+  .banner_text p {
+    font-size: 1em;
+  }
 
-.container a {
-  text-decoration: none;
-  color: black;
-}
+  .btnA {
+    width: 180px;
+    height: 50px;
+    font-size: 1em;
+  }
 
-.container a:hover {
-  text-decoration: underline;
-  transition: ease-in-out 0.5s;
-}
+  .industry-features {
+    font-size: 1.5em;
+  }
 
-.container ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  font-weight: 100;
-  font-size: 0.8em;
-}
+  .industry-container {
+    grid-template-columns: 25% 25% 25%;
+    padding: 5% 0;
+  }
 
-.container2 {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  align-items: center;
-}
+  .industry-container2 {
+    grid-template-columns: 40% 40%;
+    padding: 5% 0;
+  }
 
-.socials-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
+  .card {
+    height: 180px;
+    gap: 0.5em;
+    padding: 20px 5px;
+  }
 
-.logo {
-  color: #303030;
-  text-decoration: none;
-  font-weight: 900;
-  font-size: 2em;
-}
+  .card h3 {
+    font-size: 1.1em;
+  }
 
-.socials {
-  display: flex;
-  gap: 1.5em;
-}
+  .card p {
+    font-size: 0.8em;
+  }
 
-.socials img {
-  width: 22px;
-  height: 22px;
-}
+  .industry-container2 .card {
+    height: 150px;
+  }
 
-.socials img:hover {
-  opacity: 0.7;
-}
+  .landing_tested {
+    padding-top: 5%;
+  }
 
-.copyright {
-  display: flex;
-  gap: 1em;
-  font-size: 0.8em;
-}
+  .tested_text {
+    gap: 0.5em;
 
-.language-container img {
-  width: 18px;
-  height: 18px;
-}
+  }
 
-.btn-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5em;
-  width: 170px;
-  height: 40px;
-  padding: 0 5px;
-  background: white;
-  border: 1px solid #303030;
-  color: #303030;
-  border-radius: 2px;
-}
+  .landing_tested h4 {
+    font-size: 1.5em;
+  }
 
-.language-container select {
-  background: transparent;
-  border: 0;
-  width: 150px;
-  font-size: 1.3em;
-  font-weight: 400;
-}
+  .tested_text p {
+    font-size: 0.8em;
+    width: 90%;
+  }
 
-a button {
-  cursor: pointer;
-}
+  .image_container {
+    padding: 0 5% 5%;
+  }
 
-a {
-  cursor: pointer;
+  .landing_tested img {
+    height: 100%;
+  }
+
+  .about {
+    gap: 0.5em;
+  }
+
+  .about h3 {
+    font-size: 1.8em;
+  }
+
+  .about span {
+    font-size: 1.2em;
+    width: 90%;
+  }
+
+  .about p {
+    font-size: 0.8em;
+    width: 70%;
+  }
+
+  .btn5 {
+    width: 150px;
+    padding: 12px;
+    font-size: 15px;
+  }
 }

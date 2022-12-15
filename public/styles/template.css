@@ -19,6 +19,7 @@ main {
 .banner {
   height: 90vh;
   width: 100vw;
+  padding: 5% 0;
   background:linear-gradient(115deg,
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8),
@@ -33,11 +34,11 @@ main {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   text-align: center;
   margin: auto;
   gap: 1em;
-  height: 90vh;
+  height: 80vh;
   width: 60%;
   color: white;
 }
@@ -71,7 +72,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 5em;
-  border-bottom: 50px solid #21144e;
+  border-bottom: 45px solid #21144e;
   padding: 2.5% 5%;
 }
 
@@ -116,9 +117,8 @@ main {
   color: white;
   border-radius: 5px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  bottom: -2.4%;
-  right: -11%;
+  bottom: 6px;
+  right: 2.8%;
   font-weight: bold;
 }
 
@@ -138,7 +138,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   border: 1px solid #797979;
-  padding: 8px 8px;
+  padding: 10px 8px;
   /* margin-top: -5px; */
   font-family: "Roboto";
   font-size: 14px;
@@ -151,7 +151,7 @@ main {
   color: white;
   font-size: 1em;
   font-weight: bold;
-  padding: 10px;
+  padding: 12px;
 }
 
 .load:hover {
@@ -159,9 +159,8 @@ main {
 }
 
 .theme-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto;
   padding: 4% 5%;
 }
 
@@ -187,4 +186,63 @@ main {
 .theme:hover {
   background-color: #623cea10;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 700px) {
+  .banner {
+    padding: 2%;
+    height: 50vh;
+  }
+
+  .banner_text {
+    width: 95%;
+    height: 60vh;
+  }
+
+  .banner_text h1 {
+    font-size: 34px;
+  }
+
+  .banner_text p {
+    font-size: 0.9em;
+  }
+
+  .commercial-templates {
+    font-size: 1.2em;
+  }
+
+  .templates {
+    gap: 2em;
+    padding: 5%;
+  }
+
+  .template img {
+    height: 100%;
+  }
+
+  .image-container {
+    grid-template-columns: auto auto;
+    gap: 1em;
+  }
+
+  .hidden-template {
+    display: none;
+  }
+
+  .load {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+
+  .theme {
+    padding: 10px;
+  }
+
+  .theme h3 {
+    font-size: 1.1em;
+  }
+
+  .theme p {
+    font-size: 0.8em;
+  }
 }

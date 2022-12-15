@@ -1,0 +1,176 @@
+<link rel="stylesheet" href="/styles/sidebar.css" />
+<script
+      src="https://kit.fontawesome.com/9bd36ee156.js"
+      crossorigin="anonymous"
+    ></script>
+<body>
+  <!-- side bar -->
+  <article class="settings-container_side-bar">
+    <!-- logo -->
+    <span class="logo-container">
+      <img class="logo" src="/public/images/weCodeLogo.png" alt="" />
+    </span>
+
+    <!-- side bar menu -->
+    <ul class="side-bar_menu">
+      <!-- home menu item -->
+      <li>
+        <a href="/template" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-house-user"></i>
+          </span>
+          <p class="side-bar_menu-text">Home</p>
+        </a>
+      </li>
+
+      <!-- dashboard menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-grip"></i>
+          </span>
+          <p class="side-bar_menu-text">Dashboard</p>
+        </a>
+      </li>
+
+      <!-- update menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-bell"></i>
+          </span>
+          <p class="side-bar_menu-text">Updates</p>
+        </a>
+      </li>
+
+      <!-- media menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-photo-film"></i>
+          </span>
+          <p class="side-bar_menu-text">Media</p>
+        </a>
+      </li>
+
+      <!-- pages menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-file-circle-plus"></i>
+          </span>
+          <p class="side-bar_menu-text">Pages</p>
+        </a>
+      </li>
+
+      <!-- comments menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-comments"></i>
+          </span>
+          <p class="side-bar_menu-text">Comments</p>
+        </a>
+      </li>
+
+      <!-- testimonials menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-quote-right"></i>
+          </span>
+          <p class="side-bar_menu-text">Testimonials</p>
+        </a>
+      </li>
+
+      <!-- our teams menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-users"></i>
+          </span>
+          <p class="side-bar_menu-text">Our Teams</p>
+        </a>
+      </li>
+
+      <!-- plugins menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-sharp fa-solid fa-sliders"></i>
+          </span>
+          <p class="side-bar_menu-text">Plugins</p>
+        </a>
+      </li>
+
+      <!-- users menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-user"></i>
+          </span>
+          <p class="side-bar_menu-text">Users</p>
+        </a>
+      </li>
+
+      <!-- tools menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-wrench"></i>
+          </span>
+          <p class="side-bar_menu-text">Tools</p>
+        </a>
+      </li>
+
+      <!-- settings menu item -->
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-gear"></i>
+          </span>
+          <p class="side-bar_menu-text">Settings</p>
+        </a>
+      </li>
+
+      <!-- logout menu item -->
+      <li>
+        <a class="side-bar_menu-item" id="logout-menu-item" type="button">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </span>
+          <p class="side-bar_menu-text">Logout</p>
+        </a>
+      </li>
+
+      <!-- collapse menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-angles-left"></i>
+          </span>
+          <p class="side-bar_menu-text">Collapse Menu</p>
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <!-- main panel -->
+  <section class="settings-container_main-panel">
+    <!-- logout popup screen : hidden by default -->
+    <div class="overlay"></div>
+    <aside class="logout-popup">
+      <h4 class="logout-header">Logout</h4>
+      <p class="logout-subtext">Are you sure you want to log out?</p>
+      <div class="logout-flex">
+        <a class="logout-cancel" type="button">Cancel</a>
+        <a href="" class="logout-logout">Logout</a>
+      </div>
+    </aside>
+
+    <!-- =========add your other dashboard content here ======-->
+  </section>
+
+  <!-- link javascript -->
+  <script src="/public/js/sidebar.js"></script>
+</body>
