@@ -20,12 +20,12 @@ router.post("/register", (req, res) => {
     (err, user) => {
       if (err) {
         req.flash("error", "Username already exists");
-        return res.render("pages/SigUp");
+        return res.render("pages/SignUp");
       }
       // if (req.body.password == req.body.repeat_password) {
       passport.authenticate("local")(req, res, () => {
         req.flash("welcome", "Welcome " + req.body.username);
-        res.redirect("/");
+        res.redirect("/dashboard");
       });
     }
     // }
