@@ -28,11 +28,11 @@ body {
 }
 
 .div1 a {
-   color: white;
-   text-decoration: none;
-   font-family: "Inter";
-   font-weight: bold;
-   font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .div1 a:hover {
@@ -50,7 +50,7 @@ body {
 .na-flex1 {
   display: flex;
   align-items: center;
-   gap: 1.0em;
+  gap: 1em;
   /* width: 43%; */
 }
 
@@ -63,10 +63,11 @@ body {
 }
 
 #list {
-  display: flex;
+  display: none;
+  /* display: flex;
   list-style: none;
   color: white;
-  gap: 1.5em;
+  gap: 1.5em; */
 }
 
 .logout-none {
@@ -158,11 +159,11 @@ body {
   }
 
   .nabar-brand1 img {
-    width: 70px ;
+    width: 70px;
   }
 
   .form {
-  padding: 3px 10px;
+    padding: 3px 10px;
   }
 
   .form img {
@@ -181,7 +182,10 @@ body {
     gap: 0.5em;
   }
 
- #list {
+  #list {
+    display: flex;
+    list-style: none;
+    color: white;
     position: fixed;
     z-index: 100;
     right: 0%;
@@ -201,14 +205,14 @@ body {
   }
 
   .na-item a {
-     padding: 10px 12vw;
+    padding: 10px 12vw;
   }
 
   .na-item a:hover {
     text-decoration: none;
     background-color: #d8d6d6;
-     color: #21144e;
-     transition: .2s ease-in;
+    color: #21144e;
+    transition: 0.2s ease-in;
   }
 
   .logout-none {
@@ -225,44 +229,44 @@ body {
   }
 
   #navMenu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
 
   #navMenu > span {
-  display: block;
-  width: 25px;
-  height: 2px;
-  border-radius: 9999px;
-  background-color: white;
-}
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: white;
+  }
 
-#navMenu, #navmenu > span {
-  transition: all .4s ease-in-out;
-}
+  #navMenu,
+  #navmenu > span {
+    transition: all 0.4s ease-in-out;
+  }
 
-#navMenu.active {
-  transition-delay: 0.8s;
-  transform: rotate(45deg);
-}
+  #navMenu.active {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+  }
 
-#navMenu.active > span:nth-child(2) {
-  width: 0;
-}
+  #navMenu.active > span:nth-child(2) {
+    width: 0;
+  }
 
-#navMenu.active > span:nth-child(1),
-#navMenu.active > span:nth-child(2) {
-  transition-delay: .4s;
-}
+  #navMenu.active > span:nth-child(1),
+  #navMenu.active > span:nth-child(2) {
+    transition-delay: 0.4s;
+  }
 
-#navMenu.active > span:nth-child(1) {
-  transform: translateY(9px);
-}
+  #navMenu.active > span:nth-child(1) {
+    transform: translateY(9px);
+  }
 
-#navMenu.active > span:nth-child(3) {
-  transform: translateY(-9px) rotate(90deg);
+  #navMenu.active > span:nth-child(3) {
+    transform: translateY(-9px) rotate(90deg);
+  }
 }
-}
-
