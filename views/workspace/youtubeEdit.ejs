@@ -1,0 +1,251 @@
+<html>
+  <head>
+    <meta name="description" content="Hello this is my first web page!." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="stylesheet" href="/static/stylesheet/netflix.css">
+
+    <link rel="stylesheet" href="netflix.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cameroon - Watch TV Shows, Watch Movies Online</title>
+    <link rel="icon" href="http://pngimg.com/uploads/netflixnetflix/small/netflixnetflix_PNG15.png">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__brand">
+          <img
+            class="logo_brand"
+            src="https://www.freepnglogos.com/uploads/netflix-logo-0.png"
+            alt="logo"
+          
+          />
+        </div>
+       
+        <div class="navbar__nav__items">
+          <div class="nav__item">
+            <button class="signin__button">Sign in</button>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__bg__image__container">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/058/186/original/netflix03.jpg?1670912628"
+            alt="BG hero image"
+            class="hero__bg__image"
+          />
+        </div>
+        <div class="hero__bg__overlay"></div>
+
+        <div class="hero__card">
+          <h1 class="hero__title">
+           
+            Unlimited Movies TV,<br />
+            Shows and More.
+          </h1>
+          <p class="hero__subtitle">Watch anywhere and cancel anytime.</p>
+          <p class="hero__description">
+            Ready to watch? Enter your email to create or restart your
+            membership .
+          </p>
+
+          <div class="email__form__container">
+            <div class="form__container">
+              <input type="email" class="email__input" placeholder=" " />
+              <label class="email__label">Email Address</label>
+            </div>
+            <button class="primary__button">
+              Get Started <i class="fal fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- section2 -->
+      <section  class="features__container">
+   
+        </div>
+
+       
+     
+        <div id="sec2"class="feature">
+          <div class="feature__details">
+    
+            <% youTube.forEach(function (section) { %> 
+            <h3 class="feature__title">
+              <% if (section._id == idData) { %>
+                <form action="/youtube/edit/<%= section._id %>" method="POST">
+              <input type="text" value="<%= section.sectionTitle %>" name="sectionTitle">
+            </h3>
+            <h5 class="feature__sub__title">
+              <input type="text" value="<%= section.sectionSubTitle %>" name="sectionSubTitle">
+            </h5>
+            <button type="submit">Confirm</button>
+            <a href="/youtube" class="cancel">Cancel</a>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/058/188/original/netflix6.jpg?1670913883"
+              alt="Feature image"
+              class="feature__image"
+            />
+          </div>
+        </div>
+        <% } else { %>
+            <!-- <div class="todo-list-item-name"></div> -->
+            <a href="/youtube/edit/<%= section._id %>" class="edit">
+              <span class="fas fa-edit"></span>
+            </a>
+            <a href="youtube/remove/<%= section._id %>" class="remove">
+              <span class="fas fa-times"></span>
+            </a>
+            <% } %> <% }) %>
+        <!-- Feature 3 -->
+    
+        </div>
+        <!-- Feature 4 -->
+        <div id="sec4" class="feature">
+          <div class="feature__details">
+            <h3 class="feature__title">Create profiles for children.</h3>
+            <h5 class="feature__sub__title">
+              Send children on adventures with their favourite characters in a
+              space made just for them—free with your membership.
+            </h5>
+          </div>
+          <div class="feature__image__container">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/058/189/original/netflix7.jpg?1670914040"
+              alt="Feature image"
+              class="feature__image"
+            />
+          </div>
+        </div>
+      </section>
+      
+      <section   class="FAQ__list__container">
+        <section  class="features__container">
+        <h1 class="FAQ__heading">Frequently Asked Questions</h1>
+        <div class="FAQ__list">
+          <% youTube.forEach(function (section) { %>
+          
+                   <div class="FAQ__accordian">
+            <details id="faq" >
+                <summary class="FAQ__title"> <%= section.summary %> <i class="fal fa-plus"></i></summary>
+                <p class="summary_p"><%= section.detail %> </p>
+               
+            </details>
+         
+        </div>
+        <% }) %>   
+
+
+          </div>
+        </div>
+        <div id="sec6"class="FAQ__get__started__email">
+          <h3>
+            Ready to watch? Enter your email to create or restart your
+            membership.
+          </h3>
+          <div class="email__form__container">
+            <div class="form__container">
+              <input type="email" class="email__input" placeholder=" " />
+              <label class="email__label">Email Address</label>
+            </div>
+            <button class="primary__button">
+              Get Started <i class="fal fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- modal section -->
+      <!-- fix footer -->
+      <div class="footer">
+              
+        <div>
+            <span class="add_section"> change back</span>
+            <input type="color" id="colorID"oninput="changeColor()">
+            <!-- <div class="wrapper">
+            
+          </div> -->
+          <span>  <a href="#demo-modal">Open Demo Modal</a></span>
+        </div>
+    </div>
+
+ 
+
+<div id="demo-modal" class="modal">
+    <div class="modal__content">
+        <h1 class="align_center">Fill this form to add content</h1>
+
+        <div class="modal-body">
+          <form action="/youtube" method="POST" class="todo-header">
+            <!-- <label for="">A Landing page: </label>
+              <input class="todo_input" placeholder="Main home Title" type="text" name="homeTitle"/>
+              <input class="todo_input" placeholder="Main home sub Title" type="text" name="homeSubTitle1"/>
+              <input class="todo_input" placeholder="Main home sub Title two" type="text" name="homeSubTitle2"/> -->
+              <p class="align_center" for="">Add A new Section: </p>
+            <input class="todo_input"  placeholder="Section Title" type="text" name="sectionTitle"/>
+            <input class="todo_input" placeholder="Section Sub Title" type="text" name="sectionSubTitle"/>
+            <p class="align_center">Add Frequently Qsked question</p>
+            <input class="todo_input" placeholder="FAQ Summary" type="text" name=" summary"/>
+            <input class="todo_input" placeholder="FAQ Details" type="text" name="detail"/>
+            <!-- <input class="todo_input" placeholder="Buttom Button" type="text" name="button"/> -->
+            <p class="align_center"for="">footer</p>
+            <input class="todo_input" placeholder="Footer one" type="text" name="  footer1"/>
+            <input class="todo_input" placeholder="Footer two" type="text" name="  footer2"/>
+            <input class="todo_input" placeholder="Footer three" type="text" name="  footer3"/>
+            <input class="todo_input" placeholder="Footer four" type="text" name="  footer4"/>
+            <button class="btn_modal" type="submit">
+             Submit
+            </button>
+          </form>
+        </div>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+    
+
+    </main>
+            
+    <footer id="sec7">
+    
+
+      <div class="footer_div_container">
+        <% youTube.forEach(function (section) { %>
+          <div class="footer_div">
+                  <p> <%= section.footer1 %></p>
+              
+              </div>
+              <% }) %>
+       </div>
+  
+    </footer>
+
+    <script>
+   
+    function changeColor() { 
+    var userColor = document.getElementById('colorID').value;
+    localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
+         }
+    if(localStorage.storedValue) {
+    document.getElementById('colorID').value = localStorage.storedValue;
+    document.body.style.backgroundColor      = localStorage.storedValue;
+        }
+    </script>
+  
+  </body>
+</html>
