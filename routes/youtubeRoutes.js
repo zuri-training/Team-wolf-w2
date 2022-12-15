@@ -1,12 +1,18 @@
+const { Router } = require("express");
+var express = require("express");
+const YouTube = require("../models/YouTube");
+var router = express.Router();
+const flash = require("connect-flash");
+
 // GET METHOD
-app.get("/youtube", (req, res) => {
+router.get("/youtube", (req, res) => {
   YouTube.find({}, (err, tasks) => {
-    res.render("youtube.ejs", { youTube: tasks });
+    res.render("workspace/youtube", { youTube: tasks });
   });
 });
 
 // POST METHOD
-app.post("/youtube", async (req, res) => {
+router.post("/youtube", async (req, res) => {
   const youTube = new YouTube({
     ...req.body,
   });
@@ -19,12 +25,12 @@ app.post("/youtube", async (req, res) => {
   }
 });
 // UPDATE
-app
+router
   .route("/youtube/edit/:id")
   .get((req, res) => {
     const id = req.params.id;
     YouTube.find({}, (err, data) => {
-      res.render("youtubeEdit.ejs", { youTube: data, idData: id });
+      res.render("workspace/youtubeEdit", { youTube: data, idData: id });
     });
   })
   .post((req, res) => {
@@ -42,7 +48,7 @@ app
   });
 
 //DELETE
-app.route("/youtube/remove/:id").get((req, res) => {
+router.route("/youtube/remove/:id").get((req, res) => {
   const id = req.params.id;
   YouTube.findByIdAndRemove(id, (err) => {
     if (err) return res.send(500, err);

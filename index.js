@@ -12,6 +12,7 @@ const userRoutes = require("./routes/userRoutes");
 const cors = require("cors");
 var authRoutes = require("./routes/authRoutes"),
   contactRoutes = require("./routes/contactRoutes"),
+  // youtubeRoutes = require("./routes/youtubeRoutes"),
   indexRoutes = require("./routes/indexRoutes");
 const LocalStrategy = require("passport-local").Strategy;
 const session = require("express-session");
@@ -66,10 +67,13 @@ app.use(function (req, res, next) {
   res.locals.welcome = req.flash("welcome");
   next();
 });
+
 app.use("/api/v1", userRoutes);
 app.use(authRoutes);
 app.use(contactRoutes);
+// app.use(youtubeRoutes);
 app.use(indexRoutes);
+
 // ===============
 // ROUTES
 // ===============
