@@ -4,6 +4,7 @@ var express = require("express"),
   flash = require("connect-flash"),
   User = require("./models/User"),
   Message = require("./models/contact"),
+  YouTube = require("./models/YouTube"),
   bodyParser = require("body-parser"),
   localStrategy = require("passport-local"),
   passportLocalMongoose = require("passport-local-mongoose");
