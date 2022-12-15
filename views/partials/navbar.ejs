@@ -1,27 +1,5 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
 <nav class="nabar">
-  <div class="div-a">
-    <% if (!currentUser){ %>
-    <a href="/register" class="nav-link">
-      <button type="button" class="nav-btn1">Register</button>
-    </a>
-    <a href="/login" class="nav-link">
-      <button type="button" class="nav-btn2">Login</button>
-    </a>
-    <% } else{ %>
-    <a href="/settings" class="nav-link">
-      <button type="button" class="nav-btn1">
-        Hello, <%= currentUser.username %>
-        <img src="images/profile.png" alt="" />
-      </button>
-    </a>
-    <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
-    <a href="/logout" class="nav-lin logout-responsive>
-      <button type="button" class="logout">Logout</button>
-    </a>
-    <% } %>
-  </div>
-  <div class="div-b">
     <div class="na-flexx1">
         <a class="nabar-brand1" href="/">
           <img src="images/weCode.png" alt="" />
@@ -32,16 +10,10 @@
             <a href="/" class="nav-lin">Home</a>
           </li>
           <li class="na-item">
-            <a href="/aboutus" class="nav-lin">About</a>
-          </li>
-          <li class="na-item">
             <a href="/templates" class="nav-lin">Products</a>
           </li>
           <li class="na-item">
-            <a href="" class="nav-lin">Features</a>
-          </li>
-          <li class="na-item">
-            <a href="/contacts" class="nav-lin">Contact</a>
+            <a href="/aboutus" class="nav-lin">About</a>
           </li>
           <li class="na-item logout-none">
           <a href="/logout" class="nav-lin">
@@ -57,17 +29,32 @@
         </button>
         <input type="search" name="search-bar" id="" placeholder="Search" />
       </form>
-      <div class="e-flex">
-        <a href="/templates" class="nav-lin">
-          <button type="button" class="nav-btn2 get-we-code">Get weCode</button>
-        </a>
-      </div>
+      <div class="div-a">
+    <% if (!currentUser){ %>
+    <a href="/register" class="nav-link">
+      <button type="button" class="nav-btn1">Sign Up</button>
+    </a>
+    <a href="/login" class="nav-link">
+      <button type="button" class="nav-btn2">Login</button>
+    </a>
+    <% } else{ %>
+    <a href="/settings" class="nav-link">
+      <button type="button" class="nav-btn1">
+        Hello, <%= currentUser.username %>
+        <img src="images/profile.png" alt="" />
+      </button>
+    </a>
+    <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
+    <!-- <a href="/logout" class="nav-lin logout-responsive>
+      <button type="button" class="logout">Logout</button>
+    </a> -->
+    <% } %>
+  </div>
     </div>
     <div id="navMenu">
     <span></span>
     <span></span>
     <span></span>
-  </div>
   </div>
 </nav>
 <% if(error && error.length>0){ %>
