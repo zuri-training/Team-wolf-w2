@@ -7,7 +7,7 @@ const { MONGODB_URI } = process.env;
 
 const connect = async () => {
   await mongoose.connect(
-    "mongodb://localhost:27017/cms_app",
+    MONGODB_URI,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

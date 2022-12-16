@@ -2,7 +2,7 @@ var express = require("express"),
   mongoose = require("mongoose"),
   path = require("path"),
   favicon = require("static-favicon"),
-  morgan = require("morgan"),
+  // morgan = require("morgan"),
   cookieParser = require("cookie-parser"),
   cookieSession = require("cookie-session"),
   passport = require("passport"),
@@ -45,7 +45,7 @@ app.set("view engine", "ejs");
 // });
 // app.use(cookies);
 app.use(favicon());
-app.use(morgan());
+// app.use(morgan());
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -114,7 +114,7 @@ app.use(indexRoutes);
 
 // Listen Port
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log("Server is running at http://127.0.0.1:%s", `${PORT}`)
-);
-// app.listen(process.env.PORT);
+// app.listen(PORT, () =>
+//   console.log("Server is running at http://127.0.0.1:%s", `${PORT}`)
+// );
+app.listen(process.env.PORT);
