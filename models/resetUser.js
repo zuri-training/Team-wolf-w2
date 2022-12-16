@@ -1,14 +1,15 @@
-const { Schema, model } = require("mongoose");
+// const { Schema, model } = require("mongoose");
+var mongoose = require("mongoose");
 const bcrpt = require("bcryptjs");
 const bcryptSalt = process.env.BCRYPRT_SALT;
 
-const userSchema = new Schema(
+const resetuserSchema = new mongoose.Schema(
   {
     Name: {
       type: String,
       required: true,
     },
-    userName: {
+    username: {
       type: String,
       require: true,
       unique: true,
@@ -51,7 +52,7 @@ const userSchema = new Schema(
   }
 );
 
-userSchema.pre("save", async function (next) {
+resetuserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     return next();
   }
@@ -60,6 +61,4 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-const userModel = model("resetUser", userSchema);
-
-module.exports = userModel;
+module.exports = mongoose.model("resetUser", resetuserSchema);

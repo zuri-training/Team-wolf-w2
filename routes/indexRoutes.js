@@ -2,6 +2,7 @@ const { Router } = require("express");
 var express = require("express");
 var router = express.Router();
 const flash = require("connect-flash");
+const youTube = require("../models/YouTube");
 
 // Home Route
 router.get("/", function (req, res) {
@@ -17,6 +18,18 @@ router.get("/dashboard", isLoggedIn, function (req, res) {
 });
 router.get("/templates", isLoggedIn, function (req, res) {
   res.render("pages/templates", { currentUser: req.user });
+});
+router.get("/template", isLoggedIn, function (req, res) {
+  res.render("workspace/landing", { currentUser: req.user });
+});
+router.get("/youtube", function (req, res) {
+  res.render("workspace/youtube");
+});
+router.get("/templatenew", isLoggedIn, function (req, res) {
+  res.render("workspace/templatenew", { currentUser: req.user });
+});
+router.get("/mysites", function (req, res) {
+  res.render("pages/mysites", { currentUser: req.user });
 });
 router.get("/infotemplate", isLoggedIn, function (req, res) {
   res.render("pages/infotemplate", { currentUser: req.user });
