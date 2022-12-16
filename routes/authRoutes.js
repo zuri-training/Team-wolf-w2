@@ -14,7 +14,8 @@ router.post("/register", (req, res) => {
     new User(
       { username: req.body.username },
       { fullname: req.body.fullname },
-      { email: req.body.email }
+      { email: req.body.email },
+      { password: req.body.retypepassword }
     ),
     req.body.password,
     (err, user) => {
@@ -95,10 +96,66 @@ router.post("/changepassword", function (req, res) {
   });
 });
 // Reset Password Route
-router.get("/requestresetpassword", (req, res) =>
-  res.render("pages/requestresetpassword")
-);
-router.get("/resetpassword", (req, res) => res.render("pages/resetpassword"));
+// router.get("/requestresetpassword", (req, res) =>
+//   res.render("pages/requestresetpassword")
+// );
+router.get("/forgot", function (req, res) {
+  if (req.isAuthenticated()) {
+    //user is alreay logged in
+    return res.redirect("/");
+  }
+
+  //UI with one input for email
+  res.render("pages/forgot");
+});
+router.post("/forgot", function (req, res) {
+  if (req.isAuthenticated()) {
+    //user is alreay logged in
+    return res.redirect("/");
+  }
+  User.forgot(req, res, function (err) {
+    if (err) {
+      req.flash("error", err);
+    } else {
+      req.flash("success", "Please check your email for further instructions.");
+    }
+    res.redirect("/");
+  });
+});
+
+router.get("/reset/:token", function (req, res) {
+  if (req.isAuthenticated()) {
+    //user is alreay logged in
+    return res.redirect("/");
+  }
+  var token = req.params.token;
+  User.checkReset(token, req, res, function (err, data) {
+    if (err) req.flash("error", err);
+
+    //show the UI with new password entry
+    res.render("pages/reset");
+  });
+});
+
+router.post("/reset", function (req, res) {
+  if (req.isAuthenticated()) {
+    //user is alreay logged in
+    return res.redirect("/");
+  }
+  User.reset(req, res, function (err) {
+    if (err) {
+      req.flash("error", err);
+      return res.redirect("/reset");
+    } else {
+      req.flash(
+        "success",
+        "Password successfully reset.  Please login using new password."
+      );
+      return res.redirect("/login");
+    }
+  });
+});
+// router.get("/resetpassword", (req, res) => res.render("pages/resetpassword"));
 // Logout Route
 router.get("/logout", function (req, res) {
   req.logout(function (err) {
@@ -116,6 +173,15 @@ function isLoggedIn(req, res, next) {
   }
   req.flash("error", "Please Login First");
   res.redirect("/Login");
+}
+// Reset Password Function
+function generateToken() {
+  var buf = new Buffer(16);
+  for (var i = 0; i < buf.length; i++) {
+    buf[i] = Math.floor(Math.random() * 256);
+  }
+  var id = buf.toString("base64");
+  return id;
 }
 
 module.exports = router;
