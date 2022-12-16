@@ -248,30 +248,13 @@
 @media (max-width: 500px) {
 
     .settings-container_side-bar {
-        width: 10%;
-        top: 6em;
-    }
-
-    .side-bar_menu-item {
-        justify-content: center;
-        text-align: center;
-        padding: .7em 0;
-    }
-
-    .logo-container {
-        margin: 0 auto;
-    }
-
-    .logo {
-        width: 30px;
-    }
-
-    .side-bar_menu-text {
         display: none;
     }
 
     .settings-container_main-panel {
         padding: 2em 1.5em;
+        width: 100%;
+        left: 0;
     }
 
     .account-settings_header {
