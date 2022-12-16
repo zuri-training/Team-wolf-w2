@@ -4,7 +4,6 @@
     display: grid;
     place-items: center;
     padding: 5em 0;
-    min-height: 100vh;
 }
 
 .error-img {
@@ -21,12 +20,12 @@
 .error-message {
     font-size: 1.25rem;
     color: var(--dark-gray);
-    margin: .5em auto 4em;
+    margin: .5em auto 3em;
     text-align: center;
     line-height: 1.5rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .error-img {
         max-width: 100%;
     }

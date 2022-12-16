@@ -108,7 +108,7 @@ header {
 }
 
 /* responsiveness */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
     .preview-container {
         margin: 2em 1em;

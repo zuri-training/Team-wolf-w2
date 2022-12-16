@@ -334,7 +334,7 @@ ul, li {list-style: none;}
 
 /* responsiveness */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
 
     .ct-container {
         width: 90%;

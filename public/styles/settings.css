@@ -245,7 +245,7 @@
 
 /* responsiveness */
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
     .settings-container_side-bar {
         display: none;
