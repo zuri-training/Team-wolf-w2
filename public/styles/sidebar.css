@@ -1,135 +1,137 @@
-/* side bar */
-
-.settings-container_side-bar {
-    background-color: #39305B;
-    width: 15%;
-    inset: 0;
-    overflow: auto;
-    padding-top:  5.75em;
+#settings-container_side-bars {
     position: fixed;
-    z-index: 1;
+    z-index: 100;
+    right: 0%;
+    top: 70px;
+    width: 20%;
+    height: 100%;
+    background-color: #39305b;
+    transform: translate(100%);
+    transition: transform 0.5s;
+    padding: 50px 0;
+    font-family: "Roboto";
+  }
+
+
+  #side-bar_menus {
+    color: #8b8888;
     display: flex;
     flex-direction: column;
-}
+    font-family: "Roboto";
+    list-style: none;
+  }
 
-.side-bar_menu {
-    color: #8B8888;
-     margin: 0 0 2em;
-}
-
-.dashboard {
+  .side-bar_menu-items {
     display: flex;
     align-items: center;
-    background-color: #21144e;
-}
-
-.dashboard img {
-
-}
-
-.side-bar_menu-item {
-    display: flex;
-    align-items: center;
-    padding: .7em 1em;
+    gap: 0.5em;
+    padding: 13px 20px;
     transition: 0.2s;
     position: relative;
-}
+    color: #8b8888;
+    text-decoration: none;
+  }
 
-.side-bar_menu-item:active {
-     background-color: #6B6A71;
-    color: var(--white);
-}
+  .side-bar_menu-items:hover {
+    background-color: #6b6a71;
+    color: white;
+  }
 
-.side-bar_menu-item:hover {
-    background-color: #6B6A71;
-    color: var(--white);
-}
+  .side-bar_menu-icon_containers {
+    font-size: 20px;
+  }
 
-#logout-menu-item {
+  .side-bar_menu-texts {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  .side-link {
+    padding: 13px 50vw;
+    transition: 0.2s;
+    position: relative;
+    color: #8b8888;
+    text-decoration: none;
+  }
+
+  .side-link:hover {
+    background-color: #6b6a71;
+    color: white;
+  }
+
+  .logout-btn {
+    border: 0;
+    background: #623cea;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  .logout-btn:hover {
+    opacity: 0.8;
+  }
+
+  #logout-menu-item {
     cursor: pointer;
-}
+  }
 
-.side-bar_menu-icon_container {
-    width: 24px;
-}
-
-.side-bar_menu-text {
-    font-size: .875rem;
-    margin-left: .5em;
-}
-
-.overlay {
+  .overlay {
     inset: 0;
-    background-color: var(--very-dark-gray);
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.9;
     display: none;
     z-index: 50;
-}
+  }
 
-/* logout popup window : hidden on default */
-.logout-popup {
+  /* logout popup window : hidden on default */
+  .logout-popup {
     width: fit-content;
-    border-radius: 24px;
+    border-radius: 10px;
     text-align: center;
-    background-color: var(--white);
+    background-color: white;
     position: fixed;
     z-index: 999;
     left: calc(85% / 2);
-    top: 33%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
-}
+    font-family: "Roboto";
+  }
 
-.logout-header {
-    font-size: 1.5rem;
-    padding: 1.5em 4em 1em;
-}
+  .logout-header {
+    font-size: 1.2rem;
+    padding: 0.5em 3em;
+    color: #21144e;
+  }
 
-.logout-subtext {
+  .logout-subtext {
     font-size: 1rem;
-    padding: 0 5em 2em;
-}
+    padding: 0 1em 1em;
+     color: #6b6a71;
+  }
 
-.logout-flex {
+  .logout-flex {
     display: flex;
-    border-top: 1px solid #C6C6C6;
+    border-top: 1px solid #c6c6c6;
     align-items: center;
-    justify-content: space-around;
-}
+  }
 
-.logout-cancel {
-    border-right: 1px solid #C6C6C6;
+  .logout-cancel {
+    border-right: 1px solid #c6c6c6;
     width: 50%;
-    padding: 1.5em 0;
+    padding: 0.5em 0;
     position: relative;
     cursor: pointer;
-}
+    color: #6b6a71;
+  }
 
-.logout-logout {
+  .logout-logout {
     width: 50%;
-    color: #C61D1D;
-    padding: 1.5em 0;
+    color: #21144e;
+    padding: 0.5em 0;
     position: relative;
-}
-
-/* responsiveness */
-@media (max-width: 500px) {
-
-    .side-bar_menu-item {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .logo-container {
-        margin: 0 auto;
-    }
-
-    .logo {
-        width: 30px;
-    }
-
-    .side-bar_menu-text {
-        display: none;
-    }
-
-}
+  }
