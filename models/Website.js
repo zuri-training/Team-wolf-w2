@@ -1,13 +1,14 @@
-const {Schema, model} = require('mongoose')
+const { Schema, model } = require("mongoose");
 
-const websiteSchema = new Schema ({
+const websiteSchema = new Schema({
   websiteName: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   owner: {
-    type:Schema.Types.ObjectId, ref: 'User'
+    type: Schema.Types.ObjectId,
+    ref: "User",
   },
   category: {
     type: String,
@@ -17,8 +18,7 @@ const websiteSchema = new Schema ({
     type: String,
     required: true,
   },
-})
+});
 
-
-const websiteModel = model ('Website', websiteSchema)
-module.exports = websiteModel
+const websiteModel = model("Website", websiteSchema);
+module.exports = websiteModel;
