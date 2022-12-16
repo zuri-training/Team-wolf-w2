@@ -20,8 +20,8 @@
           <a href="/aboutus" class="nav-lin">About</a>
         </li>
         <li class="na-item li-c">
-            <a href="/contacts" class="nav-lin">Contact us</a>
-          </li>
+          <a href="/contacts" class="nav-lin">Contact us</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -33,9 +33,9 @@
       <input type="search" name="search-bar" id="" placeholder="Search" />
     </form>
     <div class="div-a">
-      <a href="/dashboard" class="nav-link">
+      <a href="/settings" class="nav-link">
         Hello, <%= currentUser.username %>
-        <img src="images/profile.png" alt="" />
+        <a href="/dashboard"><img src="images/profile.png" alt="" /></a>
       </a>
     </div>
   </div>
@@ -74,7 +74,24 @@
     <ul id="side-bar_menu">
       <!-- home menu item -->
       <li>
-        <a href="/template" class="side-bar_menu-item">
+        <a href="/" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-home"></i>
+          </span>
+          <p class="side-bar_menu-text">Home</p>
+        </a>
+      </li>
+      <li>
+        <a href="/templates" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+          <p class="side-bar_menu-text">Products</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
           <span class="side-bar_menu-icon_container">
             <i class="fa-regular fa-user"></i>
           </span>

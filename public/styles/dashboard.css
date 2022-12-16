@@ -204,6 +204,13 @@ main {
   width: 50px;
   height: 50px;
 }
+
+.img-content {
+display: flex;
+flex-direction: column;
+gap: 0.5em;
+}
+
 .img-content a {
   color: #623cea;
 }

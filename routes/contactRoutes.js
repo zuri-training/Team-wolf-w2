@@ -4,7 +4,7 @@ var Message = require("../models/contact");
 
 // Contacts Route
 router.get("/contacts", isLoggedIn, function (req, res) {
-  res.render("pages/contacts");
+  res.render("pages/contacts", { currentUser: req.user });
 });
 router.post("/contacts", (req, res) => {
   var message = new Message(req.body);
