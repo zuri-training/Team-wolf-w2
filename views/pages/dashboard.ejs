@@ -1,12 +1,13 @@
 <%- include('../partials/header'); -%> <%- include('../partials/navbar2'); -%>
-
 <head>
   <title>weCode | dashboard</title>
   <link rel="stylesheet" href="/styles/dashboard.css" />
+  <link rel="stylesheet" href="/styles/sidebar.css" />
 </head>
 
 <body>
   <main>
+    <%- include('../partials/sidebar'); -%>
     <div class="main-dash">
       <div>
         <div class="profile-dash">
@@ -19,20 +20,20 @@
         <div>
           <div class="acc-dash">
             <img
-              src="images/joy-pfp.png"
+              src="images/person.png"
               alt="profile-img"
               class="profile-img"
             />
             <div class="profile">
-              <p>Joygirl</p>
-              <p>@joy on weCode</p>
+              <p><%= currentUser.username %></p>
+              <span>@<%= currentUser.username %> on weCode</span>
             </div>
           </div>
         </div>
         <div class="min-dash">
-          <p>Edit Profile</p>
-          <p>Edit Forum Profile</p>
-          <p>Edit Notification Settings</p>
+          <a  href="">Edit Profile</a>
+          <a href="">Edit Forum Profile</a>
+          <a href="">Edit Notification Settings</a>
         </div>
       </div>
 
@@ -44,19 +45,19 @@
               <div class="min-content">
                 <div class="min-content5">
                   <i class="fa-solid fa-thumbtack"></i>
-                  <p class="content4">5 post</p>
+                  <a href="" class="content4">5 post</a>
                 </div>
                 <div class="min-content5">
                   <i class="fa-solid fa-file-circle-plus"></i>
-                  <p class="content4">5 post</p>
+                  <a href="" class="content4">5 post</a>
                 </div>
               </div>
               <div class="min-content1">
                 <div class="min-content5">
                   <i class="fa-regular fa-message"></i>
-                  <p class="class= content4">2 comments</p>
+                  <a href="" class="class= content4">2 comments</a>
                 </div>
-                <p>
+                <p class="multipurpose-text">
                   weCode running Multipurpose theme.<br />
                   Search Engines Discourage
                 </p>
@@ -65,8 +66,8 @@
           </div>
           <div class="section2">
             <p class="dash-content">Activity</p>
-            <p class="min-content1">Recently Published</p>
-            <div class="">
+            <p class="min-title">Recently Published</p>
+            <div class="min-container">
               <div class="min-content3">
                 <p>December 12th 2022, 5:05pm</p>
                 <p class="content4">Post for learn Education</p>
@@ -92,24 +93,24 @@
             <div class="acc-dash1">
               <img src="images/joy-pfp.png" alt="" class="profile-img1" />
               <div class="img-content">
-                <p>From admin on Hello David!</p>
-                <p>Thanks so much</p>
+                <p>From admin on <a href="">Hello David!</a></p>
+                <p class="">Thanks so much</p>
               </div>
             </div>
             <div class="acc-dash1">
               <img src="images/joy-pfp.png" alt="" class="profile-img1" />
               <div class="img-content">
-                <p>From weCode on Hello David!</p>
+                <p>From weCode on <a href="">Hello David!</a></p>
                 <p>You are welcome</p>
               </div>
             </div>
-            <button class="ld-more">Load More</button>
+            <a href=""><button class="ld-more">Load More</button></a>
           </div>
         </div>
         <div class="sections">
           <div class="section3">
             <p class="dash-content">Quick draft</p>
-            <div>
+            <div class="form-container">
               <form action="" class="formstyle">
                 <label for="Title"></label><br />
                 <input
@@ -127,7 +128,7 @@
                   placeholder="What is on Your mind?"
                 ></textarea
                 ><br />
-                <button class="ld-more">Submit</button>
+                <a href=""><button class="ld-more">Submit</button></a>
               </form>
             </div>
           </div>
@@ -135,15 +136,15 @@
             <p class="dash-content">weCode Events and News</p>
             <div class="box-blog">
               <p class="box-blog1">Attend and upcoming Event near you.</p>
-              <div class="box-blog1">
+              <div class="box-blg">
                 <p>Global weCode Translation Day</p>
                 <p>Ikeja, Lagos</p>
               </div>
-              <div class="box-blog1">
+              <div class="box-blg">
                 <p>Global weCode Translation Day 3</p>
                 <p>Dev Blog: Global weCode Translation Day 4</p>
               </div>
-              <div class="box-blog1">
+              <div class="box-blg">
                 <p>Hero Bliss: Challenge Gladly Accepted</p>
                 <p>Dev Blog: Global weCode Translation Day 4</p>
               </div>
@@ -157,8 +158,4 @@
       </div>
     </div>
   </main>
-  <script
-    src="https://kit.fontawesome.com/51e04b70b4.js"
-    crossorigin="anonymous"
-  ></script>
 </body>

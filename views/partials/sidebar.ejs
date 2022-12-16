@@ -1,102 +1,104 @@
-<nav class="nabar">
-  <article id="settings-container_side-bar">
+
+
+<article id="settings-container_side-bars">
+
     <!-- side bar menu -->
-    <ul id="side-bar_menu">
+    <ul id="side-bar_menus">
       <!-- home menu item -->
 
       <li>
-        <a href="/dashboard" class="dashboard">
-          <img src="images/dashboard.png" alt="" />
-          <p class="side-bar_menu-text">Dashboard</p>
+        <a href="/dashboard" class="dashboards">
+          <img src="images/dashboard.png" alt="">
+          <p class="side-bar_menu-texts">Dashboard</p>
         </a>
       </li>
 
       <li>
-        <a href="/settings" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="/settings" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-regular fa-user"></i>
           </span>
-          <p class="side-bar_menu-text">Profile</p>
+          <p class="side-bar_menu-texts">Profile</p>
         </a>
       </li>
 
       <!-- settings menu item -->
       <li>
-        <a href="/settings" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="/settings" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-gear"></i>
           </span>
-          <p class="side-bar_menu-text">Settings</p>
+          <p class="side-bar_menu-texts">Settings</p>
         </a>
       </li>
 
       <!-- dashboard menu item -->
       <li>
-        <a href="/templates" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="/settings" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-store"></i>
           </span>
-          <p class="side-bar_menu-text">Purchases</p>
+          <p class="side-bar_menu-texts">Purchases</p>
         </a>
       </li>
 
       <!-- update menu item -->
       <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-lock"></i>
           </span>
-          <p class="side-bar_menu-text">Security</p>
+          <p class="side-bar_menu-texts">Security</p>
         </a>
       </li>
 
       <!-- media menu item -->
       <li>
-        <a href="/aboutus" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-regular fa-eye"></i>
           </span>
-          <p class="side-bar_menu-text">Privacy</p>
+          <p class="side-bar_menu-texts">Privacy</p>
         </a>
       </li>
 
       <!-- pages menu item -->
       <li>
-        <a href="/template" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-regular fa-eye"></i>
           </span>
-          <p class="side-bar_menu-text">Manage Blogs</p>
+          <p class="side-bar_menu-texts">Manage Blogs</p>
         </a>
       </li>
 
       <!-- comments menu item -->
       <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-bell"></i>
           </span>
-          <p class="side-bar_menu-text">Notification Settings</p>
+          <p class="side-bar_menu-texts">Notification Settings</p>
         </a>
       </li>
 
       <!-- testimonials menu item -->
       <li>
-        <a href="/mysites" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-ban"></i>
           </span>
-          <p class="side-bar_menu-text">Blocked Sites</p>
+          <p class="side-bar_menu-texts">Blocked Sites</p>
         </a>
       </li>
 
       <!-- our teams menu item -->
       <li>
-        <a href="" class="side-bar_menu-item">
-          <span class="side-bar_menu-icon_container">
+        <a href="" class="side-bar_menu-items">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-map-location-dot"></i>
           </span>
-          <p class="side-bar_menu-text">Get Apps</p>
+          <p class="side-bar_menu-texts">Get Apps</p>
         </a>
       </li>
 
@@ -104,31 +106,53 @@
       <li>
         <a
           href="/logout"
-          class="side-bar_menu-item"
-          id="logout-menu-item"
+          class="side-bar_menu-items"
+          id="logout-menu-items"
           type="button"
         >
-          <span class="side-bar_menu-icon_container">
+          <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-right-from-bracket"></i>
           </span>
-          <p class="side-bar_menu-text">Logout</p>
+          <p class="side-bar_menu-texts">Logout</p>
         </a>
       </li>
     </ul>
   </article>
 
   <!-- main panel -->
-  <section class="settings-container_main-panel">
-    <!-- logout popup screen : hidden by default -->
-    <div class="overlay">
-      <aside class="logout-popup">
-        <h4 class="logout-header">Logout</h4>
-        <p class="logout-subtext">Are you sure you want to log out?</p>
-        <div class="logout-flex">
-          <a class="logout-cancel" type="button">Cancel</a>
-          <a href="/logout" class="logout-logout">Logout</a>
+  <section class="settings-container_main-panels">
+        <!-- logout popup screen : hidden by default -->
+        <div class="overlays">
+          <aside class="logout-popups">
+            <h4 class="logout-headers">Logout</h4>
+            <p class="logout-subtexts">Are you sure you want to log out?</p>
+            <div class="logout-flexs">
+              <a class="logout-cancels" type="button">Cancel</a>
+              <a href="/logout" class="logout-logouts">Logout</a>
+            </div>
+          </aside>
         </div>
-      </aside>
-    </div>
-  </section>
-</nav>
+      </section>
+      </div>
+
+<script>
+  ("use strict");
+
+  const logoutBtns = document.getElementById(".logout-menu-items");
+  const overlays = document.querySelector(".overlays");
+  const logoutPopUps = document.querySelector(".logout-popups");
+  const cancelBtns = document.querySelector(".logout-cancels");
+
+  console.log("hello");
+
+  logoutBtns.addEventListener("click", () => {
+    console.log("click");
+    overlays.style.display = "block";
+    logoutPopUps.style.display = "block";
+  });
+
+  cancelBtns.addEventListener("click", () => {
+    overlays.style.display = "none";
+    logoutPopUps.style.display = "none";
+  });
+</script>

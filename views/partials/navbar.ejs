@@ -1,114 +1,131 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
 <script
-      src="https://kit.fontawesome.com/9bd36ee156.js"
-      crossorigin="anonymous"
-    ></script>
+  src="https://kit.fontawesome.com/9bd36ee156.js"
+  crossorigin="anonymous"
+></script>
 <nav class="nabar">
-    <div class="na-flexx1">
-        <a class="nabar-brand1" href="/">
-          <img src="images/weCode.png" alt="" />
-        </a>
-      <div class="collapsey">
-        <ul id="lists">
-          <li class="na-item li-a">
-            <a href="/" class="nav-lin">Home</a>
-          </li>
-          <li class="na-item li-b">
-            <a href="/templates" class="nav-lin">Products</a>
-          </li>
-          <li class="na-item li-c">
-            <a href="/aboutus" class="nav-lin">About</a>
-          </li>
-          <li class="na-item li-c">
-            <a href="/contacts" class="nav-lin">Contact Us</a>
-          </li>
-        </ul>
-      </div>
+  <div class="na-flexx1">
+    <a class="nabar-brand1" href="/">
+      <img src="images/weCode.png" alt="" />
+    </a>
+    <div class="collapsey">
+      <ul id="lists">
+        <li class="na-item li-a">
+          <a href="/" class="nav-lin">Home</a>
+        </li>
+        <li class="na-item li-b">
+          <a href="/templates" class="nav-lin">Products</a>
+        </li>
+        <li class="na-item li-c">
+          <a href="/aboutus" class="nav-lin">About</a>
+        </li>
+        <li class="na-item li-c">
+          <a href="/contacts" class="nav-lin">Contact Us</a>
+        </li>
+      </ul>
     </div>
-    <div class="na-flex2">
-      <form action="" class="form">
-        <button>
-          <img src="images/search-interface-symbol.png" alt="" />
-        </button>
-        <input type="search" name="search-bar" id="" placeholder="Search" />
-      </form>
-      <div class="div-a">
+  </div>
+  <div class="na-flex2">
+    <form action="" class="form">
+      <button>
+        <img src="images/search-interface-symbol.png" alt="" />
+      </button>
+      <input type="search" name="search-bar" id="" placeholder="Search" />
+    </form>
+    <div class="div-a">
       <% if (!currentUser){ %>
-    <a href="/register" class="nav-link">
-      <button type="button" class="nav-btn1">Sign Up</button>
-    </a>
-    <a href="/login" class="nav-link">
-      <button type="button" class="nav-btn2">Login</button>
-    </a>
-    <% } else{ %>
-    <a href="/settings" class="nav-link">
+      <a href="/register" class="nav-link">
+        <button type="button" class="nav-btn1">Sign Up</button>
+      </a>
+      <a href="/login" class="nav-link">
+        <button type="button" class="nav-btn2">Login</button>
+      </a>
+      <% } else{ %>
+      <a href="/settings" class="nav-link">
         Hello, <%= currentUser.username %>
         <img src="images/profile.png" alt="" />
-    </a>
-    <% } %>
-  </div>
+      </a>
+      <% } %>
     </div>
-    <div id="navMenu">
+  </div>
+  <div id="navMenu">
     <span></span>
     <span></span>
     <span></span>
   </div>
   <article id="settings-container_side-bar">
-        <% if (!currentUser){ %>
+    <% if (!currentUser){ %>
     <div class="div-a">
       <a href="/register" class="nav-link">
-      <button type="button" class="nav-btn1">Sign Up</button>
-    </a>
-    <a href="/login" class="nav-link">
-      <button type="button" class="nav-btn2">Login</button>
-    </a>
+        <button type="button" class="nav-btn1">Sign Up</button>
+      </a>
+      <a href="/login" class="nav-link">
+        <button type="button" class="nav-btn2">Login</button>
+      </a>
     </div>
     <div class="collapsed">
-        <ul id="list">
-          <li>
-            <a href="/" class="side-link">Home</a>
-          </li>
-          <li>
-            <a href="/templates" class="side-link">Products</a>
-          </li>
-          <li>
-            <a href="/aboutus" class="side-link">About</a>
-          </li>
-        </ul>
-        </div>
+      <ul id="list">
+        <li>
+          <a href="/" class="side-link">Home</a>
+        </li>
+        <li>
+          <a href="/templates" class="side-link">Products</a>
+        </li>
+        <li>
+          <a href="/aboutus" class="side-link">About</a>
+        </li>
+      </ul>
+    </div>
     <% } else{ %>
-      <div class="profile-section">
+    <div class="profile-section">
       <div class="profile">
         <a href="/dashboard" class="nav-link">
-       <img src="images/person.png" alt="profile image">
-        <div class="current1">
-          Hello, <%= currentUser.username %>
-        </div>
-       <div class="current2">
-         @<%= currentUser.username %>
-       </div>
-    </a>
-     </div>
-      <button type="button" class="logout-btn nav-link" id="logout-menu-item">Logout</button>
-    <section class="settings-container_main-panel">
-    <!-- logout popup screen : hidden by default -->
-    <div class="overlay">
-    <aside class="logout-popup">
-      <h4 class="logout-header">Logout</h4>
-      <p class="logout-subtext">Are you sure you want to log out?</p>
-      <div class="logout-flex">
-        <a class="logout-cancel" type="button">Cancel</a>
-        <a href="/logout" class="logout-logout">Logout</a>
+          <img src="images/person.png" alt="profile image" />
+          <div class="current1">Hello, <%= currentUser.username %></div>
+          <div class="current2">@<%= currentUser.username %></div>
+        </a>
       </div>
-    </aside>
-    </div>
-  </section>
+      <button type="button" class="logout-btn nav-link" id="logout-menu-item">
+        Logout
+      </button>
+      <section class="settings-container_main-panel">
+        <!-- logout popup screen : hidden by default -->
+        <div class="overlay">
+          <aside class="logout-popup">
+            <h4 class="logout-header">Logout</h4>
+            <p class="logout-subtext">Are you sure you want to log out?</p>
+            <div class="logout-flex">
+              <a class="logout-cancel" type="button">Cancel</a>
+              <a href="/logout" class="logout-logout">Logout</a>
+            </div>
+          </aside>
+        </div>
+      </section>
     </div>
     <!-- side bar menu -->
     <ul id="side-bar_menu">
       <!-- home menu item -->
+
+       <li>
+        <a href="/" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-home"></i>
+          </span>
+          <p class="side-bar_menu-text">Home</p>
+        </a>
+      </li>
+
       <li>
-        <a href="/template" class="side-bar_menu-item">
+        <a href=".templates" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </span>
+          <p class="side-bar_menu-text">Products</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
           <span class="side-bar_menu-icon_container">
             <i class="fa-regular fa-user"></i>
           </span>
@@ -197,13 +214,12 @@
       </li>
 
       <!-- logout menu item -->
-      <li>
-
+      <li></li>
     </ul>
   </article>
 
   <!-- main panel -->
-<% } %>
+  <% } %>
 </nav>
 
 <% if(error && error.length>0){ %>
@@ -220,26 +236,26 @@
 
   navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-    sideBar.classList.toggle('active');
-;  })
+    sideBar.classList.toggle("active");
+  });
 
-'use strict'
+  ("use strict");
 
-const logoutBtn = document.getElementById('logout-menu-item');
-const overlay = document.querySelector('.overlay');
-const logoutPopUp = document.querySelector('.logout-popup');
-const cancelBtn = document.querySelector('.logout-cancel');
+  const logoutBtn = document.getElementById("logout-menu-item");
+  const overlay = document.querySelector(".overlay");
+  const logoutPopUp = document.querySelector(".logout-popup");
+  const cancelBtn = document.querySelector(".logout-cancel");
 
-console.log("hello")
+  console.log("hello");
 
-logoutBtn.addEventListener('click', () => {
+  logoutBtn.addEventListener("click", () => {
     console.log("click");
     overlay.style.display = "block";
     logoutPopUp.style.display = "block";
-});
+  });
 
-cancelBtn.addEventListener('click', () => {
+  cancelBtn.addEventListener("click", () => {
     overlay.style.display = "none";
     logoutPopUp.style.display = "none";
-});
+  });
 </script>
