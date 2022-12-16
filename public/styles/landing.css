@@ -435,6 +435,14 @@ a .btn5:hover {
     width: 90%;
   }
 
+  .image-overlay span {
+  font-size: 14px;
+}
+
+.image-overlay p {
+  font-size: 12px;
+}
+
   .image_container {
     padding: 0 5% 5%;
     grid-template-columns: auto auto;
