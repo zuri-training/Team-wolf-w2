@@ -1,24 +1,27 @@
 <link rel="stylesheet" href="/styles/navbar.css" />
+<script
+      src="https://kit.fontawesome.com/9bd36ee156.js"
+      crossorigin="anonymous"
+    ></script>
 <nav class="nabar">
     <div class="na-flexx1">
         <a class="nabar-brand1" href="/">
           <img src="images/weCode.png" alt="" />
         </a>
       <div class="collapsey">
-        <ul id="list"">
-          <li class="na-item">
+        <ul id="lists">
+          <li class="na-item li-a">
             <a href="/" class="nav-lin">Home</a>
           </li>
-          <li class="na-item">
+          <li class="na-item li-b">
             <a href="/templates" class="nav-lin">Products</a>
           </li>
-          <li class="na-item">
+          <li class="na-item li-c">
             <a href="/aboutus" class="nav-lin">About</a>
           </li>
           <li class="na-item logout-none">
-          <a href="/logout" class="nav-lin">
-            Logout
-          </a>
+
+          </li>
         </ul>
       </div>
     </div>
@@ -30,7 +33,7 @@
         <input type="search" name="search-bar" id="" placeholder="Search" />
       </form>
       <div class="div-a">
-    <% if (!currentUser){ %>
+      <% if (!currentUser){ %>
     <a href="/register" class="nav-link">
       <button type="button" class="nav-btn1">Sign Up</button>
     </a>
@@ -39,15 +42,9 @@
     </a>
     <% } else{ %>
     <a href="/settings" class="nav-link">
-      <button type="button" class="nav-btn1">
         Hello, <%= currentUser.username %>
         <img src="images/profile.png" alt="" />
-      </button>
     </a>
-    <!-- <a href="/profile" class="nav-link"><%= currentUser.username %></a> -->
-    <!-- <a href="/logout" class="nav-lin logout-responsive>
-      <button type="button" class="logout">Logout</button>
-    </a> -->
     <% } %>
   </div>
     </div>
@@ -56,7 +53,159 @@
     <span></span>
     <span></span>
   </div>
+  <article id="settings-container_side-bar">
+        <% if (!currentUser){ %>
+    <div class="div-a">
+      <a href="/register" class="nav-link">
+      <button type="button" class="nav-btn1">Sign Up</button>
+    </a>
+    <a href="/login" class="nav-link">
+      <button type="button" class="nav-btn2">Login</button>
+    </a>
+    </div>
+    <div class="collapsed">
+        <ul id="list">
+          <li>
+            <a href="/" class="side-link">Home</a>
+          </li>
+          <li>
+            <a href="/templates" class="side-link">Products</a>
+          </li>
+          <li>
+            <a href="/aboutus" class="side-link">About</a>
+          </li>
+        </ul>
+        </div>
+    <% } else{ %>
+      <div class="profile-section">
+      <div class="profile">
+        <a href="/dashboard" class="nav-link">
+       <img src="images/person.png" alt="profile image">
+        <div class="current1">
+          Hello, <%= currentUser.username %>
+        </div>
+       <div class="current2">
+         @<%= currentUser.username %>
+       </div>
+    </a>
+     </div>
+      <button type="button" class="logout-btn nav-link" id="logout-menu-item">Logout</button>
+    <section class="settings-container_main-panel">
+    <!-- logout popup screen : hidden by default -->
+    <div class="overlay">
+    <aside class="logout-popup">
+      <h4 class="logout-header">Logout</h4>
+      <p class="logout-subtext">Are you sure you want to log out?</p>
+      <div class="logout-flex">
+        <a class="logout-cancel" type="button">Cancel</a>
+        <a href="/logout" class="logout-logout">Logout</a>
+      </div>
+    </aside>
+    </div>
+  </section>
+    </div>
+    <!-- side bar menu -->
+    <ul id="side-bar_menu">
+      <!-- home menu item -->
+      <li>
+        <a href="/template" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-user"></i>
+          </span>
+          <p class="side-bar_menu-text">Profile</p>
+        </a>
+      </li>
+
+      <!-- settings menu item -->
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-gear"></i>
+          </span>
+          <p class="side-bar_menu-text">Settings</p>
+        </a>
+      </li>
+
+      <!-- dashboard menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-store"></i>
+          </span>
+          <p class="side-bar_menu-text">Purchases</p>
+        </a>
+      </li>
+
+      <!-- update menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-lock"></i>
+          </span>
+          <p class="side-bar_menu-text">Security</p>
+        </a>
+      </li>
+
+      <!-- media menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-eye"></i>
+          </span>
+          <p class="side-bar_menu-text">Privacy</p>
+        </a>
+      </li>
+
+      <!-- pages menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-eye"></i>
+          </span>
+          <p class="side-bar_menu-text">Manage Blogs</p>
+        </a>
+      </li>
+
+      <!-- comments menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-bell"></i>
+          </span>
+          <p class="side-bar_menu-text">Notification Settings</p>
+        </a>
+      </li>
+
+      <!-- testimonials menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-ban"></i>
+          </span>
+          <p class="side-bar_menu-text">Blocked Sites</p>
+        </a>
+      </li>
+
+      <!-- our teams menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </span>
+          <p class="side-bar_menu-text">Get Apps</p>
+        </a>
+      </li>
+
+      <!-- logout menu item -->
+      <li>
+
+    </ul>
+  </article>
+
+  <!-- main panel -->
+<% } %>
 </nav>
+
 <% if(error && error.length>0){ %>
 <div class="alert alert-primary" role="alert"><%= error %></div>
 <% } else if(success &&success.length>0){ %>
@@ -67,10 +216,30 @@
 
 <script>
   const navMenu = document.querySelector("#navMenu");
-  const list = document.querySelector("#list");
+  const sideBar = document.querySelector("#settings-container_side-bar");
 
   navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-    list.classList.toggle('active');
+    sideBar.classList.toggle('active');
 ;  })
+
+'use strict'
+
+const logoutBtn = document.getElementById('logout-menu-item');
+const overlay = document.querySelector('.overlay');
+const logoutPopUp = document.querySelector('.logout-popup');
+const cancelBtn = document.querySelector('.logout-cancel');
+
+console.log("hello")
+
+logoutBtn.addEventListener('click', () => {
+    console.log("click");
+    overlay.style.display = "block";
+    logoutPopUp.style.display = "block";
+});
+
+cancelBtn.addEventListener('click', () => {
+    overlay.style.display = "none";
+    logoutPopUp.style.display = "none";
+});
 </script>

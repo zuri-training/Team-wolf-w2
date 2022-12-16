@@ -10,42 +10,47 @@ body {
   overflow-x: 0;
 }
 
-
 main {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* gap: 3em; */
 }
 
 .banner {
-  padding: 150px 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 30vh 5%;
   width: 100%;
-  background:linear-gradient(115deg,
+  background: linear-gradient(
+      115deg,
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8),
       rgba(0, 0, 0, 0.8)
-    ), url(/images/banner.png);
+    ),
+    url(/images/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .banner_text {
   display: flex;
-  
   flex-direction: column;
-  justify-content: center;  
-  text-align: left;  
+  justify-content: center;
+  text-align: left;
   gap: 1em;
-  
   width: 60%;
   color: white;
+}
+
+.banner_text {
+  gap: 0.7em;
 }
 
 .banner_text h1 {
   font-size: 55px;
   font-weight: 900;
-  /* line-height: 60px; */
+  line-height: 70px;
   font-family: "Inter";
 }
 
@@ -65,18 +70,7 @@ main {
   border: 1px solid #623cea;
   border-radius: 5px;
   outline: none;
-  
-  transition: 1s ease-in-out;
-}
 
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 170;
   transition: 1s ease-in-out;
 }
 
@@ -196,61 +190,158 @@ svg {
 .tested_text p {
   text-align: center;
   width: 80%;
+  font-family: "Roboto";
 }
 
 .image_container {
-  display: grid;
-  grid-template-columns: auto auto auto;
+   display: grid;
+  grid-template-columns: auto auto auto auto;
   /* flex-wrap: wrap; */
   gap: 1em;
 }
 
-.landing_tested img {
+.tested-img {
   width: 100%;
-  height: 250px;
   max-height: 100%;
 }
 
-.landing_tested img:hover {
-  opacity: 0.8;
+.tested-img:hover {
+  opacity: 0.4;
   transition: 0.3s;
 }
+
+.imageOverlay-container {
+  position: relative;
+}
+
+.image-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-family: "Roboto";
+}
+
+
+.imageOverlay-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay:hover .tested-img {
+  opacity: 0.4;
+}
+
+.image-overlay span {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.image-overlay p {
+  font-size: 14px;
+}
+
+.sell {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2.5% 0;
+  background-color: #21144e;
+  width: 100%;
+}
+
+.sell-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+   color: white;
+}
+
+.sell-text h4 {
+  font-size: 2.7em;
+  font-weight: 900;
+  font-family: "Inter";
+}
+
+.sell_p {
+   font-family: "Roboto";
+   width: 60%;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.sell-card-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1em;
+}
+
+.sell-card {
+  background-color: white;
+  height: 200px;
+  color: #303030;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  padding: 0 20px 50px;
+  font-family: "Roboto";
+}
+
+.sell-card img {
+  width: 24px;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+
+.sell-card span {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.sell-card p {
+  font-size: 14px;
+}
+
 
 .about {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   gap: 1em;
   background-color: white;
-  padding: 7% 0;
+  padding: 5%;
   font-family: "Roboto";
-  text-align: center;
 }
 
 .about h3 {
   font-size: 2.5em;
   font-weight: 900;
   color: #303030;
-  /* margin-bottom: 20px; */
+  text-align: center;
 }
 
 .about span {
   font-size: 1.5em;
   color: #303030;
-  width: 60%;
 }
 
 .about p {
   font-size: 1.1em;
-  width: 40%;
-  text-align: center;
   margin-bottom: 20px;
 }
 
 .btn5 {
   border: 0;
   border-radius: 5px;
-  background: #623cea;
+  background: #2D0DB1;
   color: white;
   width: 230px;
   padding: 16px 10px;
@@ -258,6 +349,11 @@ svg {
   font-style: normal;
   font-weight: 900;
   font-size: 17px;
+}
+
+.buttond {
+ text-align: center;
+ margin: auto;
 }
 
 a .btn5:hover {
@@ -269,15 +365,17 @@ a .btn5:hover {
 @media screen and (max-width: 768px) {
   .banner {
     height: 60vh;
+    padding: 15vh 5%;
   }
 
   .banner_text {
     width: 95%;
-    height: 60vh;
+    height: 50vh;
   }
 
   .banner_text h1 {
     font-size: 34px;
+    line-height: normal;
   }
 
   .banner_text p {
@@ -323,16 +421,15 @@ a .btn5:hover {
   }
 
   .landing_tested {
-    padding-top: 5%;
+    padding: 5% 5% 0;
   }
 
   .tested_text {
     gap: 0.5em;
-
   }
 
   .landing_tested h4 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .tested_text p {
@@ -348,6 +445,38 @@ a .btn5:hover {
     height: 100%;
   }
 
+  .sell {
+     padding: 5% 5%;
+     gap: 1.3em;
+  }
+
+  .sell-text {
+     gap: 0.5em;
+  }
+
+  .sell-text h4 {
+    font-size: 1em;
+  }
+
+  .sell_p {
+    font-size: 0.8em;
+    width: 100%;
+    font-weight: normal;
+  }
+
+  .sell-card img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sell-card span {
+    font-size: 1em;
+  }
+
+  .sell-card p {
+    font-size: 0.8em;
+  }
+
   .about {
     gap: 0.5em;
   }
@@ -356,19 +485,19 @@ a .btn5:hover {
     font-size: 1.8em;
   }
 
-  .about span {
-    font-size: 1.2em;
-    width: 90%;
-  }
-
   .about p {
     font-size: 0.8em;
-    width: 70%;
+    width: 100%;
+  }
+
+  .landing_p2 {
+    display: none;
   }
 
   .btn5 {
-    width: 150px;
-    padding: 12px;
+    width: 120px;
+    padding: 10px 12px;
     font-size: 15px;
   }
+
 }
