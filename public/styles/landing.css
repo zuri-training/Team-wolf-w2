@@ -194,7 +194,7 @@ main {
 }
 
 .image_container {
-   display: grid;
+  display: grid;
   grid-template-columns: auto auto auto auto;
   /* flex-wrap: wrap; */
   gap: 1em;
@@ -226,7 +226,6 @@ main {
   opacity: 0;
   font-family: "Roboto";
 }
-
 
 .imageOverlay-container:hover .image-overlay {
   opacity: 1;
@@ -261,7 +260,7 @@ main {
   align-items: center;
   text-align: center;
   gap: 2em;
-   color: white;
+  color: white;
 }
 
 .sell-text h4 {
@@ -271,10 +270,10 @@ main {
 }
 
 .sell_p {
-   font-family: "Roboto";
-   width: 60%;
-   font-size: 20px;
-   font-weight: bold;
+  font-family: "Roboto";
+  width: 60%;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .sell-card-container {
@@ -310,7 +309,6 @@ main {
   font-size: 14px;
 }
 
-
 .about {
   display: flex;
   flex-direction: column;
@@ -341,7 +339,7 @@ main {
 .btn5 {
   border: 0;
   border-radius: 5px;
-  background: #2D0DB1;
+  background: #2d0db1;
   color: white;
   width: 230px;
   padding: 16px 10px;
@@ -352,8 +350,8 @@ main {
 }
 
 .buttond {
- text-align: center;
- margin: auto;
+  text-align: center;
+  margin: auto;
 }
 
 a .btn5:hover {
@@ -439,6 +437,7 @@ a .btn5:hover {
 
   .image_container {
     padding: 0 5% 5%;
+    grid-template-columns: auto auto;
   }
 
   .landing_tested img {
@@ -446,12 +445,12 @@ a .btn5:hover {
   }
 
   .sell {
-     padding: 5% 5%;
-     gap: 1.3em;
+    padding: 5% 5%;
+    gap: 1.3em;
   }
 
   .sell-text {
-     gap: 0.5em;
+    gap: 0.5em;
   }
 
   .sell-text h4 {
@@ -462,6 +461,15 @@ a .btn5:hover {
     font-size: 0.8em;
     width: 100%;
     font-weight: normal;
+  }
+
+  .sell-card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .sell-card {
+    padding: 20px;
   }
 
   .sell-card img {
@@ -499,5 +507,4 @@ a .btn5:hover {
     padding: 10px 12px;
     font-size: 15px;
   }
-
 }
