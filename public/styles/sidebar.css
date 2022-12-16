@@ -17,6 +17,16 @@
      margin: 0 0 2em;
 }
 
+.dashboard {
+    display: flex;
+    align-items: center;
+    background-color: #21144e;
+}
+
+.dashboard img {
+
+}
+
 .side-bar_menu-item {
     display: flex;
     align-items: center;

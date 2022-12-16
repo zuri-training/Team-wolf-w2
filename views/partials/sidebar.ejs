@@ -1,0 +1,135 @@
+<nav class="nabar">
+  <article id="settings-container_side-bar">
+
+    <!-- side bar menu -->
+    <ul id="side-bar_menu">
+      <!-- home menu item -->
+
+      <li>
+        <a href="/dashboard" class="dashboard">
+          <img src="images/dashboard.png" alt="">
+          <p class="side-bar_menu-text">Dashboard</p>
+        </a>
+      </li>
+
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-user"></i>
+          </span>
+          <p class="side-bar_menu-text">Profile</p>
+        </a>
+      </li>
+
+      <!-- settings menu item -->
+      <li>
+        <a href="/settings" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-gear"></i>
+          </span>
+          <p class="side-bar_menu-text">Settings</p>
+        </a>
+      </li>
+
+      <!-- dashboard menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-store"></i>
+          </span>
+          <p class="side-bar_menu-text">Purchases</p>
+        </a>
+      </li>
+
+      <!-- update menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-lock"></i>
+          </span>
+          <p class="side-bar_menu-text">Security</p>
+        </a>
+      </li>
+
+      <!-- media menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-eye"></i>
+          </span>
+          <p class="side-bar_menu-text">Privacy</p>
+        </a>
+      </li>
+
+      <!-- pages menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-regular fa-eye"></i>
+          </span>
+          <p class="side-bar_menu-text">Manage Blogs</p>
+        </a>
+      </li>
+
+      <!-- comments menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-bell"></i>
+          </span>
+          <p class="side-bar_menu-text">Notification Settings</p>
+        </a>
+      </li>
+
+      <!-- testimonials menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-ban"></i>
+          </span>
+          <p class="side-bar_menu-text">Blocked Sites</p>
+        </a>
+      </li>
+
+      <!-- our teams menu item -->
+      <li>
+        <a href="" class="side-bar_menu-item">
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </span>
+          <p class="side-bar_menu-text">Get Apps</p>
+        </a>
+      </li>
+
+      <!-- logout menu item -->
+      <li>
+        <a
+          href="/logout"
+          class="side-bar_menu-item"
+          id="logout-menu-item"
+          type="button"
+        >
+          <span class="side-bar_menu-icon_container">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </span>
+          <p class="side-bar_menu-text">Logout</p>
+        </a>
+      </li>
+    </ul>
+  </article>
+
+  <!-- main panel -->
+  <section class="settings-container_main-panel">
+        <!-- logout popup screen : hidden by default -->
+        <div class="overlay">
+          <aside class="logout-popup">
+            <h4 class="logout-header">Logout</h4>
+            <p class="logout-subtext">Are you sure you want to log out?</p>
+            <div class="logout-flex">
+              <a class="logout-cancel" type="button">Cancel</a>
+              <a href="/logout" class="logout-logout">Logout</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+</nav>
