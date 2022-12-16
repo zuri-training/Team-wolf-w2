@@ -34,7 +34,7 @@
 
       <!-- dashboard menu item -->
       <li>
-        <a href="" class="side-bar_menu-items">
+        <a href="/settings" class="side-bar_menu-items">
           <span class="side-bar_menu-icon_containers">
             <i class="fa-solid fa-store"></i>
           </span>
@@ -138,21 +138,21 @@
 <script>
   ("use strict");
 
-  const logoutBtn = document.getElementById("logout-menu-items");
-  const overlay = document.querySelector(".overlays");
-  const logoutPopUp = document.querySelector(".logout-popups");
-  const cancelBtn = document.querySelector(".logout-cancels");
+  const logoutBtns = document.getElementById(".logout-menu-items");
+  const overlays = document.querySelector(".overlays");
+  const logoutPopUps = document.querySelector(".logout-popups");
+  const cancelBtns = document.querySelector(".logout-cancels");
 
   console.log("hello");
 
-  logoutBtn.addEventListener("click", () => {
+  logoutBtns.addEventListener("click", () => {
     console.log("click");
-    overlay.style.display = "block";
-    logoutPopUp.style.display = "block";
+    overlays.style.display = "block";
+    logoutPopUps.style.display = "block";
   });
 
-  cancelBtn.addEventListener("click", () => {
-    overlay.style.display = "none";
-    logoutPopUp.style.display = "none";
+  cancelBtns.addEventListener("click", () => {
+    overlays.style.display = "none";
+    logoutPopUps.style.display = "none";
   });
 </script>
