@@ -28,6 +28,9 @@ router.get("/youtube", function (req, res) {
 router.get("/templatenew", isLoggedIn, function (req, res) {
   res.render("workspace/templatenew", { currentUser: req.user });
 });
+router.get("/mysites", function (req, res) {
+  res.render("pages/mysites", { currentUser: req.user });
+});
 router.get("/infotemplate", isLoggedIn, function (req, res) {
   res.render("pages/infotemplate", { currentUser: req.user });
 });
