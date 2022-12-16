@@ -106,7 +106,7 @@
     <ul id="side-bar_menu">
       <!-- home menu item -->
 
-       <li>
+      <li>
         <a href="/" class="side-bar_menu-item">
           <span class="side-bar_menu-icon_container">
             <i class="fa-solid fa-home"></i>
@@ -223,11 +223,17 @@
 </nav>
 
 <% if(error && error.length>0){ %>
-<div class="alert alert-primary" role="alert"><%= error %></div>
+<div style="background-color: green" class="alert alert-primary" role="alert">
+  <%= error %>
+</div>
 <% } else if(success &&success.length>0){ %>
-<div class="alert alert-success" role="alert"><%= success %></div>
+<div style="background-color: green" class="alert alert-success" role="alert">
+  <%= success %>
+</div>
 <% } else if(welcome && welcome.length>0){ %>
-<div class="alert alert-info" role="alert"><%= welcome %></div>
+<div style="background-color: green" class="alert alert-info" role="alert">
+  <%= welcome %>
+</div>
 <% }%>
 
 <script>
