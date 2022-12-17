@@ -419,7 +419,7 @@ a .btn5:hover {
   }
 
   .landing_tested {
-    padding: 5% 5% 0;
+    padding: 5% 0 0;
   }
 
   .tested_text {
@@ -433,6 +433,27 @@ a .btn5:hover {
   .tested_text p {
     font-size: 0.8em;
     width: 90%;
+  }
+
+  .tested-img {
+    width: 180px;
+    height: 200px;
+  }
+
+  .tested-img:hover {
+    opacity: 1;
+  }
+
+  .image-overlay {
+    opacity: 1;
+  }
+
+  .imageOverlay-container {
+    opacity: 0.7;
+  }
+
+  .image-overlay:hover .tested-img {
+    opacity: 0.7;
   }
 
   .image-overlay span {
