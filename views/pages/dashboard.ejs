@@ -12,7 +12,9 @@
       <div>
         <div class="profile-dash">
           <p class="main-profile">Profile</p>
-          <button class="select">My Sites</button>
+          <button class="select">
+            <a style="text-decoration: none" href="/mysites">My Sites</a>
+          </button>
         </div>
       </div>
 
@@ -31,9 +33,9 @@
           </div>
         </div>
         <div class="min-dash">
-          <a  href="">Edit Profile</a>
-          <a href="">Edit Forum Profile</a>
-          <a href="">Edit Notification Settings</a>
+          <a href="/settings">Edit Profile</a>
+          <a href="/settings">Edit Forum Profile</a>
+          <a href="/settings">Edit Notification Settings</a>
         </div>
       </div>
 
@@ -104,24 +106,32 @@
                 <p>You are welcome</p>
               </div>
             </div>
-            <a href=""><button class="ld-more">Load More</button></a>
+            <a href="/infotemplate"
+              ><button class="ld-more">Load More</button></a
+            >
           </div>
         </div>
         <div class="sections">
           <div class="section3">
             <p class="dash-content">Quick draft</p>
             <div class="form-container">
-              <form action="" class="formstyle">
+              <form method="POST" action="/contacts"" class="formstyle">
                 <label for="Title"></label><br />
                 <input
                   type="text"
                   id="title"
-                  name="title"
+                  name="name"
+                  placeholder="Name"
+                /><br />
+                <input
+                  type="text"
+                  id="title"
+                  name="subject"
                   placeholder="Title"
                 /><br />
                 <label for="What is on your mind"></label>
                 <textarea
-                  name=""
+                  name="message"
                   id=""
                   cols="20"
                   rows="5"

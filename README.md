@@ -102,3 +102,8 @@ It's important to note that it is not necessary to be familiar with these framew
   ### User Authentication: Testing/Hosting
 
   - The website is currently being hosted on AWS with the URL: http://ec2-34-239-165-230.compute-1.amazonaws.com:3000/
+
+## Chanllenges (Suggestions and Contributions are welcome)
+
+- Reset Password failed to work using different ways (Cookie-session does give problem)
+- Sign up or Login with Goolge works fine on localhost but fails on host server due to the follwing code (callbackURL: "http://localhost:3000/google/callback")
