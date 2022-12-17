@@ -469,10 +469,6 @@ a .btn5:hover {
     grid-template-columns: auto auto;
   }
 
-  .landing_tested img {
-    height: 100%;
-  }
-
   .sell {
     padding: 5% 5%;
     gap: 1.3em;
