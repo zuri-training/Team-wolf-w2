@@ -9,12 +9,12 @@ body {
 }
 .account-settings_header {
     font-size: 2rem;
-    margin-bottom: .25em;
+    margin-bottom: .05em;
 }
 
 .account-settings_subtext {
     font-size: .875rem;
-    margin-bottom: 2em;
+    margin-bottom: .5em;
 }
 
 .info_container {
@@ -22,7 +22,7 @@ body {
     position: relative;
     border-radius: 10px;
     font-size: .875rem;
-    margin-bottom: 2em;
+    margin-bottom: .01em;
 }
 
 .info_header {
@@ -35,8 +35,8 @@ body {
 }
 
 .info_bottom {
-    padding: 2.5em 1.5em 3em;
-    padding-right: 3em;
+    padding: 1.0em 1.5em .5em;
+    /* padding-right: 3em; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +56,7 @@ body {
     border-radius: 5px;
     border: .5px solid var(--light-gray);
     padding: .875em .65em;
-    margin-top: .25em;
+    margin-top: .5em;
 }
 
 .info_label {
@@ -67,7 +67,7 @@ body {
 }
 
 .lname {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 .login-bottom {
@@ -76,7 +76,7 @@ body {
 
 .login-bottom_accemail-confirmed {
     display: flex;
-    gap: 1em;
+    gap: .5em;
 }
 
 .fa-check {
@@ -109,7 +109,7 @@ body {
     justify-content: space-between;
     gap: 10em;
     width: 50%;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .promotions-box_top {
@@ -123,7 +123,7 @@ body {
 }
 
 .delete-account_container {
-    margin-bottom: 3em;
+    margin-bottom: .5em;
 }
 
 .delete-account_text {
@@ -135,10 +135,11 @@ body {
     background-color: var(--purple);
     color: var(--white);
     cursor: pointer;
-    padding: .8em 3em;
+    padding: .8em 1em;
+    width: 20%;
+    text-align: center;
     border: none;
     border-radius: 5px;
-    margin: 1em auto;
     display: block;
 }
 
@@ -168,7 +169,6 @@ body {
         flex-direction: column;
         align-items: flex-start;
         padding-right: 1.5em;
-        padding-bottom: 2.5em;
     }
 
     .info_bottom-left, .info_bottom-right {width: 100%;}
@@ -188,6 +188,16 @@ body {
         gap: 7em;
         width: 100%;
     }
-
+    .save-changes {
+        background-color: var(--purple);
+        color: var(--white);
+        cursor: pointer;
+        padding: .8em 1em;
+        width: 100%;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+        display: block;
+    }
     #languages {width: 100%;}
 }
