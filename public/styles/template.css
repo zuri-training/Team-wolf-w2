@@ -221,7 +221,8 @@ main {
   }
 
   .template img {
-    height: 200px;
+    width: 100%;
+    height: 100%;
   }
 
   .template:hover img {
@@ -229,7 +230,7 @@ main {
   }
 
   .image-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
     gap: 1em;
   }
 
