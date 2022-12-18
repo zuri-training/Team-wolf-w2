@@ -102,3 +102,42 @@ margin-top: none;
     justify-content: center;
     
 }
+
+@media (max-width: 768px)  {
+
+    .element-head {
+        padding: 2rem;
+    }
+
+    .text{
+        width: 100%;
+    }
+
+    .section{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h"
+        "i";
+        gap: 25px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        position: relative;
+    }
+
+    .box{
+        padding: 2rem 2rem 3rem;
+        border-radius: 0.5rem;
+        position: relative;
+    }
+
+    .icon-container{
+        margin-left: 80%;
+    }
+}

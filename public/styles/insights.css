@@ -101,3 +101,24 @@ justify-content: ;
     justify-content: center;
     
 }
+
+@media (max-width: 768px) {
+    .element-head {
+        padding: 2rem;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .section {
+        padding: 4rem 2rem;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+    }
+}
