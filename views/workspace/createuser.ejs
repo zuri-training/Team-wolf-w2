@@ -1,0 +1,83 @@
+<%- include('../partials/header'); -%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>weCode | Sign Up</title>
+  <link rel="stylesheet" href="/styles/SignUp.css" />
+  <link
+    rel="icon"
+    type="images/x-icon"
+    sizes="16x16 32x32 96x96 120x120 180x180 300x300 512x512"
+    href="/images/favicon32x32.ico"
+  />
+</head>
+
+<body>
+  <div class="sign-up_container container">
+    <!-- left/image section of the sign-up container -->
+    <div class="sign-up_img"></div>
+
+    <!-- right/form section of the sign-up container -->
+    <div class="sign-up_form">
+      <!-- logo -->
+      <aside class="signup-logo_container">
+        <a href="/"
+          ><img
+            class="sign-up_logo"
+            src="images/weCodeLogo.png"
+            alt="weCode Logo"
+        /></a>
+      </aside>
+
+      <h1 class="sign-up_header">
+        Enter your details to have a unique address
+      </h1>
+      <!-- form -->
+      <form action="/createuser" method="post">
+        <input type="text" name="fullName" placeholder="John Example" />
+        <input type="text" name="username1" placeholder="username" />
+        <input type="email" name="email" placeholder="example@gmail.com" />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+        />
+        <!-- terms -->
+        <div class="agree-terms_flex flex">
+          <input type="checkbox" name="" id="agree-terms" />
+          <label for="checkbox" class="agree-terms"
+            >I agree to the Terms of User</label
+          >
+        </div>
+        <!-- sign up button -->
+        <input type="submit" value="Sign Up" />
+      </form>
+      <div class="container">
+        <div class="jumbotron text-center text-primary">
+          <h1><span class="fa fa-lock"></span> OR</h1>
+          <button
+            style="
+              background-color: #623cea;
+              padding: 16px 20px;
+              color: white;
+              font-size: 16px;
+              border: none;
+            "
+          >
+            <a href="/google" class="btn btn-danger"
+              ><span class="fa fa-google"></span> Sign Up with Google</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- add fontawesome -->
+  <script
+    src="https://kit.fontawesome.com/51e04b70b4.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/public/js/signuplogin.js"></script>
+</body>

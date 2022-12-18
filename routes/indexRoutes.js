@@ -9,7 +9,7 @@ router.get("/", function (req, res) {
   res.render("pages/home", { currentUser: req.user });
 });
 // About Us Route
-router.get("/aboutus", function (req, res) {
+router.get("/aboutus", isLoggedIn, function (req, res) {
   res.render("pages/aboutus");
 });
 // Dashboard Route
@@ -18,9 +18,6 @@ router.get("/dashboard", isLoggedIn, function (req, res) {
 });
 router.get("/templates", isLoggedIn, function (req, res) {
   res.render("pages/templates", { currentUser: req.user });
-});
-router.get("/template", isLoggedIn, function (req, res) {
-  res.render("workspace/landing", { currentUser: req.user });
 });
 router.get("/youtube", function (req, res) {
   res.render("workspace/youtube");
@@ -44,13 +41,11 @@ router.get("/sidebar", isLoggedIn, function (req, res) {
 router.get("/settings", (req, res) => {
   res.render("pages/settings", { currentUser: req.user });
 });
-
+// router.get("/template", isLoggedIn, function (req, res) {
+//   res.render("workspace/landing", { currentUser: req.user });
+// });
 router.get("/subscription", function (req, res) {
   res.render("pages/subscription", { currentUser: req.user });
-});
-
-router.get("/template", function (req, res) {
-  res.render("pages/template", { currentUser: req.user });
 });
 router.get("/element", function (req, res) {
   res.render("pages/element", { currentUser: req.user });

@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="/styles/navbar.css" />
+
+<body>
+<header>
+      <nav class="navbar">
+          <div class="nav-flex1">
+            <a class="navbar-brand" href="#"> <img src="images/weCode.png" alt=""> </a>
+            <div class="collapse">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a href="" class="nav-link">Product</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Template</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">Resources</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link">More</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <div class="nav-flex2">
+          <form class="nav_form" action="">
+            <button><img src="images/search-interface-symbol.png" alt=""></button>
+            <input class="nav_input" type="search" name="search-bar" id="" placeholder="search template">
+          </form>
+          <div class="d-flex">
+            <a href="/login" class="nav-link">
+                <button type="button" class="nav-btn1">Log in</button>
+            </a>
+            <a href="/register" class="nav-link">
+                <button type="button" class="nav-btn2">Get Started</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- </body> -->
+    <body>
+      
+      <section   class="FAQ__list__container">
+        <section  class="features__container">
+          <form action="/navbar" method="POST" class="todo-header">
+            <input class="todo_input" type="text" name="questionn" />
+            <input class="todo_input" type="text" name="detail" />
+            <input class="todo_input" type="text" name="title" />
+            <input class="todo_input" type="text" name="subtitle" />
+            <input class="todo_input" type="text" name="para" />
+            <button type="submit">
+              <span class="fas fa-plus">submit</span>
+            </button>
+          </form>
+        <h1 class="FAQ__heading">Frequently Asked Questions</h1>
+        <div class="FAQ__list">
+          <%if ()
+          %>
+          <% questioning.forEach(function (ans) { %>
+          
+          <div class="FAQ__accordian">
+            <details id="faq" >
+                <summary class="FAQ__title"> <%= ans.questionn %>  <i class="fal fa-plus"></i></summary>
+                <p class="summary_p"> <%= ans.detail %> </p>
+
+       
+            </details>
+         
+        </div>
+        <% }) %> 
+    </body>

@@ -1,0 +1,447 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter|Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/images/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/static/stylesheet/navbar.css">
+    <link rel="stylesheet" href="/static/stylesheet/landing.css">
+    <link rel="stylesheet" href="/static/stylesheet/footer.css">
+ 
+    <title>weCode | templates</title>
+  </head>
+  <body>
+  <nav class="nabar">
+  <div class="div-a">    
+    <a href="/register" class="nav-link">
+      <button type="button" class="nav-btn1">Register</button>
+    </a>
+    <a href="/login" class="nav-link">
+      <button type="button" class="nav-btn1">Login</button>
+    </a>
+  </div>
+  <div class="div-b">
+    <div class="na-flexx1">
+        <a class="nabar-brand1" href="/">
+          <img src="static/images/weCode.png" alt="" />
+        </a>
+      <div class="collapsey">
+    
+        <ul id="list">
+            <% LandingModel.forEach(function (nav) { %>
+          <li class="na-item">
+            <a href="/landing/edit/:id" class="nav-lin"><%= nav.navItems %></a>
+          </li>
+          <a href="/youtube/edit/<%= section._id %>" class="edit">
+            <span class="fas fa-edit"></span>
+          </a>
+          <a href="youtube/remove/<%= section._id %>" class="remove">
+            <span class="fas fa-times"></span>
+          </a>
+          <% }) %> 
+          <li class="na-item">
+            <a href="/aboutus" class="nav-lin">Home</a>
+          </li>
+          <li class="na-item">
+            <a href="/templates" class="nav-lin">Products</a>
+          </li>
+          <li class="na-item">
+            <a href="" class="nav-lin">Features</a>
+          </li>
+          <!-- <li class="na-item">
+            <a href="/contacts" class="nav-lin">Contact</a>
+          </li> -->
+          <li class="na-item logout-none">
+          <a href="/logout" class="nav-lin">
+            Logout
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="na-flex2">
+      <form action="" class="form">
+        <button>
+          <img src="static/images/search-interface-symbol.png" alt="" />
+        </button>
+        <input type="search" name="search-bar" id="" placeholder="Search" />
+      </form>
+    </div>
+    <div id="navMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+  </div>
+</nav>
+<div class="banner">
+  <div class="banner_text">
+    <% LandingModel.forEach(function (nav) { %>
+       
+      
+    <h1> <%= nav.homeTitle %></h1>
+    <p>
+        <%= nav.homeSubTitle %>
+    </p>
+    <% }) %> 
+    <a href="">
+      <button class="btnA">
+        <!-- <svg viewBox="0 0 180 50" class="border">
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+        </svg> -->
+        <a href="/templates">Get Started</a>
+      </button>
+    </a>
+  </div>
+</div>
+<section class="landing1">
+    <% LandingModel.forEach(function (nav) { %>
+  <h2 class="industry-features"><%= nav.byIndustry %></h2>
+  <% }) %>
+  <div class="industry-container">
+    <a href="">
+      <div class="card">
+      <img src="static/images/retail.png" alt="" />
+      <h3>Retail</h3>
+      <p>
+        Provide robust retail that’s adaptable to an ever- changing
+        demand.
+      </p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/fintech.png" alt="" />
+      <h3>Fin Tech</h3>
+      <p>Empower & protect account holders</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/sport.png" alt="" />
+      <h3>Sports & Entertainment</h3>
+      <p>Bring fans to their feet</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/decoupled.png" alt="" />
+      <h3>Decoupled</h3>
+      <p>
+        Render any front-end experience built on a decoupled weCode
+        solution
+      </p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/travel.png" alt="" />
+      <h3>Travel & Tourism</h3>
+      <p>Entice and inspire</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/high.png" alt="" />
+      <h3>High tech</h3>
+      <p>A digital presence as advance as you are</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/ecommerce.png" alt="" />
+      <h3>Ecommerce</h3>
+      <p>
+        Provide powerful and flexible solutions for your ecommerce
+        workflows
+      </p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/ngo.png" alt="" />
+      <h3>Nonprofit and NGOs</h3>
+      <p>Advance your mission</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/heart.png" alt="" />
+      <h3>Healthcare</h3>
+      <p>Healing healthcare IT pain</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/highered.png" alt="" />
+      <h3>Higher Ed</h3>
+      <p>Empowering universities around the globe</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/ecommerce.png" alt="" />
+      <h3>Media & publishing</h3>
+      <p>Content at your audience's fingertips</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/global.png" alt="" />
+      <h3>Government</h3>
+      <p>Engage citizens around the globe</p>
+    </div>
+    </a>
+  </div>
+</section>
+<section class="landing2">
+    <% LandingModel.forEach(function (nav) { %>
+  <h2 class="industry-features"><%= nav.byFeatures %></h2>
+  <% }) %>
+  <a href="">
+    <div class="industry-container2">
+    <div class="card">
+      <img src="static/images/retail.png" alt="" />
+      <h3>Retail</h3>
+      <p>
+        Provide robust retail that’s adaptable to an ever- changing
+        demand.
+      </p>
+    </div>
+  </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/fintech.png" alt="" />
+      <h3>Fin Tech</h3>
+      <p>Empower & protect account holders</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/sport.png" alt="" />
+      <h3>Sports & Entertainment</h3>
+      <p>Bring fans to their feet</p>
+    </div>
+    </a>
+    <a href="">
+      <div class="card">
+      <img src="static/images/decoupled.png" alt="" />
+      <h3>Decoupled</h3>
+      <p>
+        Render any front-end experience built on a decoupled weCode
+        solution
+      </p>
+    </div>
+    </a>
+  </div>
+</section>
+<section class="landing_tested">
+  <div class="tested_text">
+    <% LandingModel.forEach(function (nav) { %>
+    <h4> <%= nav.section1Title %> </h4>
+    <p class="landing_p"> <%= nav.section1para %>
+    </p>
+    <% }) %>
+  </div>
+  <div class="image_container">
+    <img src="static/images/tested1.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+    <img src="static/images/tested2.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+    <img src="static/images/tested3.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+    <img src="static/images/tested4.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+    <img src="static/images/tested5.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+    <img src="static/images/tested6.png" alt="Fin Manager" title="Ade is Lorem ipsum, dolor sit amet consectetur" />
+  </div>
+</section>
+<section class="about">
+    <% LandingModel.forEach(function (nav) { %>
+  <h3> <%= nav.aboutTitle %> </h3>
+  <span>  <%= nav.aboutPara %> </span
+  >
+  <p class="landing_p"> <%= nav.aboutPara2 %>
+  </p>
+  <% }) %>
+  <a href="/aboutus"><button class="btn5 btns">Learn More</button></a>
+</section>
+<div class="footer">
+              
+    <div>
+        <span class="add_section"> change back</span>
+        <input type="color" id="colorID"oninput="changeColor()">
+        <!-- <div class="wrapper">
+      </div> -->
+
+      <!-- MODALS -->
+      <span>  <a href="#demo-modal2">Edit page here</a></span>
+    </div>
+</div>
+<div id="demo-modal2" class="modal">
+    <div class="modal__content">
+        <h1 class="align_center">Fill this form to add content</h1>
+
+        <div class="modal-body">
+          <form action="/land" method="POST" class="todo-header">
+            <label for="">Nav Items: </label>
+              <input class="todo_input" placeholder="Nav Bar Items" type="text" name="navItems"/>
+              <input class="todo_input" placeholder="Main home Title" type="text" name="homeTitle"/>
+              <input class="todo_input" placeholder="Main home sub Title" type="text" name="homeSubTitle"/>
+
+              <input class="todo_input" placeholder="Center heading" type="text" name="byIndustry"/>
+              <!-- <p class="align_center" for="">Add A new Section: </p> -->
+            <input class="todo_input"  placeholder="Second centered title" type="text" name="byFeatures"/>
+            <input class="todo_input" placeholder="section one Title" type="text" name="section1Title"/>
+            <input class="todo_input" placeholder="section one para" type="text" name="section1para"/>
+            <!-- <p class="align_center">Add Frequently Qsked question</p> -->
+            <input class="todo_input" placeholder="About us page Title paragraph" type="text" name="aboutTitle"/>
+            <input class="todo_input" placeholder="About us page Body" type="text" name="aboutPara"/>
+            <!-- <input class="todo_input" placeholder="Buttom Button" type="text" name="button"/> -->
+            <p class="align_center"for="">footer</p>
+            <input class="todo_input" placeholder="Footer one" type="text" name="footerOne"/>
+            <input class="todo_input" placeholder="Footer two" type="text" name="footer2"/>
+            <input class="todo_input" placeholder="Footer three" type="text" name="footer3"/>
+            <input class="todo_input" placeholder="Footer four" type="text" name="footer4"/>
+            <input class="todo_input" placeholder="Footer five" type="text" name="footer5"/>
+            <button class="btn_modal">
+                submit
+            </button>
+            <!-- <a href="/landing" class="btn_modal"></a> -->
+            <a class="btn_modal" href="/landing">Cancel</a>
+          </form>
+        </div>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+
+
+<footer class="footer_back">
+  <div class="container1">
+    <% LandingModel.forEach(function (nav) { %>
+    <div class="container">
+      <span class="title">Products</span>
+      <ul>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <!-- <a href=""><li>Website Builder</li></a>
+        <a href=""><li>Create a Blog</li></a>
+        <a href=""><li>Join our team!</li></a> -->
+      </ul>
+    </div>
+ 
+    <div class="container">
+      <span class="title">Features</span>
+      <ul>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <!-- <a href=""><li>Themes</li></a>
+        <a href=""><li>Plugins</li></a> -->
+      </ul>
+    </div>
+    <div class="container">
+      <span class="title">Resources</span>
+      <ul>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <!-- <a href=""><li>Forums</li></a>
+        <a href=""><li>News</li></a> -->
+      </ul>
+    </div>
+    <div class="container">
+      <span class="title">Company</span>
+      <ul>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <!-- <a href=""><li>Partners</li></a>
+        <a href=""><li>Terms of Service</li></a>
+        <a href=""><li>Privacy Policy</li></a> -->
+      </ul>
+    </div>
+    <div class="container">
+      <span class="title">Help Center</span>
+      <ul>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <!-- <a href=""><li>Support</li></a>
+        <a href=""><li>Report an issue</li></a>
+        <a href=""><li>Help Translate</li></a> -->
+      </ul>
+    </div>
+    <% }) %>
+  </div>
+  <div class="container2">
+    <div class="socials-container">
+      <span class="logo">weCode</span>
+      <div class="socials">
+        <a href="">
+          <img src="static/images/twitter.png" alt="twitter logo" />
+        </a>
+        <a href="">
+          <img src="static/images/facebook.png" alt="facebook logo" />
+        </a>
+        <a href="">
+          <img src="static/images/youtube.png" alt="Youtube logo" />
+        </a>
+        <a href="">
+          <img src="static/images/linkedin.png" alt="linkedin logo" />
+        </a>
+        <a href="/">
+          <img src="static/images/insta.png" alt="instagram logo" />
+        </a>
+      </div>
+      <div class="copyright">
+        <span>© 2022</span>
+        <span>All Rights Reserved</span>
+      </div>
+    </div>
+    <div class="language-container">
+      <button class="btn-container">
+        <img src="static/images/global.png" alt="" />
+        <select name="language" id="">
+          <option value="english">English</option>
+          <option value="french">French</option>
+        </select>
+      </button>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  const navMenu = document.querySelector("#navMenu");
+  const list = document.querySelector("#list");
+
+  navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    list.classList.toggle('active');
+;  })
+
+function changeColor() { 
+    var userColor = document.getElementById('colorID').value;
+    localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
+         }
+    if(localStorage.storedValue) {
+    document.getElementById('colorID').value = localStorage.storedValue;
+    document.body.style.backgroundColor      = localStorage.storedValue;
+        }
+</script>
+
+  </body>
+</html>

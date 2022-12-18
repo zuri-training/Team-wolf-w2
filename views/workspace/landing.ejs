@@ -12,64 +12,30 @@
       sizes="32x32"
       href="images/favicon-32x32.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
     <link rel="stylesheet" href="/styles/navbar.css" />
     <link rel="stylesheet" href="/styles/landing.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <title>weCode | templates</title>
   </head>
   <body>
-  <nav class="nabar">
-  <div class="div-a">    
-    <a href="/register" class="nav-link">
-      <button type="button" class="nav-btn1">Register</button>
-    </a>
-    <a href="/login" class="nav-link">
-      <button type="button" class="nav-btn1">Login</button>
-    </a>
-  </div>
-  <div class="div-b">
-    <div class="na-flexx1">
-        <a class="nabar-brand1" href="/">
-          <img src="images/weCode.png" alt="" />
-        </a>
-      <div class="collapsey">
-        <ul id="list"">
-          <li class="na-item">
-            <a href="/" class="nav-lin">Home</a>
-          </li>
-          <li class="na-item">
-            <a href="/aboutus" class="nav-lin">About</a>
-          </li>
-          <li class="na-item">
-            <a href="/templates" class="nav-lin">Products</a>
-          </li>
-          <!-- <li class="na-item">
-            <a href="" class="nav-lin">Features</a>
-          </li> -->
-          <li class="na-item">
-            <a href="/contacts" class="nav-lin">Contact</a>
-          </li>
-          <li class="na-item logout-none">
-          <a href="/logout" class="nav-lin">
-            Logout
-          </a>
-        </ul>
-      </div>
+  <nav class="nbar">
+  <div class="div-b" style="display: flex; justify-content: space-around;">
+    <div class="na-flexx1">              
+        <a id="nav1" href="">Home</a>
+        <a href="/"><%= Navbar.nav1 %></a>
+        <a href="/edit"></a>
+        <a href="/edit"></a>
+        <a href="/edit"></a>
     </div>
-    <div class="na-flex2">
-      <form action="" class="form">
-        <button>
-          <img src="images/search-interface-symbol.png" alt="" />
-        </button>
-        <input type="search" name="search-bar" id="" placeholder="Search" />
-      </form>
-    </div>
-    <div id="navMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
+    <div class="div-a">    
+      <a href="/register" class="nav-link">
+        <button type="button" class="nav-btn1">Register</button>
+      </a>
+      <a href="/login" class="nav-link">
+        <button type="button" class="nav-btn1">Login</button>
+      </a>
+    </div>  
   </div>
 </nav>
 <div class="banner">
@@ -352,7 +318,12 @@
 <script>
   const navMenu = document.querySelector("#navMenu");
   const list = document.querySelector("#list");
+  var header = document.getElementById("nav1")
 
+  header.addEventListener("click", ()=>{
+    var item = prompt("Change item")
+    header.textContent += item
+  })
   navMenu.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     list.classList.toggle('active');

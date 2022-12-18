@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Message = require("../models/contact");
+var flash = require("connect-flash");
 
 // Contacts Route
 router.get("/contacts", isLoggedIn, function (req, res) {

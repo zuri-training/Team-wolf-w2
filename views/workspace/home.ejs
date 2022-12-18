@@ -1,0 +1,180 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter|Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="static/images/favicon-32x32.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/landing.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+ 
+    <title>weCode | templates</title>
+  </head>
+  <body>
+        <ul id="list">
+            <% LandingModel.forEach(function (nav) { %>
+          <li class="na-item">
+            <a href="/" class="nav-lin"><%= nav.navItems %></a>
+          </li>
+          <% }) %> 
+    <div id="navMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+    
+
+    <% LandingModel.forEach(function (nav) { %>
+       
+      
+    <h1> <%= nav.homeTitle %></h1>
+    <p>
+        <%= nav.homeSubTitle %>
+    </p>
+    <% }) %> 
+
+    <% LandingModel.forEach(function (nav) { %>
+  <h2 class="industry-features"><%= nav.byIndustry %></h2>
+  <% }) %>
+    <% LandingModel.forEach(function (nav) { %>
+  <h2 class="industry-features"><%= nav.byFeatures %></h2>
+  <% }) %>
+
+  <div class="tested_text">
+    <% LandingModel.forEach(function (nav) { %>
+    <h4> <%= nav.section1Title %> </h4>
+    <p class="landing_p"> <%= nav.section1para %>
+    </p>
+    <% }) %>
+  </div>
+
+    <% LandingModel.forEach(function (nav) { %>
+  <h3> <%= nav.aboutTitle %> </h3>
+  <span>  <%= nav.aboutPara %> </span
+  >
+  <p class="landing_p"> <%= nav.aboutPara2 %>
+  </p>
+  <% }) %>
+
+    <div>
+       <a href=""> <span class="add_section"> change back</span></a>
+        <input type="color" id="colorID"oninput="changeColor()">        
+      <span>  <a href="#demo-modal2">Edit page here</a></span>
+    </div>
+
+<div id="demo-modal2" class="modal">
+    <div class="modal__content">
+        <h1 class="align_center">Fill this form to add content</h1>
+        <div class="modal-body">
+          <form action="/land" method="POST" class="todo-header">
+            <label for="">Nav Items: </label>
+              <input class="todo_input" placeholder="Nav Bar Items" type="text" name="navItems"/>
+              <input class="todo_input" placeholder="Main home Title" type="text" name="homeTitle"/>
+              <input class="todo_input" placeholder="Main home sub Title" type="text" name="homeSubTitle"/>
+
+              <input class="todo_input" placeholder="Center heading" type="text" name="byIndustry"/>
+              <!-- <p class="align_center" for="">Add A new Section: </p> -->
+            <input class="todo_input"  placeholder="Second centered title" type="text" name="byFeatures"/>
+            <input class="todo_input" placeholder="section one Title" type="text" name="section1Title"/>
+            <input class="todo_input" placeholder="section one para" type="text" name="section1para"/>
+            <!-- <p class="align_center">Add Frequently Qsked question</p> -->
+            <input class="todo_input" placeholder="About us page Title paragraph" type="text" name="aboutTitle"/>
+            <input class="todo_input" placeholder="About us page Body" type="text" name="aboutPara"/>
+            <!-- <input class="todo_input" placeholder="Buttom Button" type="text" name="button"/> -->
+            <p class="align_center"for="">footer</p>
+            <input class="todo_input" placeholder="Footer one" type="text" name="footerOne"/>
+            <input class="todo_input" placeholder="Footer two" type="text" name="footer2"/>
+            <input class="todo_input" placeholder="Footer three" type="text" name="footer3"/>
+            <input class="todo_input" placeholder="Footer four" type="text" name="footer4"/>
+            <input class="todo_input" placeholder="Footer five" type="text" name="footer5"/>
+            <button class="btn_modal">
+                submit
+            </button>
+            <!-- <a href="/landing" class="btn_modal"></a> -->
+            <a class="btn_modal" href="/landing">Cancel</a>
+          </form>
+        </div>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+
+<!-- <footer class="footer_back"> -->
+  <div class="container1">
+    <% LandingModel.forEach(function (nav) { %>
+    <div class="container">
+      <!-- <span class="title">Products</span> -->
+      <ul>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+        <a href=""><li> <%= nav.footer1 %></li></a>
+      </ul>
+    </div>
+ 
+    <div class="container">
+      <ul>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>
+        <a href=""><li><%= nav.footer2 %></li></a>        
+      </ul>
+    </div>
+    <div class="container">
+      <span class="title">Resources</span>
+      <ul>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+        <a href=""><li><%= nav.footer3 %></li></a>
+      </ul>
+    </div>
+    <div class="container">
+      <span class="title">Company</span>
+      <ul>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>
+        <a href=""><li><%= nav.footer4 %></li></a>        
+      </ul>
+    </div>
+    <div class="container">
+
+      <ul>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+        <a href=""><li><%= nav.footer5 %></li></a>
+      </ul>
+    </div>
+    <% }) %>
+  </div>
+<script>
+  const navMenu = document.querySelector("#navMenu");
+  const list = document.querySelector("#list");
+
+  navMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    list.classList.toggle('active');
+;  })
+
+function changeColor() { 
+    var userColor = document.getElementById('colorID').value;
+    localStorage.setItem('storedValue', document.body.style.backgroundColor = userColor);
+         }
+    if(localStorage.storedValue) {
+    document.getElementById('colorID').value = localStorage.storedValue;
+    document.body.style.backgroundColor      = localStorage.storedValue;
+        }
+</script>
+
+  </body>
+</html>
