@@ -77,7 +77,7 @@ body {
 .na-item a {
   color: #f8f8f880;
   text-decoration: none;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 .li-a a:active,
