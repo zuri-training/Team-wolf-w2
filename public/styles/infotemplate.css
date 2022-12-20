@@ -30,10 +30,18 @@ body {
     color: var(--very-dark-gray);
 }
 
-a, p, h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0;}
-p {line-height: 1.5rem;}
-a {text-decoration: none; color: inherit;}
-ul, li {list-style: none;}
+.my-body a,
+.my-body p,
+.my-body h1,
+.my-body h2,
+.my-body h3,
+.my-body h4,
+.my-body h5,
+.my-body h6 {padding: 0; margin: 0;}
+.my-body p {line-height: 1.5rem;}
+.my-body a {text-decoration: none; color: inherit;}
+.my-body ul,
+.my-body li {list-style: none;}
 
 /* hero */
 .it-hero-background {
@@ -416,7 +424,7 @@ ul, li {list-style: none;}
 
 
 /* responsiveness */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
 
     /* hero */
     .it-hero-text_container {

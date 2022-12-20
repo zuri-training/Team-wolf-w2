@@ -37,7 +37,7 @@ a {text-decoration: none; color: inherit;}
 }
 
 .container {
-    padding: 2em 0;
+    padding: 1.5em 0;
     margin: 0 auto;
     width: 85%;
     max-width: 1440px;
@@ -45,7 +45,6 @@ a {text-decoration: none; color: inherit;}
 
 .sign-up_container {
     display: flex;
-    height: 100vh;
     gap: 2em;
     margin: 1em auto;
 }
@@ -108,6 +107,7 @@ form input {
     border: .5px solid var(--light-gray);
     padding: 1.25em .5em;
     margin-top: .25em;
+    outline: none;
 }
 
 input::placeholder {
@@ -227,7 +227,7 @@ input[type="checkbox"]:checked:hover {
 }
 
 /* responsiveness */
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .sign-up_img {
         display: none;
     }
@@ -235,5 +235,9 @@ input[type="checkbox"]:checked:hover {
     .sign-up_form {
         width: 100%;
         padding: 0;
+    }
+
+    input[type="submit"] {
+        padding: 18px 0;
     }
 }
