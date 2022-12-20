@@ -20,28 +20,17 @@
     <title>weCode | templates</title>
   </head>
   <body>
-        <ul id="list">
-            <% LandingModel.forEach(function (nav) { %>
-          <li class="na-item">
-            <a href="/" class="nav-lin"><%= nav.navItems %></a>
-          </li>
-          <% }) %> 
-    <div id="navMenu">
-    <span></span>
-    <span></span>
-    <span></span>
-    </div>
-    
+        
+    <div style="display: flex; justify-content: space-evenly;">
 
     <% LandingModel.forEach(function (nav) { %>
-       
-      
-    <h1> <%= nav.homeTitle %></h1>
-    <p>
+    <h2><a href=""> <%= nav.homeTitle %></a></h2>
+    <h2>
         <%= nav.homeSubTitle %>
-    </p>
+    </h2>
     <% }) %> 
-
+  </div>
+  
     <% LandingModel.forEach(function (nav) { %>
   <h2 class="industry-features"><%= nav.byIndustry %></h2>
   <% }) %>
@@ -56,7 +45,6 @@
     </p>
     <% }) %>
   </div>
-
     <% LandingModel.forEach(function (nav) { %>
   <h3> <%= nav.aboutTitle %> </h3>
   <span>  <%= nav.aboutPara %> </span
