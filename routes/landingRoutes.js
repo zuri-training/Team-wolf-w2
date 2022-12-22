@@ -10,31 +10,46 @@ const LandingModel = require("../models/LandingModel");
 router.get("/createuser", (req, res) => {
   res.render("workspace/url");
 });
-// router.post("/createuser", (req, res) => {
-//   createuser.register(
-//     new createuser(
-//       { username1: req.body.username1 },
-//       { fullname: req.body.fullname },
-//       { email: req.body.email }
-//     ),
-//     req.body.password,
-//     (err, user) => {
-//       if (err) {
-//         req.flash("error", "Username already exists");
-//         res.send(err);
-//         // return res.render("workspace/createuser");
-//       }
-//       // if (req.body.password == req.body.repeat_password) {
-//       passport.authenticate("local")(req, res, () => {
-//         req.flash("welcome", "Welcome " + req.body.username1);
-//         res.redirect("/landing");
-//       });
-//     }
-//     // }
-//   );
-//   // res.status(200).json({ message: "Registered successfully", User: User });
-// });
+router.get("/home", (req, res) => {
+  Navbar.find({}, (err, data) => {
+    res.render("workspace/home", { Navbar: data });
+  });
+});
 
+router.get("/navform", (req, res) => {
+  res.render("workspace/navform");
+});
+router.post("/navform", async (req, res) => {
+  const nav = new Navbar({
+    ...req.body,
+  });
+
+  try {
+    await nav.save();
+    res.redirect("/home");
+  } catch (err) {
+    res.redirect("/home");
+  }
+});
+router.get("/edit", (req, res) => {
+  res.render("workspace//edit");
+});
+router.put("/edit", async (req, res) => {
+  try {
+    Navbar.findByIdAndUpdate(req.body, { new: true }).then((Navbar) => {
+      if (!Navbar) {
+        return res.status(404).send({
+          message: "Navbar not found with id ",
+        });
+      }
+      res.redirect("/home");
+    });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Old Routes
 router.get("/landing", (req, res) => {
   LandingModel.find({}, (err, data) => {
     res.render("workspace/home", { LandingModel: data });
