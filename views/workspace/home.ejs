@@ -34,10 +34,13 @@
           justify-content: space-between;
           gap: 2em;
           align-items: center;
+          background-color: rgb(3, 3, 66);
         "
       >
         <% Navbar.forEach(function(navbar){ %>
-        <a href="/edit"><%= navbar.nav %></a>
+        <a href="/edit" style="text-decoration: none; color: white"
+          ><%= navbar.nav %></a
+        >
         <% }) %>
       </div>
       <div
@@ -49,7 +52,9 @@
         "
       >
         <% Navbar.forEach(function(navbar){ %>
-        <a href="/edit"><%= navbar.nav2 %></a>
+        <a href="/edit" style="text-decoration: none; color: white"
+          ><%= navbar.nav2 %></a
+        >
         <% }) %>
       </div>
       <div style="display: flex; justify-content: flex-end">
